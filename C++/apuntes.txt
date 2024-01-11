@@ -1,0 +1,4 @@
+a tener en cuenta que el espacio de los objetos de transporte son el mismo para todos los productos
+es decir que todos los productos ocupan lo mismo
+un cliente podrá tener varios envios
+el precio total del envio incluye el descuento dentro del precio total del packaging y el producto SIN contar el coste por el transporte

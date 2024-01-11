@@ -1,0 +1,50 @@
+[
+{
+  "directory": "C:/Users/viole/Desktop/ERASMUS/CPS2004-OOP/build",
+  "command": "C:\\MinGW\\bin\\g++.exe   -g -o CMakeFiles\\C++.dir\\main.cpp.obj -c C:\\Users\\viole\\Desktop\\ERASMUS\\CPS2004-OOP\\C++\\main.cpp",
+  "file": "C:/Users/viole/Desktop/ERASMUS/CPS2004-OOP/C++/main.cpp",
+  "output": "CMakeFiles/C++.dir/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/viole/Desktop/ERASMUS/CPS2004-OOP/build",
+  "command": "C:\\MinGW\\bin\\g++.exe   -g -o CMakeFiles\\C++.dir\\src\\customer.cpp.obj -c C:\\Users\\viole\\Desktop\\ERASMUS\\CPS2004-OOP\\C++\\src\\customer.cpp",
+  "file": "C:/Users/viole/Desktop/ERASMUS/CPS2004-OOP/C++/src/customer.cpp",
+  "output": "CMakeFiles/C++.dir/src/customer.cpp.obj"
+},
+{
+  "directory": "C:/Users/viole/Desktop/ERASMUS/CPS2004-OOP/build",
+  "command": "C:\\MinGW\\bin\\g++.exe   -g -o CMakeFiles\\C++.dir\\src\\packaging.cpp.obj -c C:\\Users\\viole\\Desktop\\ERASMUS\\CPS2004-OOP\\C++\\src\\packaging.cpp",
+  "file": "C:/Users/viole/Desktop/ERASMUS/CPS2004-OOP/C++/src/packaging.cpp",
+  "output": "CMakeFiles/C++.dir/src/packaging.cpp.obj"
+},
+{
+  "directory": "C:/Users/viole/Desktop/ERASMUS/CPS2004-OOP/build",
+  "command": "C:\\MinGW\\bin\\g++.exe   -g -o CMakeFiles\\C++.dir\\src\\product.cpp.obj -c C:\\Users\\viole\\Desktop\\ERASMUS\\CPS2004-OOP\\C++\\src\\product.cpp",
+  "file": "C:/Users/viole/Desktop/ERASMUS/CPS2004-OOP/C++/src/product.cpp",
+  "output": "CMakeFiles/C++.dir/src/product.cpp.obj"
+},
+{
+  "directory": "C:/Users/viole/Desktop/ERASMUS/CPS2004-OOP/build",
+  "command": "C:\\MinGW\\bin\\g++.exe   -g -o CMakeFiles\\C++.dir\\src\\shipment.cpp.obj -c C:\\Users\\viole\\Desktop\\ERASMUS\\CPS2004-OOP\\C++\\src\\shipment.cpp",
+  "file": "C:/Users/viole/Desktop/ERASMUS/CPS2004-OOP/C++/src/shipment.cpp",
+  "output": "CMakeFiles/C++.dir/src/shipment.cpp.obj"
+},
+{
+  "directory": "C:/Users/viole/Desktop/ERASMUS/CPS2004-OOP/build",
+  "command": "C:\\MinGW\\bin\\g++.exe   -g -o CMakeFiles\\C++.dir\\src\\stock.cpp.obj -c C:\\Users\\viole\\Desktop\\ERASMUS\\CPS2004-OOP\\C++\\src\\stock.cpp",
+  "file": "C:/Users/viole/Desktop/ERASMUS/CPS2004-OOP/C++/src/stock.cpp",
+  "output": "CMakeFiles/C++.dir/src/stock.cpp.obj"
+},
+{
+  "directory": "C:/Users/viole/Desktop/ERASMUS/CPS2004-OOP/build",
+  "command": "C:\\MinGW\\bin\\g++.exe   -g -o CMakeFiles\\C++.dir\\src\\supplier.cpp.obj -c C:\\Users\\viole\\Desktop\\ERASMUS\\CPS2004-OOP\\C++\\src\\supplier.cpp",
+  "file": "C:/Users/viole/Desktop/ERASMUS/CPS2004-OOP/C++/src/supplier.cpp",
+  "output": "CMakeFiles/C++.dir/src/supplier.cpp.obj"
+},
+{
+  "directory": "C:/Users/viole/Desktop/ERASMUS/CPS2004-OOP/build",
+  "command": "C:\\MinGW\\bin\\g++.exe   -g -o CMakeFiles\\C++.dir\\src\\transport.cpp.obj -c C:\\Users\\viole\\Desktop\\ERASMUS\\CPS2004-OOP\\C++\\src\\transport.cpp",
+  "file": "C:/Users/viole/Desktop/ERASMUS/CPS2004-OOP/C++/src/transport.cpp",
+  "output": "CMakeFiles/C++.dir/src/transport.cpp.obj"
+}
+]

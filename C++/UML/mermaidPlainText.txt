@@ -1,0 +1,133 @@
+classDiagram
+  class Product {
+    -id: int
+    <<abstract>>
+    +calculateDiscount(): double
+    +displayProductInfo(): string
+  }
+
+  class Book {
+  }
+
+  class Game {
+  }
+
+  class Electronic {
+  }
+
+  class Clothing  {
+  }
+
+  class Food  {
+  }
+
+  class Cosmetic {
+  }
+
+  class Supplier {
+    -id: int
+    -name: string
+    -email: string
+    -password: string
+    -creditCard: string
+    +getId(): int
+    +getName(): string
+    +getEmail(): string
+    +getPassword(): string
+    +getCreditCard(): string
+    +setId(id: int): void
+    +setName(name: string): void
+    +setEmail(email: string): void
+    +setPassword(password: string): void
+    +setCreditCard(creditCard: string): void
+  }
+
+  class packaging {
+    -capacity: int
+    -cost: double
+    +getCapacity(): int
+    +getCost(): double
+    +setCapacity(capacity: int): void
+    +setCost(cost: double): void
+  }p
+  class Stock {
+    +getProducts(): vector<Product>
+    +addProduct(Product: Product): void
+    +removeProduct(Product: Product): void
+  }
+
+  class Transport {
+    <<abstract>>
+    -speed: double
+    -costPerKm: double
+    +Transport(id: int, speed: double, costPerKm: double)
+    +setId(id: int): void
+    +setSpeed(speed: double): void
+    +setCostPerKm(costPerKm: double): void
+    +getId(): int
+    +getSpeed(): double
+    +getCostPerKm(): double
+   
+    
+  }
+
+  class Truck{
+  }
+
+  class Plane {
+  }
+
+  class Ship{
+
+  }
+
+  class Shipment {
+    -dispatchDate: Date
+    -arrivalDate: Date
+    -nearestWarehouse: double
+    +calculateTotalCost(): double
+  }
+  
+  class Customer {
+    -id_: int
+    -name_: string
+    -email_: string
+    -password_: string
+    -credit_card_: string
+    -nearestWarehouse_: double
+    -Shipment_: Shipment*
+
+    +Customer(id: int, name: string, email: string, password: string, credit_card: string, nearestWarehouse: double)
+    +setId(id: int): void
+    +setName(name: string): void
+    +setEmail(email: string): void
+    +setPassword(password: string): void
+    +setCreditCard(credit_card: string): void
+    +setNearestWarehouse(nearestWarehouse: double): void
+
+    +getId(): int
+    +getName(): string
+    +getEmail(): string
+    +getPassword(): string
+    +getCreditCard(): string
+    +getNearestWarehouse(): double
+  }
+
+  packaging *-- "N" Product
+  Stock "1" -- "N" Product: composed by
+  Shipment *-- "N" packaging: 
+  Shipment "1" -- "1" Transport: is going in
+  Shipment  "1" --> "*" Product: has
+  Supplier "1" -- "N" Product: supplies with
+  Customer   "1" -- "*" Shipment: orders
+
+  Transport <|-- Truck
+  Transport <|-- Ship 
+  Transport <|-- Plane
+  Product <|-- Book
+  Product <|-- Game
+  Product <|-- Electronic
+  Product <|-- Clothing
+  Product <|-- Food
+  Product <|-- Cosmetic
+

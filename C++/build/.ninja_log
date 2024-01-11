@@ -1,0 +1,14 @@
+# ninja log v5
+29	872	1702858551739615200	CMakeFiles/C++.dir/main.cpp.o	b24e6f9489b3e53
+46	1018	1702858551790476500	CMakeFiles/C++.dir/src/transport.cpp.o	aa56aa7438206293
+0	149	0	clean	a31eedcededa8236
+47	977	1702994240146123200	CMakeFiles/ShipmentApp.dir/transport.cpp.o	d6ba93c92c38b211
+33	1010	1702994240170918400	CMakeFiles/ShipmentApp.dir/fecha.cpp.o	8c7c96ece2daa42f
+37	1052	1702994240177895100	CMakeFiles/ShipmentApp.dir/product.cpp.o	1555ded160127734
+35	1164	1702994240345615000	CMakeFiles/ShipmentApp.dir/packaging.cpp.o	6c509897246a8a4c
+65	943	1702994275455110600	CMakeFiles/ShipmentApp.dir/transport.cpp.o	d6ba93c92c38b211
+51	1092	1702994275599922600	CMakeFiles/ShipmentApp.dir/fecha.cpp.o	8c7c96ece2daa42f
+46	1199	1702994275719974400	CMakeFiles/ShipmentApp.dir/main.cpp.o	433cfe7897d6545
+55	1219	1702994275724535800	CMakeFiles/ShipmentApp.dir/product.cpp.o	1555ded160127734
+53	1272	1702994275802347300	CMakeFiles/ShipmentApp.dir/packaging.cpp.o	6c509897246a8a4c
+61	1296	1702994275819510600	CMakeFiles/ShipmentApp.dir/supplier.cpp.o	809241740024f8ae

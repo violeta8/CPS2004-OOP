@@ -1,0 +1,57 @@
+[
+{
+  "directory": "/mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/CPProject/build",
+  "command": "/usr/bin/g++ -g -o CMakeFiles/project.dir/main.cpp.o -c /mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/CPProject/main.cpp",
+  "file": "/mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/CPProject/main.cpp"
+},
+{
+  "directory": "/mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/CPProject/build",
+  "command": "/usr/bin/g++ -g -o CMakeFiles/project.dir/fecha.cpp.o -c /mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/CPProject/fecha.cpp",
+  "file": "/mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/CPProject/fecha.cpp"
+},
+{
+  "directory": "/mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/CPProject/build",
+  "command": "/usr/bin/g++ -g -o CMakeFiles/project.dir/packaging.cpp.o -c /mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/CPProject/packaging.cpp",
+  "file": "/mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/CPProject/packaging.cpp"
+},
+{
+  "directory": "/mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/CPProject/build",
+  "command": "/usr/bin/g++ -g -o CMakeFiles/project.dir/product.cpp.o -c /mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/CPProject/product.cpp",
+  "file": "/mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/CPProject/product.cpp"
+},
+{
+  "directory": "/mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/CPProject/build",
+  "command": "/usr/bin/g++ -g -o CMakeFiles/project.dir/computergame.cpp.o -c /mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/CPProject/computergame.cpp",
+  "file": "/mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/CPProject/computergame.cpp"
+},
+{
+  "directory": "/mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/CPProject/build",
+  "command": "/usr/bin/g++ -g -o CMakeFiles/project.dir/food.cpp.o -c /mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/CPProject/food.cpp",
+  "file": "/mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/CPProject/food.cpp"
+},
+{
+  "directory": "/mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/CPProject/build",
+  "command": "/usr/bin/g++ -g -o CMakeFiles/project.dir/homeappliance.cpp.o -c /mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/CPProject/homeappliance.cpp",
+  "file": "/mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/CPProject/homeappliance.cpp"
+},
+{
+  "directory": "/mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/CPProject/build",
+  "command": "/usr/bin/g++ -g -o CMakeFiles/project.dir/electronic.cpp.o -c /mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/CPProject/electronic.cpp",
+  "file": "/mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/CPProject/electronic.cpp"
+},
+{
+  "directory": "/mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/CPProject/build",
+  "command": "/usr/bin/g++ -g -o CMakeFiles/project.dir/stock.cpp.o -c /mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/CPProject/stock.cpp",
+  "file": "/mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/CPProject/stock.cpp"
+},
+{
+  "directory": "/mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/CPProject/build",
+  "command": "/usr/bin/g++ -g -o CMakeFiles/project.dir/supplier.cpp.o -c /mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/CPProject/supplier.cpp",
+  "file": "/mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/CPProject/supplier.cpp"
+},
+{
+  "directory": "/mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/CPProject/build",
+  "command": "/usr/bin/g++ -g -o CMakeFiles/project.dir/transport.cpp.o -c /mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/CPProject/transport.cpp",
+  "file": "/mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/CPProject/transport.cpp"
+}
+]

@@ -1,0 +1,47 @@
+[
+{
+  "directory": "/mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/C++/build",
+  "command": "/usr/bin/g++ -g -o CMakeFiles/ShipmentApp.dir/main.cpp.o -c /mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/C++/main.cpp",
+  "file": "/mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/C++/main.cpp"
+},
+{
+  "directory": "/mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/C++/build",
+  "command": "/usr/bin/g++ -g -o CMakeFiles/ShipmentApp.dir/customer.cpp.o -c /mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/C++/customer.cpp",
+  "file": "/mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/C++/customer.cpp"
+},
+{
+  "directory": "/mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/C++/build",
+  "command": "/usr/bin/g++ -g -o CMakeFiles/ShipmentApp.dir/fecha.cpp.o -c /mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/C++/fecha.cpp",
+  "file": "/mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/C++/fecha.cpp"
+},
+{
+  "directory": "/mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/C++/build",
+  "command": "/usr/bin/g++ -g -o CMakeFiles/ShipmentApp.dir/packaging.cpp.o -c /mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/C++/packaging.cpp",
+  "file": "/mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/C++/packaging.cpp"
+},
+{
+  "directory": "/mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/C++/build",
+  "command": "/usr/bin/g++ -g -o CMakeFiles/ShipmentApp.dir/product.cpp.o -c /mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/C++/product.cpp",
+  "file": "/mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/C++/product.cpp"
+},
+{
+  "directory": "/mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/C++/build",
+  "command": "/usr/bin/g++ -g -o CMakeFiles/ShipmentApp.dir/shipment.cpp.o -c /mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/C++/shipment.cpp",
+  "file": "/mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/C++/shipment.cpp"
+},
+{
+  "directory": "/mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/C++/build",
+  "command": "/usr/bin/g++ -g -o CMakeFiles/ShipmentApp.dir/stock.cpp.o -c /mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/C++/stock.cpp",
+  "file": "/mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/C++/stock.cpp"
+},
+{
+  "directory": "/mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/C++/build",
+  "command": "/usr/bin/g++ -g -o CMakeFiles/ShipmentApp.dir/supplier.cpp.o -c /mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/C++/supplier.cpp",
+  "file": "/mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/C++/supplier.cpp"
+},
+{
+  "directory": "/mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/C++/build",
+  "command": "/usr/bin/g++ -g -o CMakeFiles/ShipmentApp.dir/transport.cpp.o -c /mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/C++/transport.cpp",
+  "file": "/mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/C++/transport.cpp"
+}
+]

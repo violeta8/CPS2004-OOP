@@ -1,0 +1,11 @@
+# ninja log v5
+3	304	7254957188455837	CMakeFiles/project.dir/fecha.cpp.obj	769e5d72bf6efa31
+3	424	7254958526523798	build.ninja	ebe5ba94e4c2b268
+1	305	7254955474668894	CMakeFiles/project.dir/packaging.cpp.obj	447aa391359e8789
+305	506	7254957190336227	project.exe	d14629cb7413edad
+2	280	7254957793976433	CMakeFiles/project.dir/main.cpp.obj	7df40c91a7bbd829
+1	400	7254958526523798	build.ninja	ebe5ba94e4c2b268
+32	462	7254959023145007	CMakeFiles/project.dir/transport.cpp.obj	4791d460207c8bed
+14	510	7254962004613414	CMakeFiles/project.dir/stock.cpp.obj	990dbcafb92a7905
+6	491	7254966932920149	CMakeFiles/project.dir/product.cpp.obj	5f8c2cfbd2b2d398
+25	530	7254966933320595	CMakeFiles/project.dir/supplier.cpp.obj	81c06a2e9114ce30
