@@ -2,6 +2,7 @@ package project.packaging;
 
 import java.util.List;
 import java.util.ArrayList;
+import java.time.LocalDate;
 
 import project.product.*;
 import project.transport.*;
@@ -107,17 +108,17 @@ public class Packaging {
     }
 
     public double getTotalCost() {
+        for(Product product:products){
+            //todo cost+=product.getPrice()*product.calculate_discount(, LocalDate.now().getMonthValue());
+        }
         if(capacity<50){
-            return 3.5*cost;
+            return 5+cost;
         }
-        else if(cost<80){
-            return 2.4*cost;
+        else if(capacity<80){
+            return 4+cost;
         }
-        else if(cost<100){
-            return 1.3*cost;
-        }
-        else{
-            return 0.9*cost;
+        else {//if(capacity<100)
+            return 1+cost;
         }
     }
 

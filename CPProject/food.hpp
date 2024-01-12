@@ -2,14 +2,13 @@
 #define FOOD_HPP_
 
 #include "product.hpp"
-#include "fecha.hpp"
 
 class Food : public Product
 {
       public:
-            Food(int id, double price, int monthPurchase, Supplier supplier, Packaging packaging, Stock stock, Fecha expirationDate);
-            void setExpirationDate(Fecha expirationDate);
-            Fecha getExpirationDate() const;
+            Food(int id, double price, std::string expirationDate);
+
+            std::string getExpirationDate() const;
 
             virtual std::string display_product_info()=0;
             double calculate_discount(int quantity) const;
@@ -17,14 +16,14 @@ class Food : public Product
             ~Food();
 
       private:
-            Fecha expirationDate_;
+            std::string expirationDate_;
 };
 
 
 class Milk : public Food
 {
 public:
-    Milk(int id, double price, int monthPurchase, Supplier supplier, Packaging packaging, Stock stock, Fecha expirationDate, std::string fatContent);
+    Milk(int id, double price, std::string expirationDate, std::string fatContent);
     std::string getFatContent() const;
 
     std::string display_product_info();
@@ -38,7 +37,7 @@ private:
 class Cheese : public Food
 {
 public:
-    Cheese(int id, double price, int monthPurchase, Supplier supplier, Packaging packaging, Stock stock, Fecha expirationDate, std::string fatContent, std::string type);
+    Cheese(int id, double price, std::string expirationDate, std::string type);
 
     void setFatContent(std::string fatContent);
     void setType(std::string type);
@@ -51,7 +50,6 @@ public:
     ~Cheese();
 
 private:
-    std::string fatContent_;
     std::string type_;
 };
 

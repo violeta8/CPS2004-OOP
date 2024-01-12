@@ -11,14 +11,15 @@ class Product;
 class Stock
 {
       public:
-            Stock();
+            Stock(Product product, int units);
             void addProduct(Product* product, int units);
             void removeProduct(Product* product, int units);
             void displayStock() const;
             ~Stock();
 
       private:
-            std::map<Product*, int> stock_;
+            Product product_;
+            int units_;
 };
 
 #endif // STOCK_HPP_

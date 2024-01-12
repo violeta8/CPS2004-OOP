@@ -7,6 +7,7 @@ public class Customer {
     private String email;
     private String phone;
     private double warehouseDistance;
+    
     public Customer(int idCustomer, String name, String address, String email, String phone, double warehouseDistance) {
         this.idCustomer = idCustomer;
         this.name = name;

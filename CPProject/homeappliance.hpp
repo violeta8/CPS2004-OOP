@@ -6,13 +6,11 @@
 class HomeAppliance : public Product
 {
       public:
-            HomeAppliance(int id, double price, int monthPurchase, Supplier supplier, Packaging packaging, Stock stock, std::string brand, std::string model);
-            
-            void setBrand(std::string brand);
-            void setModel(std::string model);
+            HomeAppliance(int id, double price, std::string brand);
             
             std::string getBrand() const;
-            std::string getModel() const;
+
+            virtual void updateProduct(std::string what, std::string change)override;
 
             virtual std::string display_product_info()=0;
             double calculate_discount(int quantity) const;
@@ -21,31 +19,33 @@ class HomeAppliance : public Product
 
       private:
             std::string brand_;
-            std::string model_;
 };
-
-
 
 class Fridge : public HomeAppliance
 {
 public:
-    Fridge(int id, double price, int monthPurchase, Supplier supplier, Packaging packaging, Stock stock, std::string brand, std::string model, std::string energyEfficiency);
-    std::string getEnergyEfficiency() const;
+    Fridge(int id, double price, std::string brand, std::string model);
+    
+    std::string getModel() const;
+
+    void updateProduct(std::string what, std::string change)override;
 
     std::string display_product_info();
 
     ~Fridge();
 
 private:
-    std::string energyEfficiency_;
+    std::string model_;
 };
 
 class WashingMachine : public HomeAppliance
 {
 public:
-    WashingMachine(int id, double price, int monthPurchase, bool automatic, Supplier supplier, Packaging packaging, std::string brand, std::string model, std::string energyEfficiency);
+    WashingMachine(int id, double price, std::string brand, std::string energyEfficiency);
+    
     std::string getEnergyEfficiency() const;
-    bool getIsAutomatic() const;
+
+    void updateProduct(std::string what, std::string change)override;
 
     std::string display_product_info();
 
@@ -53,8 +53,6 @@ public:
 
 private:
     std::string energyEfficiency_;
-    bool isAutomatic_;
 };
-
 
 #endif // HOMEAPPLIANCE_HPP_

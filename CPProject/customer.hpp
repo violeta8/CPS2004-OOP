@@ -8,11 +8,13 @@
 class Customer{
       public:
             Customer(std::string name, std::string address, std::string phone, std::string email);
+            
             void setName(std::string name);
             void setAddress(std::string address);
             void setPhone(std::string phone);
             void setEmail(std::string email);
             void setWarehouseDistance(double warehouseDistance);
+
             int getId() const;
             std::string getName() const;
             std::string getAddress() const;

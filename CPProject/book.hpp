@@ -7,7 +7,7 @@
 class Book : public Product
 {
       public:
-            Book(int id, double price, int monthPurchase, Supplier supplier, Packaging packaging, Stock stock, std::string author, std::string title, std::string genre, int pages);
+            Book(int id, double price, std::string title);
             
             void setAuthor(std::string author);
             void setTitle(std::string title);
@@ -19,39 +19,42 @@ class Book : public Product
             std::string getGenre() const;
             int getPages() const;
 
+            void updateProduct(std::string what, std::string change)override;
+
             virtual std::string display_product_info()=0;
             double calculate_discount(int quantity) const;
 
             ~Book();
 
       private:
-            std::string author_;
             std::string title_;
-            std::string genre_;
-            int pages_;
 };
 
 class Novel : public Book
 {
       public:
-            Novel(int id, double price, int monthPurchase, Supplier supplier, Packaging packaging, Stock stock, std::string author, std::string title, std::string genre, int pages, Fecha publicationDate);
+            Novel(int id, double price, std::string title, std::string genre);
             
-            Fecha getPublicationDate() const;
+            std::string getGenre() const;
+
+            void updateProduct(std::string what, std::string change)override;
 
             std::string display_product_info();
 
             ~Novel();
 
       private:
-            Fecha publicationDate_;
+            std::string genre_;
 };
 
 class Textbook : public Book
 {
       public:
-            Textbook(int id, double price, int monthPurchase, Supplier supplier, Packaging packaging, Stock stock, std::string author, std::string title, std::string genre, int pages, std::string subject);
+            Textbook(int id, double price, std::string title, std::string subject);
             
             std::string getSubject() const;
+            
+            void updateProduct(std::string what, std::string change)override;
 
             std::string display_product_info();
 

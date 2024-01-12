@@ -9,7 +9,7 @@
 
 class Shipment{
       public:
-            Shipment(Customer customer, Product product, Packaging packaging, int units);
+            Shipment(Customer customer, Product product, std::list<Packaging> packaging, int units);
             void setCustomer(Customer customer);
             void setProduct(Product product);
             void setPackaging(Packaging packaging);
@@ -25,7 +25,7 @@ class Shipment{
       private:
             int idShipment_;
             Customer customer_;
-            Transport* transport_;
+            Transport* transport_;//todo check this
             std::list<Packaging> packaging_;
             Fecha purchaseDate_;
             Fecha deliveryDate_;

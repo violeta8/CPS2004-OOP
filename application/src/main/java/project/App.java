@@ -625,7 +625,7 @@ public class App
                     System.out.println("Please enter the id and the quantity of the products you want to add to the shipment");
                     int productid = scanner.nextInt();
                     scanner.nextLine();
-                    int quantity = scanner.nextInt();
+                    int quantity = scanner.nextInt();//todo poner esto en el getTotalCost() de packaging
                     scanner.nextLine();
                     Product product = ProductRepository.getProductById(productid);
                     if(quantity>StockRepository.getStockQuantity(product)){
@@ -729,8 +729,7 @@ public class App
     }
 
     public static void main( String[] args )
-    {//todo cambiar para que las excepciones no haga que se termine el programa
-        
+    {        
         System.out.println( "Welcome to the Logistics Management Application OF THE UNIVERSITY OF MALTA" );
         System.out.println( "This is the main class" );
         System.out.println( "In here you will be able to see everything" );

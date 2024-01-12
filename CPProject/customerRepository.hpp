@@ -2,10 +2,11 @@
 #include <list>
 #include <iostream>     
 
-static class customerRepository
+class customerRepository
 {
       public:
             customerRepository();
+            static int nextIdCustomer();
             static void addCustomer(Customer customer);
             static void removeCustomer(Customer customer);
             static void updateCustomer(int id, std::string what, std::string change);
@@ -15,7 +16,18 @@ static class customerRepository
       
       private:
             static std::list<Customer> repository;
+            static int nextId;
 };
+
+customerRepository::customerRepository(){
+      repository = std::list<Customer>();
+      nextId = 0;
+}
+
+int customerRepository::nextIdCustomer()
+{
+      return nextId++;
+}
 
 void customerRepository::addCustomer(Customer Customer)
 {
@@ -65,10 +77,10 @@ Customer customerRepository::getCustomerbyId(int idCustomer)
       return Customer("","","","");
 }
 
-std::ostream& operator<< (std::ostream& os, const customerRepository& customerRepository)
+std::ostream& operator<< (std::ostream& os, const customerRepository& CustomerRepository)
 {
       //print the repository
-      for (std::list<Customer>::const_iterator it = customerRepository.repository.begin(); it != customerRepository.repository.end(); ++it)
+      for (std::list<Customer>::const_iterator it = CustomerRepository.repository.begin(); it != CustomerRepository.repository.end(); ++it)
       {
             os << *it << std::endl;
       }

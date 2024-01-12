@@ -95,7 +95,7 @@ public class Shipment {
     public double getTotalCost() {
         double total=0;
         for(Packaging packaging:packagings){
-            total+=packaging.getTotalCost()+ transport.getCostPerKM() * transport.route()*customer.getWarehouseDistance();
+            total+=packaging.getTotalCost()+ transport.getCostPerKM() * (transport.route()+customer.getWarehouseDistance());
         }
         return total;
         

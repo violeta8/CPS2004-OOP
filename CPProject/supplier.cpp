@@ -1,7 +1,9 @@
 #include "supplier.hpp"
 
 Supplier::Supplier(std::string name, std::string address, std::string phone, std::string email)
-      : name_(name), address_(address), phone_(phone), email_(email), products_(std::list<Product>()){}
+      : id_(), name_(name), address_(address), phone_(phone), email_(email), products_(std::list<Product>()){}
+
+int Supplier::getId() const{return id_;}
 
 void Supplier::setName(std::string name) { name_ = name; }
 
@@ -27,3 +29,4 @@ Supplier::~Supplier()
 {
       products_.clear();
 }
+

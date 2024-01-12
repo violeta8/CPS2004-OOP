@@ -73,7 +73,6 @@ public abstract class Product {
     }
     
     public double calculate_discount(int quantity, int month) {
-        //make method
         if (month == 1 || month == 2 || month == 12) {
             return 0.9 * quantity * price;
         }

@@ -2,21 +2,33 @@
 #include <list>
 #include <iostream>
 
-static class supplierRepository
+class supplierRepository
 {
       public:
             supplierRepository();
+            static int nextIdSupplier();
             static void addSupplier(Supplier Supplier);
             static void removeSupplier(Supplier Supplier);
             static void updateSupplier(int id, std::string what, std::string change);
-            static void updateSupplier(int id, Product p);
+            static void updateSupplier(int id, Product& p);
             static Supplier getSupplierbyId(int idSupplier) ;
             friend std::ostream& operator<< (std::ostream& os, const supplierRepository& supplierRepository);
             ~supplierRepository();
       
       private:
             static std::list<Supplier> repository;
+            static int nextId;
 };
+
+supplierRepository::supplierRepository(){
+      repository = std::list<Supplier>();
+      nextId = 0;
+}
+
+int supplierRepository::nextIdSupplier()
+{
+      return nextId++;
+}
 
 void supplierRepository::addSupplier(Supplier Supplier)
 {
@@ -54,7 +66,7 @@ void supplierRepository::updateSupplier(int id, std::string what, std::string ch
      }
 }
 
-void supplierRepository::updateSupplier(int id, Product p)
+void supplierRepository::updateSupplier(int id, Product& p)
 {
       for(std::list<Supplier>::iterator it = repository.begin(); it != repository.end(); ++it)
       {
@@ -74,11 +86,12 @@ Supplier supplierRepository::getSupplierbyId(int idSupplier)
                   return *it;
             }
       }
+      return Supplier("","","","");
 }
 
-std::ostream& operator<< (std::ostream& os, const supplierRepository& supplierRepository)
+std::ostream& operator<< (std::ostream& os, const supplierRepository& SupplierRepository)
 {
-      for (std::list<Supplier>::const_iterator it = repository.begin(); it != repository.end(); ++it)
+      for (std::list<Supplier>::const_iterator it = SupplierRepository.repository.begin(); it != SupplierRepository.repository.end(); ++it)
       {
             os << *it << std::endl;
       }

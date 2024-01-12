@@ -12,6 +12,8 @@ class Transport
             void setSpeed(double speed);  
             void setCostPerKm(double costPerKm);
 
+            virtual void updateTransport(std::string what, std::string change);
+
             int getId() const;
             double getSpeed() const;
             double getCostPerKm() const;
@@ -31,6 +33,8 @@ class Airplane : public Transport
             void setModel(std::string model_);
             std::string getModel() const;
 
+            void updateTransport(std::string what, std::string change)override;
+
             ~Airplane();
 
       private:
@@ -44,6 +48,8 @@ class Truck : public Transport
             void setPlate(std::string plate_);
             std::string getPlate() const;
 
+            void updateTransport(std::string what, std::string change)override;
+
             ~Truck();
       private:
             std::string plate_;
@@ -55,6 +61,8 @@ class Ship : public Transport
             Ship(int id, double speed, double costPerKm, std::string name);
             void setName(std::string name_);
             std::string getName() const;
+
+            void updateTransport(std::string what, std::string change)override;
 
             ~Ship();
       private:

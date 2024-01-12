@@ -6,13 +6,11 @@
 class Electronic : public Product
 {
       public:
-            Electronic(int id, double price, int monthPurchase, Supplier supplier, Packaging packaging, Stock stock, std::string brand, std::string model);
-            
-            void setBrand(std::string brand);
-            void setModel(std::string model);
+            Electronic(int id, double price, std::string brand);
             
             std::string getBrand() const;
-            std::string getModel() const;
+
+            void updateProduct(std::string what, std::string change)override;
 
             virtual std::string display_product_info()=0;
             double calculate_discount(int quantity) const;
@@ -21,18 +19,17 @@ class Electronic : public Product
 
       private:
             std::string brand_;
-            std::string model_;
 };
 
 
 class Smartphone : public Electronic
 {
 public:
-    Smartphone(int id, double price, int monthPurchase, Supplier supplier, Packaging packaging, Stock stock, std::string brand, std::string model, std::string operatingSystem);
-
-    void setOperatingSystem(std::string operatingSystem);
+    Smartphone(int id, double price, std::string brand, std::string operatingSystem);
 
     std::string getOperatingSystem() const;
+
+    void updateProduct(std::string what, std::string change)override;
 
     std::string display_product_info();
 
@@ -45,15 +42,18 @@ private:
 class Tablet : public Electronic
 {
 public:
-    Tablet(int id, double price, int monthPurchase, Supplier supplier, Packaging packaging, Stock stock, std::string brand, std::string model, std::string operatingSystem);
-    std::string getOperatingSystem() const;
+    Tablet(int id, double price, std::string brand, std::string model);
+    
+    std::string getModel() const;
+
+    void updateProduct(std::string what, std::string change)override;
 
     std::string display_product_info();
 
     ~Tablet();
 
 private:
-    std::string operatingSystem_;
+    std::string model_;
 };
 
 

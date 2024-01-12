@@ -6,29 +6,28 @@
 class Clothing : public Product
 {
       public:
-            Clothing(int id, double price, int monthPurchase, Supplier supplier, Packaging packaging, Stock stock, std::string brand, std::string size, std::string colour);
+            Clothing(int id, double price, std::string colour);
             
-            void setBrand(std::string brand);
-            void setColour(std::string colour);
-            
-            std::string getBrand() const;
             std::string getColour() const;
+
+            void updateProduct(std::string what, std::string change)override;
             
             virtual std::string display_product_info()=0;
             double calculate_discount(int quantity) const;
 
             ~Clothing();
       private:
-            std::string brand_;
             std::string colour_;
 };
 
 class TShirt : public Clothing
 {
 public:
-    TShirt(int id, double price, int monthPurchase, Supplier supplier, Packaging packaging, Stock stock, std::string brand, std::string size, std::string colour, std::string type);
+    TShirt(int id, double price, std::string colour, std::string size);
+
     std::string getSize() const;
-    std::string getColor() const;
+
+    void updateProduct(std::string what, std::string change)override;
 
     std::string display_product_info();
 
@@ -41,16 +40,18 @@ private:
 class Pants : public Clothing
 {
 public:
-    Pants(int id, double price, int monthPurchase, Supplier supplier, Packaging packaging, Stock stock, std::string brand, std::string size, std::string colour, std::string type);
-    std::string getSize() const;
-    std::string getColor() const;
+    Pants(int id, double price, std::string colour, std::string shop);
+    
+    std::string getShop() const;
+
+    void updateProduct(std::string what, std::string change)override;
 
     std::string display_product_info();
 
     ~Pants();
 
 private:
-    std::string size_;
+    std::string shop_;
 
 };
 
