@@ -8,8 +8,8 @@ class StockRepository
 {
     public:
             StockRepository();
-            void addStock(Stock& stock);
-            void removeStock(int id);
+            void addStock(const Stock& stock);
+            void removeStock( const int id);
             void updateStock(Product& product, int units);
             Stock& getStock(int id);
             int getStockQuantity(Product& product);
@@ -27,12 +27,12 @@ StockRepository::StockRepository()
       id_ = 0;
 }
 
-void StockRepository::addStock(Stock& stock)
+void StockRepository::addStock(const Stock& stock)
 {
       repository.push_back(stock);
 }
 
-void StockRepository::removeStock(int id)
+void StockRepository::removeStock(const int id)
 {
       for(std::list<Stock>::iterator it = repository.begin(); it != repository.end(); ++it)
       {
@@ -63,6 +63,7 @@ Stock& StockRepository::getStock(int id)
                   return *it;
             }
       }
+      return *repository.end();
 }
 
 int StockRepository::getStockQuantity(Product& product)
@@ -74,6 +75,7 @@ int StockRepository::getStockQuantity(Product& product)
                   return it->getUnits();
             }
       }
+      return -1;
 }
 
 std::string StockRepository::getAllStock()const

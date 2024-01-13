@@ -6,8 +6,8 @@ class TransportRepository
       public:
             TransportRepository();
             int nextIdTransport();
-            void addTransport(Transport& transport);
-            void removeTransport(Transport& transport);
+            void addTransport(const Transport& transport);
+            void removeTransport(const Transport& transport);
             void updateTransport(int id, std::string what, std::string change);
             Transport& getTransportbyId(int id);
             friend std::ostream& operator<< (std::ostream& os, const TransportRepository& transportRepository);
@@ -28,12 +28,12 @@ int TransportRepository::nextIdTransport()
       return id_++;
 }
 
-void TransportRepository::addTransport(Transport& transport)
+void TransportRepository::addTransport(const Transport& transport)
 {
       repository.push_back(transport);
 }
 
-void TransportRepository::removeTransport(Transport& transport)
+void TransportRepository::removeTransport(const Transport& transport)
 {
       repository.remove(transport);
 }

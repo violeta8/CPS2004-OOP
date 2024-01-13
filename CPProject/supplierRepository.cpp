@@ -7,8 +7,8 @@ class supplierRepository
       public:
             supplierRepository();
             int nextIdSupplier();
-            void addSupplier(Supplier Supplier);
-            void removeSupplier(Supplier Supplier);
+            void addSupplier(const Supplier Supplier);
+            void removeSupplier(const Supplier Supplier);
             void updateSupplier(int id, std::string what, std::string change);
             void updateSupplier(int id, Product& p);
             Supplier getSupplierbyId(int idSupplier) ;
@@ -30,12 +30,12 @@ int supplierRepository::nextIdSupplier()
       return nextId++;
 }
 
-void supplierRepository::addSupplier(Supplier Supplier)
+void supplierRepository::addSupplier(const Supplier Supplier)
 {
       repository.push_back(Supplier);
 }
 
-void supplierRepository::removeSupplier(Supplier Supplier)
+void supplierRepository::removeSupplier(const Supplier Supplier)
 {
       repository.remove(Supplier);
 }

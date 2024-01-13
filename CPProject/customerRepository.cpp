@@ -7,8 +7,8 @@ class customerRepository
       public:
             customerRepository();
             int nextIdCustomer();
-            void addCustomer(Customer customer);
-            void removeCustomer(Customer customer);
+            void addCustomer(const Customer customer);
+            void removeCustomer(const Customer customer);
             void updateCustomer(int id, std::string what, std::string change);
             Customer getCustomerbyId(int idCustomer) ;
             std::string getAllCustomers()const;
@@ -29,12 +29,12 @@ int customerRepository::nextIdCustomer()
       return nextId++;
 }
 
-void customerRepository::addCustomer(Customer Customer)
+void customerRepository::addCustomer(const Customer Customer)
 {
       repository.push_back(Customer);
 }
 
-void customerRepository::removeCustomer(Customer Customer)
+void customerRepository::removeCustomer(const Customer Customer)
 {
       repository.remove(Customer);
 }
