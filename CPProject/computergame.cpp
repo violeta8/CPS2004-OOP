@@ -1,7 +1,7 @@
 #include "computergame.hpp"
 
-ComputerGame::ComputerGame(int id, double price, int age_limit) 
-      : Product(id, price), ageLimit_(age_limit){}
+ComputerGame::ComputerGame(int id, double price, int volume, int age_limit) 
+      : Product(id, price, volume), ageLimit_(age_limit){}
 
 int ComputerGame::getAgeLimit() const { return ageLimit_; }
 
@@ -18,8 +18,8 @@ ComputerGame::~ComputerGame(){}
 
 
 //* --------------------------------ComputerGame concrete subclasses-------------------------------- *//
-Zelda::Zelda(int id, double price, int age_limit, std::string platform)
-        : ComputerGame(id, price, age_limit), platform_(platform){}
+Zelda::Zelda(int id, double price, int volume, int age_limit, std::string platform)
+        : ComputerGame(id, price, volume, age_limit), platform_(platform){}
 
 
 std::string Zelda::getPlatform() const { return platform_; }
@@ -45,8 +45,8 @@ std::string Zelda::display_product_info()
 Zelda::~Zelda(){}
 
 
-Minecraft::Minecraft(int id, double price, int age_limit, std::string platform)
-        : ComputerGame(id, price, age_limit), platform_(platform){}
+Minecraft::Minecraft(int id, double price, int volume, int age_limit, std::string platform)
+        : ComputerGame(id, price, volume, age_limit), platform_(platform){}
 
 std::string Minecraft::getPlatform() const { return platform_; }
 

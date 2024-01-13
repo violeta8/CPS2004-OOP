@@ -6,7 +6,7 @@
 class Clothing : public Product
 {
       public:
-            Clothing(int id, double price, std::string colour);
+            Clothing(int id, double price, int volume, std::string colour);
             
             std::string getColour() const;
 
@@ -23,7 +23,7 @@ class Clothing : public Product
 class TShirt : public Clothing
 {
 public:
-    TShirt(int id, double price, std::string colour, std::string size);
+    TShirt(int id, double price, int volume, std::string colour, std::string size);
 
     std::string getSize() const;
 
@@ -40,7 +40,7 @@ private:
 class Pants : public Clothing
 {
 public:
-    Pants(int id, double price, std::string colour, std::string shop);
+    Pants(int id, double price, int volume, std::string colour, std::string shop);
     
     std::string getShop() const;
 

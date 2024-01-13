@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: C:/Users/viole/Desktop/ERASMUS/CPS2004-OOP/C++
-# Build directory: C:/Users/viole/Desktop/ERASMUS/CPS2004-OOP/build
+# Source directory: /mnt/c/Users/viole/Desktop/ERASMUS/cps2004-oop-1/CPProject
+# Build directory: /mnt/c/Users/viole/Desktop/ERASMUS/cps2004-oop-1/build
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

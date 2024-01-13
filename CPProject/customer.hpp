@@ -22,8 +22,8 @@ class Customer{
             std::string getEmail() const;
             double getWarehouseDistance() const;
 
-            friend std::ostream& operator<< (std::ostream& os, const Customer& customer);
-      
+            std::string display_customer_info()const;
+                  
             ~Customer();
       
       private:

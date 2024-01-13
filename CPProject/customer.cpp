@@ -64,13 +64,10 @@ double Customer::getWarehouseDistance() const
       return warehouseDistance_;
 }
 
-std::ostream& operator<< (std::ostream& os, const Customer& Customer)
+std::string Customer::display_customer_info()const
 {
-      os << "ID: " << Customer.getId() << "\n";
-      os << "Name: " << Customer.getName() << "\n";
-      os << "Address: " << Customer.getAddress() << "\n";
-      os << "Phone: " << Customer.getPhone() << "\n";
-      os << "Email: " << Customer.getEmail() << "\n";
-      os << "Warehouse distance: " << Customer.getWarehouseDistance() << "\n";
-      return os;
+      std::string info = "Customer: " + std::to_string(getId()) + " \nName: " + getName() + " \nAddress: " +
+                         getAddress() + " \nPhone: " + getPhone() + " \nEmail: " +
+                         getEmail() + " \nWarehouse distance: " + std::to_string(getWarehouseDistance());
+      return info;
 }

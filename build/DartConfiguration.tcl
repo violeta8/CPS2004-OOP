@@ -4,8 +4,8 @@
 
 
 # Configuration directories and files
-SourceDirectory: C:/Users/viole/Desktop/ERASMUS/CPS2004-OOP/C++
-BuildDirectory: C:/Users/viole/Desktop/ERASMUS/CPS2004-OOP/build
+SourceDirectory: /mnt/c/Users/viole/Desktop/ERASMUS/cps2004-oop-1/CPProject
+BuildDirectory: /mnt/c/Users/viole/Desktop/ERASMUS/cps2004-oop-1/build
 
 # Where to place the cost data store
 CostDataFile: 
@@ -14,21 +14,20 @@ CostDataFile:
 Site: ateloiv
 
 # Build name is osname-revision-compiler, i.e. Linux-2.4.2-2smp-c++
-BuildName: Win32-mingw32-make
+BuildName: Linux-g++
 
 # Subprojects
 LabelsForSubprojects: 
 
 # Submission information
 SubmitURL: http://
-SubmitInactivityTimeout: 
 
 # Dashboard start time
 NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
-ConfigureCommand: "C:/Program Files/CMake/bin/cmake.exe" "C:/Users/viole/Desktop/ERASMUS/CPS2004-OOP/C++"
-MakeCommand: C:/Program\ Files/CMake/bin/cmake.exe --build . --config "${CTEST_CONFIGURATION_TYPE}"
+ConfigureCommand: "/usr/bin/cmake" "/mnt/c/Users/viole/Desktop/ERASMUS/cps2004-oop-1/CPProject"
+MakeCommand: /usr/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}"
 DefaultCTestConfigurationType: Release
 
 # version control
@@ -63,8 +62,8 @@ UpdateOptions:
 UpdateType: 
 
 # Compiler info
-Compiler: C:/MinGW/bin/g++.exe
-CompilerVersion: 9.2.0
+Compiler: /usr/bin/g++
+CompilerVersion: 11.4.0
 
 # Dynamic analysis (MemCheck)
 PurifyCommand: 
@@ -81,7 +80,7 @@ MemoryCheckCommandOptions:
 MemoryCheckSuppressionFile: 
 
 # Coverage
-CoverageCommand: C:/MinGW/bin/gcov.exe
+CoverageCommand: /usr/bin/gcov
 CoverageExtraFlags: -l
 
 # Testing options

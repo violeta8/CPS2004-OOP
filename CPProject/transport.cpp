@@ -46,6 +46,12 @@ void Airplane::updateTransport(std::string what, std::string change)
       }
 }
 
+std::string Airplane::display_transport_info()const
+{
+      std::string info = "Airplane: " + std::to_string(getId()) + " \nThe speed is: " + std::to_string(getSpeed()) + " \nThe cost per km is: " + std::to_string(getCostPerKm()) + " \nAnd the model is: " + model_;
+      return info;
+}
+
 Airplane::~Airplane(){}
 
 
@@ -64,6 +70,12 @@ void Truck::updateTransport(std::string what, std::string change)
       }
 }
 
+std::string Truck::display_transport_info()const
+{
+      std::string info = "Truck: " + std::to_string(getId()) + " \nThe speed is: " + std::to_string(getSpeed()) + " \nThe cost per km is: " + std::to_string(getCostPerKm()) + " \nAnd the plate is: " + plate_;
+      return info;
+}
+
 Truck::~Truck(){}
 
 
@@ -80,6 +92,12 @@ void Ship::updateTransport(std::string what, std::string change)
       {
             name_ = change;
       }
+}
+
+std::string Ship::display_transport_info()const
+{
+      std::string info = "Ship: " + std::to_string(getId()) + " \nThe speed is: " + std::to_string(getSpeed()) + " \nThe cost per km is: " + std::to_string(getCostPerKm()) + " \nAnd the name is: " + name_;
+      return info;
 }
 
 Ship::~Ship(){}

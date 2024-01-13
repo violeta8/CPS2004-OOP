@@ -1,8 +1,8 @@
 #include "product.hpp"
 
 //* --------------------------------Product abstract class-------------------------------- *//
-Product::Product(int id, double price) 
-      : id_(id), price_(price){}
+Product::Product(int id, double price, int volume) 
+      : id_(id), price_(price), volume_(volume){}
 
 void Product::setId(int id) { id_ = id; }
 

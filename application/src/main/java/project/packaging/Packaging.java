@@ -15,14 +15,12 @@ public class Packaging {
     private int capacity;//this will depend on the type of transport
     private int cost;
     private List<Product> products;
-    private Transport transport;
 
     public Packaging(int idPackaging, int capacity, int cost, List<Product> products) {
         this.idPackaging = idPackaging;
         this.capacity = capacity;
         this.cost = cost;
         this.products = products;
-        transport = null;
     }
 
     public Packaging(int capacity){
@@ -30,7 +28,6 @@ public class Packaging {
         this.capacity = capacity;
         this.cost = 1;
         this.products = new ArrayList<Product>();
-        transport = null;
     }
 
     public Packaging(Transport t) {
@@ -49,7 +46,6 @@ public class Packaging {
             this.capacity = 100;
             this.cost = 2;
         }
-        transport = t;
     }
 
     public Packaging() {
@@ -57,7 +53,6 @@ public class Packaging {
         this.capacity = 16;
         this.cost = 2;
         this.products = null;
-        transport = null;
     }
 
     public boolean equals(Packaging packaging) {
@@ -109,7 +104,7 @@ public class Packaging {
 
     public double getTotalCost() {
         for(Product product:products){
-            //todo cost+=product.getPrice()*product.calculate_discount(, LocalDate.now().getMonthValue());
+            cost+=product.getPrice()*product.calculate_discount(product.get, LocalDate.now().getMonthValue());
         }
         if(capacity<50){
             return 5+cost;

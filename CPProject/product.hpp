@@ -3,25 +3,22 @@
 
 #include <iostream>
 
-
-#include "packaging.hpp"
-#include "stock.hpp"
-#include "supplier.hpp"
-
 class Product 
 {
       public:
-            Product(int id, double price);
+            Product(int id, double price, int volume);
             
             void setId(int id);
             void setPrice(double price);
+            void setVolume(int volume);
 
             int getId() const;
             double getPrice() const;
+            int getVolume() const;
 
             virtual void updateProduct(std::string what, std::string change);
 
-            virtual std::string display_product_info()=0;
+            virtual std::string display_product_info()const=0;
             double calculate_discount(int quantity, int month) const;
 
             ~Product();
@@ -29,6 +26,7 @@ class Product
       private:
             int id_;//get this incremented
             double price_;
+            int volume_;
 };
 
 #endif // PRODUCT_HPP_

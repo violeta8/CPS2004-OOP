@@ -300,13 +300,13 @@ MEMORYCHECK_SUPPRESSIONS_FILE:FILEPATH=
 SITE:STRING=ateloiv
 
 //Value Computed by CMake
-project_BINARY_DIR:STATIC=/mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/CPProject/build
+project_BINARY_DIR:STATIC=/mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/CPProject/
 
 //Value Computed by CMake
 project_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-project_SOURCE_DIR:STATIC=/mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/CPProject
+project_SOURCE_DIR:STATIC=/mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/CPProject/
 
 
 ########################

@@ -6,7 +6,7 @@
 class ComputerGame : public Product
 {
       public:
-            ComputerGame(int id, double price, int ageLimit);
+            ComputerGame(int id, double price, int volume, int ageLimit);
             
             int getAgeLimit() const;
 
@@ -28,7 +28,7 @@ class ComputerGame : public Product
 class Zelda : public ComputerGame
 {
 public:
-    Zelda(int id, double price, int ageLimit, std::string platform);
+    Zelda(int id, double price, int volume, int ageLimit, std::string platform);
 
     std::string getPlatform() const;
 
@@ -45,7 +45,7 @@ private:
 class Minecraft : public ComputerGame
 {
 public:
-    Minecraft(int id, double price, int ageLimit, std::string platform);
+    Minecraft(int id, double price, int volume, int ageLimit, std::string platform);
     
     std::string getPlatform() const;
     

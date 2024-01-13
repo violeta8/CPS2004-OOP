@@ -639,7 +639,7 @@ public class App
                         StockRepository.deleteStock(product);
                         }
                         ProductRepository.updateProduct(product);
-                        if(product.getVolume()<=packagingList.get(i).getCapacity()){
+                        if(product.getVolume()*quantity<=packagingList.get(i).getCapacity()){
                             packagingList.get(i).addProduct(product);
                         }
                         else{

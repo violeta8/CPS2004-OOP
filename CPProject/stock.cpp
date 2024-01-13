@@ -1,30 +1,48 @@
 #include "stock.hpp"
 
-Stock::Stock(){}
-
-void Stock::addProduct(Product* product, int units)
+Stock::Stock(Product& product, int units)
 {
-    stock_[product] += units;
+    product_ = &product;
+    units_ = units;
 }
 
-void Stock::removeProduct(Product* product, int units)
+void Stock::addProduct(Product& product, int units)
 {
-    stock_[product] -= units;
+    product_ = &product;
+    units_ = units;
 }
 
-void Stock::displayStock() const
+void Stock::removeProduct()
 {
-    for (auto it = stock_.begin(); it != stock_.end(); ++it)
-    {
-        std::cout << "Product: " << it->first << std::endl;
-        std::cout << "Units: " << it->second << std::endl;
-    }
+    product_ = nullptr;
+    units_ = 0;
+}
+
+void Stock::updateStock(int units)
+{
+    units_ = units;
+}
+
+Product& Stock::getProduct() const
+{
+    return *product_;
+}
+
+int Stock::getUnits() const
+{
+    return units_;
 }
 
 Stock::~Stock()
 {
-    for (auto it = stock_.begin(); it != stock_.end(); ++it)
-    {
-        delete it->first;
-    }
+    product_ = nullptr;
+    units_ = 0;
+}
+
+std::string Stock::display_stock_info()const
+{
+    std::string info = "";
+    info += "Product: " + std::to_string(product_->getId())+ "\n";
+    info += "Units: " + std::to_string(units_) + "\n";
+    return info;
 }

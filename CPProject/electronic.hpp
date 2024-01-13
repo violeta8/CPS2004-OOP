@@ -6,7 +6,7 @@
 class Electronic : public Product
 {
       public:
-            Electronic(int id, double price, std::string brand);
+            Electronic(int id, double price, int volume, std::string brand);
             
             std::string getBrand() const;
 
@@ -25,7 +25,7 @@ class Electronic : public Product
 class Smartphone : public Electronic
 {
 public:
-    Smartphone(int id, double price, std::string brand, std::string operatingSystem);
+    Smartphone(int id, double price, int volume, std::string brand, std::string operatingSystem);
 
     std::string getOperatingSystem() const;
 
@@ -42,7 +42,7 @@ private:
 class Tablet : public Electronic
 {
 public:
-    Tablet(int id, double price, std::string brand, std::string model);
+    Tablet(int id, double price, int volume, std::string brand, std::string model);
     
     std::string getModel() const;
 

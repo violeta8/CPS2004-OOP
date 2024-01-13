@@ -24,7 +24,7 @@ class Supplier
             void addProduct(Product& product);//todo & ok?
             void removeProduct(Product& product);
             
-            friend std::ostream& operator<< (std::ostream& os, const Supplier& supplier);
+            std::string display_supplier_info()const;
 
             ~Supplier();
 

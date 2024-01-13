@@ -25,6 +25,17 @@ void Supplier::addProduct(Product& product) { products_.push_back(product); }
 
 void Supplier::removeProduct(Product& product) { products_.remove(product); }
 
+std::string Supplier::display_supplier_info()const
+{
+      std::string info = "";
+      info += "Supplier id: " + std::to_string(id_) + "\n";
+      info += "Supplier name: " + name_ + "\n";
+      info += "Supplier address: " + address_ + "\n";
+      info += "Supplier phone: " + phone_ + "\n";
+      info += "Supplier email: " + email_ + "\n";
+      return info;
+}
+
 Supplier::~Supplier()
 {
       products_.clear();

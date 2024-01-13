@@ -1,5 +1,5 @@
 {
-        "cmake.sourceDirectory": "/mnt/c/Users/viole/Desktop/ERASMUS/CPS2004-OOP/C++",
+        "cmake.sourceDirectory": "/mnt/c/Users/viole/Desktop/ERASMUS/cps2004-oop-1/CPProject",
         "files.associations": {
                 "new": "cpp",
                 "xtree": "cpp",
@@ -48,7 +48,8 @@
                 "xmemory": "cpp",
                 "xstddef": "cpp",
                 "xtr1common": "cpp",
-                "xutility": "cpp"
+                "xutility": "cpp",
+                "string_view": "cpp"
         },
         "java.debug.settings.onBuildFailureProceed": true,
         "files.watcherExclude": {
