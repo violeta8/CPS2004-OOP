@@ -1,7 +1,7 @@
 #include "clothing.hpp"
 
-Clothing::Clothing(int id, double price, int volume, std::string colour)
-      : Product(id, price, volume), colour_(colour){}
+Clothing::Clothing(int id, double price, int volume, Supplier supplier, std::string colour)
+      : Product(id, price, volume, supplier), colour_(colour){}
 
 
 std::string Clothing::getColour() const { return colour_; }
@@ -18,8 +18,8 @@ Clothing::~Clothing(){}
 
 
 //* --------------------------------Clothing concrete subclasses-------------------------------- *//
-TShirt::TShirt(int id, double price, int volume, std::string color, std::string size)
-        : Clothing(id, price, volume, color), size_(size){}
+TShirt::TShirt(int id, double price, int volume, Supplier supplier, std::string color, std::string size)
+        : Clothing(id, price, volume, supplier, color), size_(size){}
 
 
 std::string TShirt::getSize() const { return size_; }
@@ -44,8 +44,8 @@ std::string TShirt::display_product_info()
 TShirt::~TShirt(){}
 
 
-Pants::Pants(int id, double price, int volume, std::string color, std::string shop)
-        : Clothing(id, price, volume, color), shop_(shop){}
+Pants::Pants(int id, double price, int volume, Supplier supplier, std::string color, std::string shop)
+        : Clothing(id, price, volume, supplier, color), shop_(shop){}
 
 
 std::string Pants::getShop() const { return shop_; }

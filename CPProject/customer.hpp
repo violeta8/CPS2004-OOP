@@ -9,6 +9,7 @@ class Customer{
       public:
             Customer(std::string name, std::string address, std::string phone, std::string email);
             
+            void setId(int id);
             void setName(std::string name);
             void setAddress(std::string address);
             void setPhone(std::string phone);
@@ -27,7 +28,7 @@ class Customer{
             ~Customer();
       
       private:
-            static int idCustomer_;//todo incrementar
+            static int idCustomer_;//todo static(?)
             std::string name_;
             std::string address_;
             std::string phone_;

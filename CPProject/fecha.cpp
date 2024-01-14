@@ -51,6 +51,20 @@ Fecha::Fecha(const char* cad){
     }    
 }
 
+Fecha::Fecha(string f){
+    int d, m, a;
+    if(sscanf(f.c_str(), "%d/%d/%d", &d, &m, &a)!=3){
+        throw Invalida("Fecha incorrecta");
+    }
+    else{
+        dia_=d;
+        mes_=m;
+        anno_=a;
+        zeroDate(dia_,mes_,anno_);
+        CheckDate(dia_,mes_,anno_);
+    }    
+}
+
 void Fecha::zeroDate(int d, int m, int a){
     if(d==0){
         dia_=now_date().tm_mday;

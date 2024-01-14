@@ -9,6 +9,11 @@ Customer::Customer(std::string name, std::string address, std::string phone, std
       email_ = email;
 }
 
+void Customer::setId(int id)
+{
+      idCustomer_ = id;
+}
+
 int Customer::getId() const
 {
       return idCustomer_;

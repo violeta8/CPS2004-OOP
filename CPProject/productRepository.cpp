@@ -11,6 +11,7 @@ public:
       void updateProduct(int id, std::string what, std::string change);
       Product& getProductbyId(int id);
       std::string getAllProducts()const;
+      std::string getAllProductsbySupplier(int idSupplier)const;
       ~ProductRepository();
 
 private:
@@ -69,4 +70,22 @@ std::string ProductRepository::getAllProducts()const
             result += it->display_product_info();
       }
       return result;
+}
+
+std::string ProductRepository::getAllProductsbySupplier(int idSupplier)const
+{
+      std::string result = "";
+      for(std::list<Product>::const_iterator it = repository.begin(); it != repository.end(); ++it)
+      {
+            if (it->getSupplier().getId() == idSupplier)
+            {
+                  result += it->display_product_info();
+            }
+      }
+      return result;
+}
+
+ProductRepository::~ProductRepository()
+{
+      repository.clear();
 }

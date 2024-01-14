@@ -7,7 +7,7 @@
 class Book : public Product
 {
       public:
-            Book(int id, double price, int volume, std::string title);
+            Book(int id, double price, int volume, Supplier supplier,std::string title);
             
             void setAuthor(std::string author);
             void setTitle(std::string title);
@@ -33,7 +33,7 @@ class Book : public Product
 class Novel : public Book
 {
       public:
-            Novel(int id, double price, int volume, std::string title, std::string genre);
+            Novel(int id, double price, int volume, Supplier supplier,std::string title, std::string genre);
             
             std::string getGenre() const;
 
@@ -50,7 +50,7 @@ class Novel : public Book
 class Textbook : public Book
 {
       public:
-            Textbook(int id, double price, int volume, std::string title, std::string subject);
+            Textbook(int id, double price, int volume, Supplier supplier,std::string title, std::string subject);
             
             std::string getSubject() const;
             

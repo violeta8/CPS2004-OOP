@@ -6,7 +6,7 @@
 class HomeAppliance : public Product
 {
       public:
-            HomeAppliance(int id, double price, int volume, std::string brand);
+            HomeAppliance(int id, double price, int volume, Supplier supplier, std::string brand);
             
             std::string getBrand() const;
 
@@ -24,7 +24,7 @@ class HomeAppliance : public Product
 class Fridge : public HomeAppliance
 {
 public:
-    Fridge(int id, double price, int volume, std::string brand, std::string model);
+    Fridge(int id, double price, int volume, Supplier supplier, std::string brand, std::string model);
     
     std::string getModel() const;
 
@@ -41,7 +41,7 @@ private:
 class WashingMachine : public HomeAppliance
 {
 public:
-    WashingMachine(int id, double price, int volume, std::string brand, std::string energyEfficiency);
+    WashingMachine(int id, double price, int volume, Supplier supplier, std::string brand, std::string energyEfficiency);
     
     std::string getEnergyEfficiency() const;
 

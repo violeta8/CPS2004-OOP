@@ -1,14 +1,43 @@
 #include "product.hpp"
 
 //* --------------------------------Product abstract class-------------------------------- *//
-Product::Product(int id, double price, int volume) 
-      : id_(id), price_(price), volume_(volume){}
+Product::Product(int id, double price, int volume, Supplier supplier) 
+      : id_(id), price_(price), volume_(volume), supplier_(supplier){}
 
-void Product::setId(int id) { id_ = id; }
+void Product::setId(int id) 
+{
+      id_ = id;
+}
 
-int Product::getId() const { return id_; }
+void Product::setPrice(double price) 
+{
+      price_ = price;
+}
 
-double Product::getPrice() const { return price_; }
+void Product::setVolume(int volume) 
+{
+      volume_ = volume;
+}
+
+int Product::getId() const 
+{ 
+      return id_; 
+}
+
+double Product::getPrice() const 
+{
+      return price_; 
+}
+
+int Product::getVolume() const 
+{
+      return volume_; 
+}
+
+Supplier Product::getSupplier() const 
+{
+      return supplier_; 
+}
 
 void Product::updateProduct(std::string what, std::string change)
 {
@@ -37,6 +66,5 @@ double Product::calculate_discount(int quantity, int month) const
       }
 }
 
-void Product::setPrice(double price) { price_ = price; }
 
 Product::~Product(){}

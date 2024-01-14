@@ -17,9 +17,11 @@ import project.supplier.*;
 import project.supplier.SupplierRepository;
 import project.transport.*;
 import project.transport.TransportRepository;
-import project.transport.truck.Truck;
-import project.transport.ship.Ship;
-import project.transport.plane.Plane;
+import project.transport.truck.TruckFactory;
+import project.transport.ship.ShipFactory;
+import project.transport.plane.PlaneFactory;
+import project.shipment.ShipmentDecorator;
+
 
 
 /**
@@ -134,22 +136,18 @@ public class App
                 System.out.println( "12. Fridge" );
                 int choice3 = scanner.nextInt();
                 scanner.nextLine();
-                switch(choice3){
-                    case 1:
-                        System.out.println( "Please enter the book's genre" );
-                        String genre = scanner.nextLine();
-                        System.out.println( "Please enter the book's title" );
-                        String title = scanner.nextLine();
-                        System.out.println( "Please enter the book's price" );
+                System.out.println( "Please enter the new products's price" );
                         double price = scanner.nextDouble();
                         scanner.nextLine();
-                        System.out.println("Please enter the book's volume");
+                        System.out.println("Please enter the new products's volume");
                         int volume = scanner.nextInt();
                         scanner.nextLine();
-                        System.out.println("Please enter the book's units");
+                        System.out.println("Please enter the new products's units");
                         int units = scanner.nextInt();
                         scanner.nextLine();
-                        Novel novel = new Novel(s, volume,price,title,genre);
+                switch(choice3){
+                    case 1:
+                        Novel novel = new Novel(s, volume, price);
                         ProductRepository.saveProduct(novel);
                         SupplierRepository.updateSupplier(s.getIdSupplier(),novel);
                         Stock stock = new Stock(novel,units);
@@ -157,237 +155,92 @@ public class App
                         break;
 
                     case 2:
-                        System.out.println( "Please enter the textbook's edition" );
-                        int edition = scanner.nextInt();
-                        scanner.nextLine();
-                        System.out.println( "Please enter the textbook's title" );
-                        String title1 = scanner.nextLine();
-                        System.out.println( "Please enter the textbook's price" );
-                        double price1 = scanner.nextDouble();
-                        scanner.nextLine();
-                        System.out.println("Please enter the textbook's volume");
-                        int volume1 = scanner.nextInt();
-                        scanner.nextLine();
-                        System.out.println("Please enter the textbook's units");
-                        int units1 = scanner.nextInt();
-                        scanner.nextLine();
-                        Textbook textbook = new Textbook(s,volume1,price1,title1,edition);
+                        
+                        Textbook textbook = new Textbook(s, volume, price);
                         ProductRepository.saveProduct(textbook);
                         SupplierRepository.updateSupplier(s.getIdSupplier(),textbook);
-                        Stock stock1 = new Stock(textbook,units1);
+                        Stock stock1 = new Stock(textbook, units);
                         StockRepository.saveStock(stock1);
                         break;
 
                     case 3:
-                        System.out.println( "Please enter the game's age restriction" );
-                        int ageRestriction = scanner.nextInt();
-                        scanner.nextLine();
-                        System.out.println( "Please enter the game's platform" );
-                        String platform = scanner.nextLine();
-                        System.out.println( "Please enter the game's price" );
-                        double price2 = scanner.nextDouble();
-                        scanner.nextLine();
-                        System.out.println("Please enter the game's packaging volume");
-                        int volume2 = scanner.nextInt();
-                        scanner.nextLine();
-                        System.out.println("Please enter the game's units");
-                        int units2 = scanner.nextInt();
-                        scanner.nextLine();
-                        Minecraft minecraft = new Minecraft(s,volume2,price2,platform,ageRestriction);
+                        
+                        Minecraft minecraft = new Minecraft(s, volume, price);
                         ProductRepository.saveProduct(minecraft);
                         SupplierRepository.updateSupplier(s.getIdSupplier(),minecraft);
-                        Stock stock2 = new Stock(minecraft,units2); 
+                        Stock stock2 = new Stock(minecraft, units); 
                         StockRepository.saveStock(stock2);
                         break;
 
                     case 4:
-                        System.out.println( "Please enter the game's rating" );
-                        String rating = scanner.nextLine();
-                        System.out.println( "Please enter the game's platform" );
-                        String platform1 = scanner.nextLine();
-                        System.out.println( "Please enter the game's price" );
-                        double price3 = scanner.nextDouble();
-                        scanner.nextLine();
-                        System.out.println("Please enter the game's volume");
-                        int volume3 = scanner.nextInt();
-                        scanner.nextLine();
-                        System.out.println("Please enter the game's units");
-                        int units3 = scanner.nextInt();
-                        scanner.nextLine();
-                        Zelda zelda = new Zelda(s,volume3,price3,platform1,rating); 
+                        
+                        Zelda zelda = new Zelda(s, volume, price); 
                         ProductRepository.saveProduct(zelda);
                         SupplierRepository.updateSupplier(s.getIdSupplier(),zelda);
-                        Stock stock3 = new Stock(zelda,units3);
+                        Stock stock3 = new Stock(zelda, units);
                         StockRepository.saveStock(stock3);
                         break;
 
                     case 5:
-                        System.out.println( "Please enter the tablet's brand" );
-                        String brand = scanner.nextLine();
-                        System.out.println( "Please enter the tablet's energy consumption" );
-                        String energyConsumption = scanner.nextLine();
-                        System.out.println( "Please enter the tablet's price" );
-                        double price4 = scanner.nextDouble();
-                        scanner.nextLine();
-                        System.out.println("Please enter the tablet's packaging volume");
-                        int volume4 = scanner.nextInt();
-                        scanner.nextLine();
-                        System.out.println("Please enter the tablet's units");
-                        int units4 = scanner.nextInt();
-                        scanner.nextLine();
-                        Tablet tablet = new Tablet(s,volume4,price4,brand,energyConsumption);
+                        
+                        Tablet tablet = new Tablet(s, volume, price);
                         ProductRepository.saveProduct(tablet);
                         SupplierRepository.updateSupplier(s.getIdSupplier(),tablet);
-                        Stock stock4 = new Stock(tablet,units4);
+                        Stock stock4 = new Stock(tablet, units);
                         StockRepository.saveStock(stock4);
                         break;
 
                     case 6:
-                        System.out.println( "Please enter the smartphone's OS" );
-                        String OS = scanner.nextLine();
-                        System.out.println( "Please enter the smartphone's energy consumption" );
-                        String energyConsumption1 = scanner.nextLine();
-                        System.out.println( "Please enter the smartphone's price" );
-                        double price5 = scanner.nextDouble();
-                        scanner.nextLine();
-                        System.out.println("Please enter the smartphone's packaging volume");
-                        int volume5 = scanner.nextInt();
-                        scanner.nextLine();
-                        System.out.println("Please enter the phone's units");
-                        int units5 = scanner.nextInt();
-                        scanner.nextLine();
-                        SmartPhone smartphone = new SmartPhone(s,volume5,price5,energyConsumption1,OS);
+                        SmartPhone smartphone = new SmartPhone(s, volume, price);
                         ProductRepository.saveProduct(smartphone);
                         SupplierRepository.updateSupplier(s.getIdSupplier(),smartphone);
-                        Stock stock5 = new Stock(smartphone,units5);
+                        Stock stock5 = new Stock(smartphone, units);
                         StockRepository.saveStock(stock5);
                         break;
 
                     case 7:
-                        System.out.println( "Please enter the tshirt's color" );
-                        String color = scanner.nextLine();
-                        System.out.println( "Please enter the tshirt's size" );
-                        String size = scanner.nextLine();
-                        System.out.println( "Please enter the tshirt's price" );
-                        double price6 = scanner.nextDouble();
-                        scanner.nextLine();
-                        System.out.println("Please enter the tshirt's packaging volume");
-                        int volume6 = scanner.nextInt();
-                        scanner.nextLine();
-                        System.out.println("Please enter the tshirt's units");
-                        int units6 = scanner.nextInt();
-                        scanner.nextLine();
-                        TShirt tshirt = new TShirt(s,volume6,price6,color,size);
+                        TShirt tshirt = new TShirt(s, volume, price);
                         ProductRepository.saveProduct(tshirt);
                         SupplierRepository.updateSupplier(s.getIdSupplier(),tshirt);
-                        Stock stock6 = new Stock(tshirt,units6);
+                        Stock stock6 = new Stock(tshirt, units);
                         StockRepository.saveStock(stock6);
                         break;
 
                     case 8:
-                        System.out.println( "Please enter the pants shop's name" );
-                        String shopName = scanner.nextLine();
-                        System.out.println( "Please enter the pants' size" );
-                        String size1 = scanner.nextLine();
-                        System.out.println( "Please enter the pants' price" );
-                        double price7 = scanner.nextDouble();
-                        scanner.nextLine();
-                        System.out.println("Please enter the pants' packaging volume");
-                        int volume7 = scanner.nextInt();
-                        scanner.nextLine();
-                        System.out.println("Please enter the pant's units");
-                        int units7 = scanner.nextInt();
-                        scanner.nextLine();
-                        Pants pants = new Pants(s,volume7,price7,shopName,size1);
+                        Pants pants = new Pants(s, volume, price);
                         ProductRepository.saveProduct(pants);
                         SupplierRepository.updateSupplier(s.getIdSupplier(),pants);
-                        Stock stock7 = new Stock(pants,units7);
+                        Stock stock7 = new Stock(pants, units);
                         StockRepository.saveStock(stock7);
                         break;
 
                     case 9:
-                        System.out.println( "Please enter the milk's brand" );
-                        String brand1 = scanner.nextLine();
-                        System.out.println( "Please enter the milk's expiration date" );
-                        String expirationDate = scanner.nextLine();
-                        System.out.println( "Please enter the milk's price" );
-                        double price8 = scanner.nextDouble();
-                        scanner.nextLine();
-                        System.out.println("Please enter the milk's packaging volume");
-                        int volume8 = scanner.nextInt();
-                        scanner.nextLine();
-                        System.out.println("Please enter the milk's units");
-                        int units8 = scanner.nextInt();
-                        scanner.nextLine();
-                        Milk milk = new Milk(s,volume8,price8,expirationDate,brand1);
+                        Milk milk = new Milk(s, volume, price);
                         ProductRepository.saveProduct(milk);
                         SupplierRepository.updateSupplier(s.getIdSupplier(),milk);
-                        Stock stock8 = new Stock(milk,units8);
+                        Stock stock8 = new Stock(milk, units);
                         StockRepository.saveStock(stock8);
                         break;
 
                     case 10:
-                        System.out.println( "Please enter the cheese's fat content" );
-                        int fatContent = scanner.nextInt();
-                        scanner.nextLine();
-                        System.out.println( "Please enter the cheese's expiration date" );
-                        String expirationDate1 = scanner.nextLine();
-                        System.out.println( "Please enter the cheese's price" );
-                        double price9 = scanner.nextDouble();
-                        scanner.nextLine();
-                        System.out.println("Please enter the cheese's packaging volume");
-                        int volume9 = scanner.nextInt();
-                        scanner.nextLine();
-                        System.out.println("Please enter the chesse's units");
-                        int units9 = scanner.nextInt();
-                        scanner.nextLine();
-                        Cheese cheese = new Cheese(s,volume9,price9,expirationDate1,fatContent);
+                        Cheese cheese = new Cheese(s, volume, price);
                         ProductRepository.saveProduct(cheese);
                         SupplierRepository.updateSupplier(s.getIdSupplier(),cheese);
-                        Stock stock9 = new Stock(cheese,units9);
+                        Stock stock9 = new Stock(cheese, units);
                         StockRepository.saveStock(stock9);
                         break;
                     case 11:
-                        System.out.println( "Please enter the washing machine's volume" );
-                        int volume10 = scanner.nextInt();
-                        scanner.nextLine();
-                        System.out.println( "Please enter the washing machine's warranty period" );
-                        int warrantyPeriod = scanner.nextInt();
-                        scanner.nextLine();
-                        System.out.println( "Please enter the washing machine's price" );
-                        double price10 = scanner.nextDouble();
-                        scanner.nextLine();
-                        System.out.println("Please enter the washing machine's packaging volume");
-                        int volume11 = scanner.nextInt();
-                        scanner.nextLine();
-                        System.out.println("Please enter the washing machine's units");
-                        int units10 = scanner.nextInt();
-                        scanner.nextLine();
-                        WashingMachine washingMachine = new WashingMachine(s,volume11,price10,volume10,warrantyPeriod);
+                        WashingMachine washingMachine = new WashingMachine(s, volume, price);
                         ProductRepository.saveProduct(washingMachine);
                         SupplierRepository.updateSupplier(s.getIdSupplier(),washingMachine);
-                        Stock stock10 = new Stock(washingMachine,units10);
+                        Stock stock10 = new Stock(washingMachine, units);
                         StockRepository.saveStock(stock10);
                         break;
                     case 12:
-                        System.out.println( "Please enter the fridge's energy consumption" );
-                        String energyConsumption2 = scanner.nextLine();
-                        System.out.println( "Please enter the fridge's warranty period" );
-                        int warrantyPeriod1 = scanner.nextInt();
-                        scanner.nextLine();
-                        System.out.println( "Please enter the fridge's price" );
-                        double price11 = scanner.nextDouble();
-                        scanner.nextLine();
-                        System.out.println("Please enter the fridge's packaging volume");
-                        int volume12 = scanner.nextInt();
-                        scanner.nextLine();
-                        System.out.println("Please enter the fridge's units");
-                        int units11 = scanner.nextInt();
-                        scanner.nextLine();
-                        Fridge fridge = new Fridge(s,volume12,price11,warrantyPeriod1,energyConsumption2);
+                        Fridge fridge = new Fridge(s, volume, price);
                         ProductRepository.saveProduct(fridge);
                         SupplierRepository.updateSupplier(s.getIdSupplier(),fridge);
-                        Stock stock11 = new Stock(fridge,units11);
+                        Stock stock11 = new Stock(fridge, units);
                         StockRepository.saveStock(stock11);
                         break;
                 
@@ -503,9 +356,13 @@ public class App
         int choice5 = scanner.nextInt();
         scanner.nextLine();
         switch (choice5) {
-        
-            case 1:
+            case 1:                
                 System.out.println( "You have selected to add a transport" );
+                System.out.println("Please enter the transport's cost per km");
+                int costPerKM = scanner.nextInt();
+                scanner.nextLine();
+                System.out.println("Please enter the transport's speed");
+                double speed = scanner.nextDouble();
                 System.out.println( "Please enter the transport's type" );
                 System.out.println( "1. Truck" );
                 System.out.println( "2. Ship" );
@@ -514,39 +371,18 @@ public class App
                 scanner.nextLine();
                 switch(type){
                     case 1:
-                        System.out.println("Please enter the truck's license plate");
-                        String plate = scanner.nextLine();
-                        System.out.println("Please enter the truck's cost per km");
-                        int costPerKM = scanner.nextInt();
-                        scanner.nextLine();
-                        System.out.println("Please enter the truck's speed");
-                        double speed = scanner.nextDouble();
-                        scanner.nextLine();
-                        Truck truck = new Truck(TransportRepository.nextIdTransport(), costPerKM, speed, plate);
+                        TransportFactory truckFactory= new TruckFactory();
+                        Transport truck = truckFactory.createTransport(TransportRepository.nextIdTransport(), costPerKM, speed);
                         TransportRepository.saveTransport(truck);
                         break;
                     case 2:
-                        System.out.println("Please enter the ship's license plate");
-                        String plate1 = scanner.nextLine();
-                        System.out.println("Please enter the ship's cost per km");
-                        int costPerKM1 = scanner.nextInt();
-                        scanner.nextLine();
-                        System.out.println("Please enter the ship's speed");
-                        double speed1 = scanner.nextDouble();
-                        scanner.nextLine();
-                        Ship ship = new Ship(TransportRepository.nextIdTransport(), costPerKM1, speed1, plate1);
+                        TransportFactory shipFactory= new ShipFactory();
+                        Transport ship = shipFactory.createTransport(TransportRepository.nextIdTransport(), costPerKM, speed);
                         TransportRepository.saveTransport(ship);
                         break;
                     case 3:
-                        System.out.println("Please enter the plane's license plate");
-                        String plate2 = scanner.nextLine();
-                        System.out.println("Please enter the plane's cost per km");
-                        int costPerKM2 = scanner.nextInt();
-                        scanner.nextLine();
-                        System.out.println("Please enter the plane's speed");
-                        double speed2 = scanner.nextDouble();
-                        scanner.nextLine();
-                        Plane plane = new Plane(TransportRepository.nextIdTransport(), costPerKM2, speed2, plate2);
+                        TransportFactory planeFactory= new PlaneFactory();
+                        Transport plane = planeFactory.createTransport(TransportRepository.nextIdTransport(), costPerKM, speed);
                         TransportRepository.saveTransport(plane);
                         break;
                     default:
@@ -570,7 +406,6 @@ public class App
                 System.out.println( "Please enter what would you like to change" );
                 String change = scanner.nextLine();
                 System.out.println( "Please enter the new value" );
-                
                 String newchange = scanner.nextLine();
                 try{
                     SupplierRepository.updateSupplier(id1, change,newchange);
@@ -647,13 +482,13 @@ public class App
                             i++;
                             packagingList.get(i).addProduct(product);
                         }
-                        
                     }
-                    
                 System.out.println("Would you like to add more products? Please write yes");
                 }while(scanner.nextLine().equals("yes"));
                 Shipment shipment = new Shipment(customer, packagingList , transport, LocalDate.now());
                 ShipmentRepository.saveShipment(shipment);
+                ShipmentDecorator shipmentCost = new ShipmentDecoratorTotalCost(shipment);
+                ShipmentDecorator shipmentDelivery = new ShipmentDecoratorDeliveryDate(shipment);
                 break;
 
             case 2:
@@ -682,12 +517,12 @@ public class App
                     System.out.println(e.getMessage());
                 }
                 break;
+
             case 4:
                 System.out.println( "You have selected to view all shipments" );
                 System.out.println( "This is the List of shipments that are available at the moment:" );
                 System.out.println( ShipmentRepository.getAllShipments() );
                 break;
-        
         }
     }
 
@@ -733,7 +568,6 @@ public class App
         System.out.println( "Welcome to the Logistics Management Application OF THE UNIVERSITY OF MALTA" );
         System.out.println( "This is the main class" );
         System.out.println( "In here you will be able to see everything" );
-
         do{
             index();
             int choice = 0;
@@ -786,4 +620,3 @@ public class App
         scanner.close();
     }
 }
-

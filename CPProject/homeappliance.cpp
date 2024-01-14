@@ -1,8 +1,8 @@
 #include "homeappliance.hpp"
 #include "product.hpp"
 
-HomeAppliance::HomeAppliance(int id, double price, int volume, std::string brand) 
-      : Product(id, price, volume), brand_(brand){}
+HomeAppliance::HomeAppliance(int id, double price, int volume, Supplier supplier, std::string brand) 
+      : Product(id, price, volume, supplier), brand_(brand){}
 
 std::string HomeAppliance::getBrand() const { return brand_; }
 
@@ -19,8 +19,8 @@ HomeAppliance::~HomeAppliance(){}
 
 
 //* --------------------------------HomeAppliance concrete subclasses-------------------------------- *//
-Fridge::Fridge(int id, double price, int volume, std::string brand, std::string model)
-        : HomeAppliance(id, price, volume, brand), model_(model){}
+Fridge::Fridge(int id, double price, int volume, Supplier supplier, std::string brand, std::string model)
+        : HomeAppliance(id, price, volume, supplier, brand), model_(model){}
 
 std::string Fridge::getModel() const { return model_; }
 
@@ -44,8 +44,8 @@ std::string Fridge::display_product_info()
 Fridge::~Fridge(){}
 
 
-WashingMachine::WashingMachine(int id, double price, int volume, std::string brand, std::string energyEfficiency)
-        : HomeAppliance(id, price, volume, brand), energyEfficiency_(energyEfficiency){}
+WashingMachine::WashingMachine(int id, double price, int volume, Supplier supplier, std::string brand, std::string energyEfficiency)
+        : HomeAppliance(id, price, volume, supplier, brand), energyEfficiency_(energyEfficiency){}
 
 std::string WashingMachine::getEnergyEfficiency() const { return energyEfficiency_; }
 

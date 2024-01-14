@@ -50,7 +50,7 @@ double Packaging::getWeight() const
 }
 
 
-void Packaging::display_info() const
+void Packaging::display_packaging_info() const
 {
     std::cout << "Units: " << getUnits() << std::endl;
     std::cout << "Price: " << getPrice() << std::endl;

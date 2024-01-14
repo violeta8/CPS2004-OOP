@@ -2,11 +2,12 @@
 #define PRODUCT_HPP_
 
 #include <iostream>
+#include "supplier.hpp"
 
 class Product 
 {
       public:
-            Product(int id, double price, int volume);
+            Product(int id, double price, int volume, Supplier supplier);
             
             void setId(int id);
             void setPrice(double price);
@@ -15,6 +16,7 @@ class Product
             int getId() const;
             double getPrice() const;
             int getVolume() const;
+            Supplier getSupplier() const;
 
             virtual void updateProduct(std::string what, std::string change);
 
@@ -27,6 +29,7 @@ class Product
             int id_;//get this incremented
             double price_;
             int volume_;
+            Supplier supplier_;
 };
 
 #endif // PRODUCT_HPP_

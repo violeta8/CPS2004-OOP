@@ -1,7 +1,7 @@
 #include "book.hpp"
 
-Book::Book(int id, double price, int volume, std::string title) 
-      : Product(id, price, volume), title_(title){}
+Book::Book(int id, double price, int volume, Supplier supplier,std::string title) 
+      : Product(id, price, volume, supplier), title_(title){}
 
 void Book::setTitle(std::string title) { title_ = title; }
 
@@ -18,8 +18,8 @@ void Book::updateProduct(std::string what, std::string change)
 Book::~Book(){}
 
 
-Novel::Novel(int id, double price, int volume, std::string title, std::string genre) 
-      : Book(id, price, volume, title), genre_(genre){}
+Novel::Novel(int id, double price, int volume, Supplier supplier,std::string title, std::string genre) 
+      : Book(id, price, volume, supplier, title), genre_(genre){}
 
 std::string Novel::getGenre() const { return genre_; }
 
@@ -44,8 +44,8 @@ Novel::~Novel(){}
 
 
 
-Textbook::Textbook(int id, double price, int volume, std::string title, std::string subject)
-      : Book(id, price, volume, title), subject_(subject){}
+Textbook::Textbook(int id, double price, int volume, Supplier supplier,std::string title, std::string subject)
+      : Book(id, price, volume, supplier, title), subject_(subject){}
 
 std::string Textbook::getSubject() const { return subject_; }
 

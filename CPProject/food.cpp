@@ -1,8 +1,8 @@
 #include "food.hpp"
 #include "product.hpp"
 
-Food::Food(int id, double price, int volume, std::string expirationDate) 
-      : Product(id, price, volume), expirationDate_(expirationDate){}
+Food::Food(int id, double price, int volume, Supplier supplier, std::string expirationDate) 
+      : Product(id, price, volume, supplier), expirationDate_(expirationDate){}
 
 
 std::string Food::getExpirationDate() const { return expirationDate_; }
@@ -11,8 +11,8 @@ Food::~Food(){}
 
 
 //* --------------------------------Food concrete subclasses-------------------------------- *//
-Milk::Milk(int id, double price, int volume, std::string expirationDate, std::string getFatContent)
-        : Food(id, price, volume, expirationDate), fatContent_(getFatContent){}
+Milk::Milk(int id, double price, int volume, Supplier supplier, std::string expirationDate, std::string getFatContent)
+        : Food(id, price, volume, supplier, expirationDate), fatContent_(getFatContent){}
 
 std::string Milk::getFatContent() const { return fatContent_; }
 
@@ -28,8 +28,8 @@ std::string Milk::display_product_info()
 Milk::~Milk(){}
 
 
-Cheese::Cheese(int id, double price, int volume, std::string expirationDate, std::string type)
-        : Food(id, price, volume, expirationDate), type_(type){}
+Cheese::Cheese(int id, double price, int volume, Supplier supplier, std::string expirationDate, std::string type)
+        : Food(id, price, volume, supplier, expirationDate), type_(type){}
 
 std::string Cheese::getType() const { return type_; }
 

@@ -7,12 +7,13 @@ using namespace std;
 
 class Fecha{
     public:
-        static const int AnnoMaximo=2037, AnnoMinimo=1902;
+        static const int AnnoMaximo=3000, AnnoMinimo=2024;
         explicit Fecha (int dia_);
         Fecha (int dia_, int mes_, int anno_);
         Fecha (int dia_, int mes_);
         Fecha ();
         Fecha (const char* cad);
+        Fecha (std::string f);
 
         int dia() const{return dia_;};
         int mes()  const{return mes_;};

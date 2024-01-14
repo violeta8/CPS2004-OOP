@@ -6,10 +6,9 @@ import project.transport.Transport;
 import project.transport.TransportRepository;
 
 import java.util.List;
-
 import java.time.LocalDate;
 
-public class Shipment {
+public class Shipment{
     private int idShipment;
     private Customer customer;
     private List<Packaging> packagings;//this should already have the whole products inside of it
@@ -23,7 +22,7 @@ public class Shipment {
         this.packagings = packagings;
         this.transport = transport;
         this.purchaseDate = purchaseDate;
-        setDeliveryDate();
+        this.deliveryDate = getDeliveryDate();
     }
 
     public Shipment( Customer customer, List<Packaging> packagings, Transport transport, LocalDate purchaseDate) {
@@ -31,7 +30,7 @@ public class Shipment {
         this.packagings = packagings;
         this.transport = transport;
         this.purchaseDate = purchaseDate;
-        setDeliveryDate();
+        this.deliveryDate = getDeliveryDate();
     }
 
     public Shipment() {
@@ -117,24 +116,19 @@ public class Shipment {
         this.deliveryDate = deliveryDate;
     }
 
-    public LocalDate getDeliveryDate() {
-        return deliveryDate;
-    }
-
-    public void setDeliveryDate() {//there cannot be a wrong deliverydate as it is calculated from the purchase date
+    public LocalDate getDeliveryDate() {//there cannot be a wrong deliverydate as it is calculated from the purchase date
         int distance = (int)(customer.getWarehouseDistance()/100);
+        LocalDate aux;
         if(transport.route()==64){
-            this.deliveryDate = purchaseDate.plusDays(1+distance);
+            aux = purchaseDate.plusDays(1+distance);
         }
         else if(transport.route()==128){
-            this.deliveryDate = purchaseDate.plusDays(4+distance);
+            aux = purchaseDate.plusDays(4+distance);
         }
-        else if(transport.route()==256){
-            this.deliveryDate = purchaseDate.plusDays(8+distance);
+        else {
+            aux = purchaseDate.plusDays(8+distance);
         }
-        else{
-            throw new IllegalArgumentException("There's no right route");
-        }
+        return aux;
     }
 
     @Override

@@ -15,16 +15,6 @@ public abstract class Product {
         this.price = price;
     }
 
-    protected Product() {
-        productId = 0;
-        supplier = null;
-        price = 0;
-    }
-
-    public void nextId() {
-        productId++;
-    }
-
     boolean equals (Product product) {
         return this.productId == product.productId;
     }

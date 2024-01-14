@@ -3916,3 +3916,144 @@ ene 07, 2024 2:59:36 P. M. scala.meta.internal.pc.CompilerAccess handleError
 SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\viole\Desktop\ERASMUS\CPS2004-OOP\.metals\.reports\metals-full\2024-01-07\r_compiler-error_14-59-36-374.md
 ene 07, 2024 3:00:33 P. M. scala.meta.internal.pc.CompilerAccess handleError
 SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\viole\Desktop\ERASMUS\CPS2004-OOP\.metals\.reports\metals-full\2024-01-07\r_compiler-error_15-00-33-076.md
+2024.01.13 12:02:34 INFO  Started: Metals version 1.2.0 in folders 'C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1' for client Visual Studio Code 1.85.1.
+2024.01.13 12:02:40 WARN  Build server is not auto-connectable.
+2024.01.13 12:02:40 WARN  no build target for: C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\application\src\main\java\project\product\ComputerGame.java
+2024.01.13 12:02:40 WARN  no build target for: C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\application\src\main\java\project\product\Book.java
+2024.01.13 12:02:44 INFO  no build target found for C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\application\src\main\java\project\product\ComputerGame.java. Using presentation compiler with project's scala-library version: 3.3.1
+ene 13, 2024 12:02:47 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\.metals\.reports\metals-full\2024-01-13\r_compiler-error_12-02-47-034.md
+2024.01.13 12:05:22 WARN  no build target for: C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\application\src\main\java\project\product\Electronic.java
+ene 13, 2024 12:05:24 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\.metals\.reports\metals-full\2024-01-13\r_compiler-error_12-05-24-217.md
+2024.01.13 12:05:51 WARN  no build target for: C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\application\src\main\java\project\product\Clothing.java
+2024.01.13 12:07:39 WARN  no build target for: C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\application\src\main\java\project\product\Food.java
+2024.01.13 12:08:16 WARN  no build target for: C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\application\src\main\java\project\product\HomeAppliance.java
+2024.01.13 12:22:04 WARN  no build target for: C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\application\src\main\java\project\product\Milk.java
+ene 13, 2024 12:22:05 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\.metals\.reports\metals-full\2024-01-13\r_compiler-error_12-22-05-363.md
+2024.01.13 12:26:18 WARN  no build target for: C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\application\src\main\java\project\product\Cheese.java
+2024.01.13 12:28:58 WARN  no build target for: C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\application\src\main\java\project\product\SmartPhone.java
+2024.01.13 12:29:49 WARN  no build target for: C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\application\src\main\java\project\product\Tablet.java
+2024.01.13 12:31:32 WARN  no build target for: C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\application\src\main\java\project\product\Minecraft.java
+ene 13, 2024 12:31:34 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\.metals\.reports\metals-full\2024-01-13\r_compiler-error_12-31-34-029.md
+ene 13, 2024 12:31:35 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\.metals\.reports\metals-full\2024-01-13\r_compiler-error_12-31-35-154.md
+2024.01.13 12:32:21 WARN  no build target for: C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\application\src\main\java\project\product\Zelda.java
+ene 13, 2024 12:32:22 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\.metals\.reports\metals-full\2024-01-13\r_compiler-error_12-32-22-079.md
+2024.01.13 12:33:48 WARN  no build target for: C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\application\src\main\java\project\product\Fridge.java
+2024.01.13 12:35:26 WARN  no build target for: C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\application\src\main\java\project\product\WashingMachine.java
+2024.01.13 12:36:27 WARN  no build target for: C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\application\src\main\java\project\product\Novel.java
+2024.01.13 12:37:31 WARN  no build target for: C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\application\src\main\java\project\product\Textbook.java
+ene 13, 2024 12:37:32 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\.metals\.reports\metals-full\2024-01-13\r_compiler-error_12-37-32-308.md
+2024.01.13 12:38:17 WARN  no build target for: C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\application\src\main\java\project\product\TShirt.java
+ene 13, 2024 12:38:19 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\.metals\.reports\metals-full\2024-01-13\r_compiler-error_12-38-19-376.md
+2024.01.13 12:38:55 WARN  no build target for: C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\application\src\main\java\project\product\Pants.java
+2024.01.13 12:43:05 WARN  no build target for: C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\application\src\main\java\project\packaging\Packaging.java
+ene 13, 2024 12:43:06 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\.metals\.reports\metals-full\2024-01-13\r_compiler-error_12-43-06-835.md
+ene 13, 2024 12:43:30 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\.metals\.reports\metals-full\2024-01-13\r_compiler-error_12-43-30-073.md
+ene 13, 2024 12:43:38 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\.metals\.reports\metals-full\2024-01-13\r_compiler-error_12-43-38-935.md
+2024.01.13 12:43:40 WARN  no build target for: C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\application\src\main\java\project\App.java
+ene 13, 2024 12:44:52 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\.metals\.reports\metals-full\2024-01-13\r_compiler-error_12-44-52-973.md
+2024.01.13 12:45:09 WARN  no build target for: C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\application\src\main\java\project\stock\Stock.java
+ene 13, 2024 12:45:41 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\.metals\.reports\metals-full\2024-01-13\r_compiler-error_12-45-41-087.md
+2024.01.13 12:45:49 WARN  no build target for: C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\application\src\main\java\project\App.java
+ene 13, 2024 12:46:03 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\.metals\.reports\metals-full\2024-01-13\r_compiler-error_12-46-03-363.md
+ene 13, 2024 12:46:09 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\.metals\.reports\metals-full\2024-01-13\r_compiler-error_12-46-09-284.md
+2024.01.13 12:46:16 WARN  no build target for: C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\application\src\main\java\project\packaging\Packaging.java
+ene 13, 2024 12:46:17 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\.metals\.reports\metals-full\2024-01-13\r_compiler-error_12-46-17-444.md
+ene 13, 2024 12:46:18 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\.metals\.reports\metals-full\2024-01-13\r_compiler-error_12-46-18-765.md
+ene 13, 2024 12:46:20 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\.metals\.reports\metals-full\2024-01-13\r_compiler-error_12-46-20-593.md
+2024.01.13 12:46:21 WARN  no build target for: C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\application\src\main\java\project\packaging\Packaging.java
+ene 13, 2024 12:46:21 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\.metals\.reports\metals-full\2024-01-13\r_compiler-error_12-46-21-601.md
+2024.01.13 12:46:21 WARN  no build target for: C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\application\src\main\java\project\packaging\Packaging.java
+2024.01.13 12:46:45 WARN  no build target for: C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\application\src\main\java\project\stock\Stock.java
+ene 13, 2024 12:46:50 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\.metals\.reports\metals-full\2024-01-13\r_compiler-error_12-46-50-783.md
+ene 13, 2024 12:51:12 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\.metals\.reports\metals-full\2024-01-13\r_compiler-error_12-51-12-631.md
+2024.01.13 12:51:48 WARN  no build target for: C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\application\src\main\java\project\transport\Transport.java
+ene 13, 2024 12:51:48 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\.metals\.reports\metals-full\2024-01-13\r_compiler-error_12-51-48-673.md
+ene 13, 2024 12:51:48 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\.metals\.reports\metals-full\2024-01-13\r_compiler-error_12-51-48-945.md
+ene 13, 2024 12:51:50 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\.metals\.reports\metals-full\2024-01-13\r_compiler-error_12-51-50-779.md
+2024.01.13 12:54:20 WARN  no build target for: C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\application\src\main\java\project\transport\truck\Truck.java
+2024.01.13 12:55:03 WARN  no build target for: C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\application\src\main\java\project\transport\plane\Plane.java
+2024.01.13 12:55:05 WARN  no build target for: C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\application\src\main\java\project\transport\ship\Ship.java
+2024.01.13 12:58:53 WARN  no build target for: C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\application\src\main\java\project\shipment\Shipment.java
+2024.01.13 13:02:39 WARN  no build target for: C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\application\src\main\java\project\customer\Customer.java
+ene 13, 2024 1:02:41 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\.metals\.reports\metals-full\2024-01-13\r_compiler-error_13-02-41-700.md
+ene 13, 2024 1:02:42 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\.metals\.reports\metals-full\2024-01-13\r_compiler-error_13-02-42-026.md
+2024.01.13 13:02:47 WARN  no build target for: C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\application\src\main\java\project\packaging\Packaging.java
+2024.01.13 13:02:51 WARN  no build target for: C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\application\src\main\java\project\transport\plane\Plane.java
+2024.01.13 13:03:24 WARN  no build target for: C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\application\src\main\java\project\packaging\Packaging.java
+2024.01.13 13:04:10 WARN  no build target for: C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\application\src\main\java\project\customer\CustomerRepository.java
+ene 13, 2024 4:46:35 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\.metals\.reports\metals-full\2024-01-13\r_compiler-error_16-46-35-568.md
+ene 13, 2024 4:46:40 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\.metals\.reports\metals-full\2024-01-13\r_compiler-error_16-46-40-583.md
+ene 13, 2024 4:46:40 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\.metals\.reports\metals-full\2024-01-13\r_compiler-error_16-46-40-925.md
+ene 13, 2024 4:46:45 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\.metals\.reports\metals-full\2024-01-13\r_compiler-error_16-46-45-048.md
+2024.01.13 16:46:50 WARN  no build target for: C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\application\src\main\java\project\customer\Customer.java
+ene 13, 2024 4:46:50 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\.metals\.reports\metals-full\2024-01-13\r_compiler-error_16-46-50-941.md
+ene 13, 2024 4:46:51 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\.metals\.reports\metals-full\2024-01-13\r_compiler-error_16-46-51-191.md
+ene 13, 2024 4:50:02 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\.metals\.reports\metals-full\2024-01-13\r_compiler-error_16-50-02-938.md
+ene 13, 2024 4:52:02 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\.metals\.reports\metals-full\2024-01-13\r_compiler-error_16-52-02-359.md
+ene 13, 2024 4:52:02 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\.metals\.reports\metals-full\2024-01-13\r_compiler-error_16-52-02-978.md
+ene 13, 2024 4:52:03 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\.metals\.reports\metals-full\2024-01-13\r_compiler-error_16-52-03-468.md
+2024.01.13 16:53:14 WARN  no build target for: C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\application\src\main\java\project\transport\Transport.java
+ene 13, 2024 5:08:15 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\.metals\.reports\metals-full\2024-01-13\r_compiler-error_17-08-15-955.md
+ene 13, 2024 5:08:16 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\.metals\.reports\metals-full\2024-01-13\r_compiler-error_17-08-16-186.md
+ene 13, 2024 5:22:20 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\.metals\.reports\metals-full\2024-01-13\r_compiler-error_17-22-20-387.md
+ene 13, 2024 5:22:21 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\.metals\.reports\metals-full\2024-01-13\r_compiler-error_17-22-21-137.md
+2024.01.13 17:27:33 WARN  no build target for: C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\application\src\main\java\project\product\ComputerGame.java
+2024.01.13 17:27:34 WARN  no build target for: C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\application\src\main\java\project\product\Clothing.java
+ene 13, 2024 5:27:34 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\.metals\.reports\metals-full\2024-01-13\r_compiler-error_17-27-34-774.md
+2024.01.13 17:27:38 WARN  no build target for: C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\application\src\main\java\project\product\TShirt.java
+2024.01.13 17:31:35 WARN  no build target for: C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\application\src\main\java\project\product\Pants.java
+ene 13, 2024 5:31:45 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\.metals\.reports\metals-full\2024-01-13\r_compiler-error_17-31-45-837.md
+2024.01.13 17:31:46 INFO  time: code lens generation in 10s
+ene 13, 2024 5:31:47 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\.metals\.reports\metals-full\2024-01-13\r_compiler-error_17-31-47-031.md
+ene 13, 2024 5:54:01 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\.metals\.reports\metals-full\2024-01-13\r_compiler-error_17-54-01-877.md
+2024.01.13 17:54:02 WARN  no build target for: C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\application\src\main\java\project\shipment\Shipment.java
+ene 13, 2024 5:54:04 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\.metals\.reports\metals-full\2024-01-13\r_compiler-error_17-54-04-877.md
+ene 13, 2024 5:59:36 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\.metals\.reports\metals-full\2024-01-13\r_compiler-error_17-59-36-477.md
+ene 13, 2024 6:01:04 P. M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\viole\Desktop\ERASMUS\cps2004-oop-1\.metals\.reports\metals-full\2024-01-13\r_compiler-error_18-01-04-853.md

@@ -3,7 +3,6 @@
 
 #include <iostream>
 #include <list>
-#include "product.hpp"
 
 class Supplier
 {
@@ -20,9 +19,6 @@ class Supplier
             std::string getAddress() const;
             std::string getPhone() const;
             std::string getEmail() const;
-
-            void addProduct(Product& product);//todo & ok?
-            void removeProduct(Product& product);
             
             std::string display_supplier_info()const;
 
@@ -34,7 +30,6 @@ class Supplier
             std::string address_;
             std::string phone_;
             std::string email_;
-            std::list<Product> products_;
 };
 
 #endif // SUPPLIER_HPP_

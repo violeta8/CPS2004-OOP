@@ -1,8 +1,8 @@
 #include "electronic.hpp"
 #include "product.hpp"
 
-Electronic::Electronic(int id, double price, int volume, std::string brand) 
-      : Product(id, price, volume), brand_(brand){}
+Electronic::Electronic(int id, double price, int volume, Supplier supplier, std::string brand) 
+      : Product(id, price, volume, supplier), brand_(brand){}
 
 std::string Electronic::getBrand() const { return brand_; }
 
@@ -18,8 +18,8 @@ Electronic::~Electronic(){}
 
 
 //* --------------------------------Electronic concrete subclasses-------------------------------- *//
-Smartphone::Smartphone(int id, double price, int volume, std::string brand, std::string os)
-        : Electronic(id, price, volume, brand), operatingSystem_(os){}
+Smartphone::Smartphone(int id, double price, int volume, Supplier supplier, std::string brand, std::string os)
+        : Electronic(id, price, volume, supplier, brand), operatingSystem_(os){}
 
 std::string Smartphone::getOperatingSystem() const { return operatingSystem_; }
 
@@ -44,8 +44,8 @@ std::string Smartphone::display_product_info()
 Smartphone::~Smartphone(){}
 
 
-Tablet::Tablet(int id, double price, int volume, std::string brand, std::string model)
-        : Electronic(id, price, volume, brand), model_(model){}
+Tablet::Tablet(int id, double price, int volume, Supplier supplier, std::string brand, std::string model)
+        : Electronic(id, price, volume, supplier, brand), model_(model){}
 
 std::string Tablet::getModel() const { return model_; }
 

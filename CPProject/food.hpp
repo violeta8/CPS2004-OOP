@@ -6,7 +6,7 @@
 class Food : public Product
 {
       public:
-            Food(int id, double price, int volume, std::string expirationDate);
+            Food(int id, double price, int volume, Supplier supplier, std::string expirationDate);
 
             std::string getExpirationDate() const;
 
@@ -23,7 +23,7 @@ class Food : public Product
 class Milk : public Food
 {
 public:
-    Milk(int id, double price, int volume, std::string expirationDate, std::string fatContent);
+    Milk(int id, double price, int volume, Supplier supplier, std::string expirationDate, std::string fatContent);
     std::string getFatContent() const;
 
     std::string display_product_info();
@@ -37,7 +37,7 @@ private:
 class Cheese : public Food
 {
 public:
-    Cheese(int id, double price, int volume, std::string expirationDate, std::string type);
+    Cheese(int id, double price, int volume, Supplier supplier, std::string expirationDate, std::string type);
 
     void setFatContent(std::string fatContent);
     void setType(std::string type);

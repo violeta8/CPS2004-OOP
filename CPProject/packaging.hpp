@@ -19,7 +19,7 @@ class Packaging
             double getVolume() const;
             double getWeight() const;
 
-            void display_info() const;
+            void display_packaging_info() const;
             ~Packaging();
 
       private:

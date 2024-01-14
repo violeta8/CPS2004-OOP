@@ -6,12 +6,13 @@ public abstract class Transport {
     private double speed;
 
     public abstract int route();//this will be added in the subclasses
-    
+
     public Transport(int idTransport, int costPerKM, double speed) {
         this.idTransport = idTransport;
         this.costPerKM = costPerKM;
         this.speed = speed;
     }
+    
 
     public void updateTransport(int id,String change,String newchange){
         if(change.equals("costPerKM")) {

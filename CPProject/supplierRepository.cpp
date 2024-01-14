@@ -10,7 +10,7 @@ class supplierRepository
             void addSupplier(const Supplier Supplier);
             void removeSupplier(const Supplier Supplier);
             void updateSupplier(int id, std::string what, std::string change);
-            void updateSupplier(int id, Product& p);
+            // void updateSupplier(int id, Product& p);
             Supplier getSupplierbyId(int idSupplier) ;
             std::string getAllSuppliers()const;
             ~supplierRepository();
@@ -66,16 +66,16 @@ void supplierRepository::updateSupplier(int id, std::string what, std::string ch
      }
 }
 
-void supplierRepository::updateSupplier(int id, Product& p)
-{
-      for(std::list<Supplier>::iterator it = repository.begin(); it != repository.end(); ++it)
-      {
-             if (it->getId() == id)
-             {
-                     it->addProduct(p);
-             }
-      }
-}
+// void supplierRepository::updateSupplier(int id, Product& p)
+// {
+//       for(std::list<Supplier>::iterator it = repository.begin(); it != repository.end(); ++it)
+//       {
+//              if (it->getId() == id)
+//              {
+//                      it->addProduct(p);
+//              }
+//       }
+// }
 
 Supplier supplierRepository::getSupplierbyId(int idSupplier) 
 {

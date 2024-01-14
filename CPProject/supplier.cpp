@@ -1,7 +1,7 @@
 #include "supplier.hpp"
 
 Supplier::Supplier(std::string name, std::string address, std::string phone, std::string email)
-      : id_(), name_(name), address_(address), phone_(phone), email_(email), products_(std::list<Product>()){}
+      : id_(), name_(name), address_(address), phone_(phone), email_(email){}
 
 int Supplier::getId() const{return id_;}
 
@@ -21,10 +21,6 @@ std::string Supplier::getPhone() const { return phone_; }
 
 std::string Supplier::getEmail() const { return email_; }
 
-void Supplier::addProduct(Product& product) { products_.push_back(product); }
-
-void Supplier::removeProduct(Product& product) { products_.remove(product); }
-
 std::string Supplier::display_supplier_info()const
 {
       std::string info = "";
@@ -36,8 +32,5 @@ std::string Supplier::display_supplier_info()const
       return info;
 }
 
-Supplier::~Supplier()
-{
-      products_.clear();
-}
+Supplier::~Supplier(){}
 
