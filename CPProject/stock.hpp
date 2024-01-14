@@ -22,7 +22,7 @@ class Stock
             ~Stock();
 
       private:
-            Product* product_;
+            Product& product_;
             int units_;
 };
 
