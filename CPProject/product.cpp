@@ -47,7 +47,7 @@ void Product::updateProduct(std::string what, std::string change)
       }
 }
 
-double Product::calculate_discount(int quantity, int month) const
+double Product::calculate_discount(int quantity, int month)
 {
       if (month == 1 || month == 2 || month == 12) {
             return 0.9 * quantity * price_;

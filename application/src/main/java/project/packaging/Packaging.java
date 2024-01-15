@@ -3,6 +3,7 @@ package project.packaging;
 import java.util.List;
 import java.util.ArrayList;
 import java.time.LocalDate;
+import java.util.Map;
 
 import project.product.*;
 import project.transport.*;
@@ -15,6 +16,7 @@ public class Packaging {
     private int capacity;//this will depend on the type of transport
     private int cost;
     private List<Product> products;
+    private Map<Product, Integer> product_quantity;
 
     public Packaging(int idPackaging, int capacity, int cost, List<Product> products) {
         this.idPackaging = idPackaging;
@@ -104,7 +106,7 @@ public class Packaging {
 
     public double getTotalCost() {
         for(Product product:products){
-            cost+=product.getPrice()*product.calculate_discount(product.get, LocalDate.now().getMonthValue());
+            cost+=product.getPrice()*product.calculate_discount(product_quantity.get(product), LocalDate.now().getMonthValue());
         }
         if(capacity<50){
             return 5+cost;

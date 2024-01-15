@@ -1,10 +1,6 @@
 #include "stock.hpp"
 
-Stock::Stock(Product& product, int units)
-{
-    product_ = product;
-    units_ = units;
-}
+Stock::Stock(Product& product, int units) : product_(product), units_(units){}
 
 void Stock::addProduct(Product& product, int units)
 {

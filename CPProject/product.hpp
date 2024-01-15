@@ -18,10 +18,10 @@ class Product
             int getVolume() const;
             Supplier getSupplier() const;
 
-            virtual void updateProduct(std::string what, std::string change);
+            void updateProduct(std::string what, std::string change);
 
             virtual std::string display_product_info()const=0;
-            double calculate_discount(int quantity, int month) const;
+            virtual double calculate_discount(int quantity, int month);
 
             ~Product();
 

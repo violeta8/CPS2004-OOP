@@ -25,4 +25,6 @@ int main(){
     cin>> name>> address>> phone>> email;
     Supplier s(name, address, phone, email);
     cout<<s.display_supplier_info()<<endl;
+    Novel b(1, 10.0, 1, s);
+
 }

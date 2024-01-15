@@ -7,61 +7,34 @@
 class Book : public Product
 {
       public:
-            Book(int id, double price, int volume, Supplier supplier,std::string title);
-            
-            void setAuthor(std::string author);
-            void setTitle(std::string title);
-            void setGenre(std::string genre);
-            void setPages(int pages);
+            Book(int id, double price, int volume, Supplier supplier);
 
-            std::string getAuthor() const;
-            std::string getTitle() const;
-            std::string getGenre() const;
-            int getPages() const;
-
-            void updateProduct(std::string what, std::string change)override;
-
-            virtual std::string display_product_info()=0;
-            double calculate_discount(int quantity) const;
+            virtual std::string display_product_info()const=0;
+            virtual double calculate_discount(int quantity, int month);
 
             ~Book();
-
-      private:
-            std::string title_;
 };
 
 class Novel : public Book
 {
       public:
-            Novel(int id, double price, int volume, Supplier supplier,std::string title, std::string genre);
+            Novel(int id, double price, int volume, Supplier supplier);
             
-            std::string getGenre() const;
-
-            void updateProduct(std::string what, std::string change)override;
-
-            std::string display_product_info();
+            virtual std::string display_product_info()const override;
+            virtual double calculate_discount(int quantity, int month) override;
 
             ~Novel();
-
-      private:
-            std::string genre_;
 };
 
 class Textbook : public Book
 {
       public:
-            Textbook(int id, double price, int volume, Supplier supplier,std::string title, std::string subject);
+            Textbook(int id, double price, int volume, Supplier supplier);
             
-            std::string getSubject() const;
-            
-            void updateProduct(std::string what, std::string change)override;
-
-            std::string display_product_info();
+            virtual std::string display_product_info()const override;
+            virtual double calculate_discount(int quantity, int month) override;
 
             ~Textbook();
-
-      private:
-            std::string subject_;
 };
 
 
