@@ -1,60 +1,42 @@
-#ifndef ELECTRONIC_HPP_
-#define ELECTRONIC_HPP_
+#ifndef ELECTRONIC_HPP
+#define ELECTRONIC_HPP
 
 #include "product.hpp"
 
 class Electronic : public Product
 {
       public:
-            Electronic(int id, double price, int volume, Supplier supplier, std::string brand);
-            
-            std::string getBrand() const;
+            Electronic(int id, double price, int volume, Supplier supplier);
 
-            void updateProduct(std::string what, std::string change)override;
-
-            virtual std::string display_product_info()=0;
-            double calculate_discount(int quantity) const;
+            virtual std::string display_product_info()const=0;
+            virtual double calculate_discount(int quantity, int month);
 
             ~Electronic();
-
-      private:
-            std::string brand_;
 };
 
+
+//* --------------------------------Electronic concrete subclasses-------------------------------- *//
+class Tablet : public Electronic
+{
+public:
+    Tablet(int id, double price, int volume, Supplier supplier);
+
+    std::string display_product_info() const;
+    virtual double calculate_discount(int quantity, int month) override;
+
+    ~Tablet();
+};
 
 class Smartphone : public Electronic
 {
 public:
-    Smartphone(int id, double price, int volume, Supplier supplier, std::string brand, std::string operatingSystem);
-
-    std::string getOperatingSystem() const;
-
-    void updateProduct(std::string what, std::string change)override;
-
-    std::string display_product_info();
+    Smartphone(int id, double price, int volume, Supplier supplier);
+        
+    std::string display_product_info()const;
+    virtual double calculate_discount(int quantity, int month) override;
 
     ~Smartphone();
-
-private:
-    std::string operatingSystem_;
-};
-
-class Tablet : public Electronic
-{
-public:
-    Tablet(int id, double price, int volume, Supplier supplier, std::string brand, std::string model);
-    
-    std::string getModel() const;
-
-    void updateProduct(std::string what, std::string change)override;
-
-    std::string display_product_info();
-
-    ~Tablet();
-
-private:
-    std::string model_;
 };
 
 
-#endif // ELECTRONIC_HPP_
+#endif // ELECTRONIC_HPP

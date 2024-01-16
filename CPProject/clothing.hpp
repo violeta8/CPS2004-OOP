@@ -9,7 +9,7 @@ class Clothing : public Product
         Clothing(int id, double price, int volume, Supplier supplier);
                     
         virtual std::string display_product_info()const=0;
-        virtual double calculate_discount(int quantity);
+        virtual double calculate_discount(int quantity, int month);
 
         ~Clothing();
 };
@@ -19,8 +19,8 @@ class TShirt : public Clothing
 public:
     TShirt(int id, double price, int volume, Supplier supplier);
 
-    virtual std::string display_product_info()const=0;
-    virtual double calculate_discount(int quantity);
+    virtual std::string display_product_info()const override;
+    virtual double calculate_discount(int quantity, int month) override;
 
     ~TShirt();
 };
@@ -28,10 +28,10 @@ public:
 class Pants : public Clothing
 {
 public:
-    Pants(int id, double price, int volume, Supplier supplier,, std::string shop);
+    Pants(int id, double price, int volume, Supplier supplier);
     
-    virtual std::string display_product_info()const=0;
-    virtual double calculate_discount(int quantity);
+    virtual std::string display_product_info()const override;
+    virtual double calculate_discount(int quantity, int month) override;
     ~Pants();
 
 };

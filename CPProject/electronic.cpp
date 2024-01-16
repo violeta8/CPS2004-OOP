@@ -1,70 +1,54 @@
 #include "electronic.hpp"
-#include "product.hpp"
 
-Electronic::Electronic(int id, double price, int volume, Supplier supplier, std::string brand) 
-      : Product(id, price, volume, supplier), brand_(brand){}
+Electronic::Electronic(int id, double price, int volume, Supplier supplier) 
+      : Product(id, price, volume, supplier){}
 
-std::string Electronic::getBrand() const { return brand_; }
-
-void Electronic::updateProduct(std::string what, std::string change)
+double Electronic::calculate_discount(int quantity, int month)
 {
-      if (what == "brand")
-      {
-            brand_ = change;
-      }
+      return Product::calculate_discount(quantity, month);
 }
 
 Electronic::~Electronic(){}
 
 
+
 //* --------------------------------Electronic concrete subclasses-------------------------------- *//
-Smartphone::Smartphone(int id, double price, int volume, Supplier supplier, std::string brand, std::string os)
-        : Electronic(id, price, volume, supplier, brand), operatingSystem_(os){}
+Tablet::Tablet(int id, double price, int volume, Supplier supplier)
+        : Electronic(id, price, volume, supplier){}
 
-std::string Smartphone::getOperatingSystem() const { return operatingSystem_; }
-
-void Smartphone::updateProduct(std::string what, std::string change)
+std::string Tablet::display_product_info() const
 {
-      if (what == "operating system")
-      {
-            operatingSystem_ = change;
-      }
+      std::string info = "Tablet\n";
+      info += "ID: " + std::to_string(getId()) + "\n";
+      info += "Supplier: " + getSupplier().getName() + "\n";
+      info += "Price: " + std::to_string(getPrice()) + "\n";
+      return info;
 }
 
-
-std::string Smartphone::display_product_info()
+double Tablet::calculate_discount(int quantity, int month)
 {
-    std::string info = "ID: " + std::to_string(getId()) + "\n";
-    info += "Brand: " + getBrand() + "\n";
-    info += "Operating system: " + getOperatingSystem() + "\n";
-    info += "Price: " + std::to_string(getPrice()) + "\n";
-    return info;
-}
-
-Smartphone::~Smartphone(){}
-
-
-Tablet::Tablet(int id, double price, int volume, Supplier supplier, std::string brand, std::string model)
-        : Electronic(id, price, volume, supplier, brand), model_(model){}
-
-std::string Tablet::getModel() const { return model_; }
-
-void Tablet::updateProduct(std::string what, std::string change)
-{
-      if (what == "model")
-      {
-            model_ = change;
-      }
-}
-
-std::string Tablet::display_product_info()
-{
-    std::string info = "ID: " + std::to_string(getId()) + "\n";
-    info += "Brand: " + getBrand() + "\n";
-    info += "Model: " + getModel() + "\n";
-    info += "Price: " + std::to_string(getPrice()) + "\n";
-    return info;
+      return Electronic::calculate_discount(quantity, month);
 }
 
 Tablet::~Tablet(){}
+
+
+Smartphone::Smartphone(int id, double price, int volume, Supplier supplier)
+        : Electronic(id, price, volume, supplier){}
+
+std::string Smartphone::display_product_info() const
+{
+      std::string info = "Smartphone\n";
+      info += "ID: " + std::to_string(getId()) + "\n";
+      info += "Supplier: " + getSupplier().getName() + "\n";
+      info += "Price: " + std::to_string(getPrice()) + "\n";
+      return info;
+}
+
+double Smartphone::calculate_discount(int quantity, int month)
+{
+      return Electronic::calculate_discount(quantity, month);
+}
+
+Smartphone::~Smartphone(){}
 

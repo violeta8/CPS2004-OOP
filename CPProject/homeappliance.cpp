@@ -1,17 +1,11 @@
 #include "homeappliance.hpp"
-#include "product.hpp"
 
-HomeAppliance::HomeAppliance(int id, double price, int volume, Supplier supplier, std::string brand) 
-      : Product(id, price, volume, supplier), brand_(brand){}
+HomeAppliance::HomeAppliance(int id, double price, int volume, Supplier supplier) 
+      : Product(id, price, volume, supplier){}
 
-std::string HomeAppliance::getBrand() const { return brand_; }
-
-void HomeAppliance::updateProduct(std::string what, std::string change)
+double HomeAppliance::calculate_discount(int quantity, int month)
 {
-      if (what == "brand")
-      {
-            brand_ = change;
-      }
+      return Product::calculate_discount(quantity, month);
 }
 
 HomeAppliance::~HomeAppliance(){}
@@ -19,51 +13,41 @@ HomeAppliance::~HomeAppliance(){}
 
 
 //* --------------------------------HomeAppliance concrete subclasses-------------------------------- *//
-Fridge::Fridge(int id, double price, int volume, Supplier supplier, std::string brand, std::string model)
-        : HomeAppliance(id, price, volume, supplier, brand), model_(model){}
+Fridge::Fridge(int id, double price, int volume, Supplier supplier)
+        : HomeAppliance(id, price, volume, supplier){}
 
-std::string Fridge::getModel() const { return model_; }
-
-void Fridge::updateProduct(std::string what, std::string change)
+std::string Fridge::display_product_info() const
 {
-      if (what == "model")
-      {
-            model_ = change;
-      }
+      std::string info = "Fridge\n";
+      info += "ID: " + std::to_string(getId()) + "\n";
+      info += "Supplier: " + getSupplier().getName() + "\n";
+      info += "Price: " + std::to_string(getPrice()) + "\n";
+      return info;
 }
 
-std::string Fridge::display_product_info()
+double Fridge::calculate_discount(int quantity, int month)
 {
-    std::string info = "ID: " + std::to_string(getId()) + "\n";
-    info += "Brand: " + getBrand() + "\n";
-    info += "Model: " + getModel() + "\n";
-    info += "Price: " + std::to_string(getPrice()) + "\n";
-    return info;
+      return HomeAppliance::calculate_discount(quantity, month);
 }
 
 Fridge::~Fridge(){}
 
 
-WashingMachine::WashingMachine(int id, double price, int volume, Supplier supplier, std::string brand, std::string energyEfficiency)
-        : HomeAppliance(id, price, volume, supplier, brand), energyEfficiency_(energyEfficiency){}
+WashingMachine::WashingMachine(int id, double price, int volume, Supplier supplier)
+        : HomeAppliance(id, price, volume, supplier){}
 
-std::string WashingMachine::getEnergyEfficiency() const { return energyEfficiency_; }
-
-void WashingMachine::updateProduct(std::string what, std::string change)
+std::string WashingMachine::display_product_info() const
 {
-      if (what == "energy efficiency")
-      {
-            energyEfficiency_ = change;
-      }
+      std::string info = "WashingMachine\n";
+      info += "ID: " + std::to_string(getId()) + "\n";
+      info += "Supplier: " + getSupplier().getName() + "\n";
+      info += "Price: " + std::to_string(getPrice()) + "\n";
+      return info;
 }
 
-std::string WashingMachine::display_product_info()
+double WashingMachine::calculate_discount(int quantity, int month)
 {
-    std::string info = "ID: " + std::to_string(getId()) + "\n";
-    info += "Brand: " + getBrand() + "\n";
-    info += "Energy efficiency: " + getEnergyEfficiency() + "\n";
-    info += "Price: " + std::to_string(getPrice()) + "\n";
-    return info;
+      return HomeAppliance::calculate_discount(quantity, month);
 }
 
 WashingMachine::~WashingMachine(){}

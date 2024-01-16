@@ -6,19 +6,12 @@
 class ComputerGame : public Product
 {
       public:
-            ComputerGame(int id, double price, int volume, Supplier supplier, int ageLimit);
-            
-            int getAgeLimit() const;
+            ComputerGame(int id, double price, int volume, Supplier supplier);
 
-            void updateProduct(std::string what, std::string change)override;
-
-            virtual std::string display_product_info()=0;
-            double calculate_discount(int quantity) const;
+            virtual std::string display_product_info()const=0;
+            virtual double calculate_discount(int quantity, int month);
 
             ~ComputerGame();
-
-      private:
-            int ageLimit_;
 };
 
 
@@ -28,35 +21,23 @@ class ComputerGame : public Product
 class Zelda : public ComputerGame
 {
 public:
-    Zelda(int id, double price, int volume, Supplier supplier, int ageLimit, std::string platform);
+    Zelda(int id, double price, int volume, Supplier supplier);
 
-    std::string getPlatform() const;
-
-    void updateProduct(std::string what, std::string change)override;
-
-    std::string display_product_info();
+    std::string display_product_info() const;
+    virtual double calculate_discount(int quantity, int month) override;
 
     ~Zelda();
-
-private:
-    std::string platform_;
 };
 
 class Minecraft : public ComputerGame
 {
 public:
-    Minecraft(int id, double price, int volume, Supplier supplier, int ageLimit, std::string platform);
-    
-    std::string getPlatform() const;
-    
-    void updateProduct(std::string what, std::string change)override;
-
-    std::string display_product_info();
+    Minecraft(int id, double price, int volume, Supplier supplier);
+        
+    std::string display_product_info()const;
+    virtual double calculate_discount(int quantity, int month) override;
 
     ~Minecraft();
-
-private:
-    std::string platform_;
 };
 
 

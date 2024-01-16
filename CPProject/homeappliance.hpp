@@ -6,53 +6,36 @@
 class HomeAppliance : public Product
 {
       public:
-            HomeAppliance(int id, double price, int volume, Supplier supplier, std::string brand);
-            
-            std::string getBrand() const;
+            HomeAppliance(int id, double price, int volume, Supplier supplier);
 
-            virtual void updateProduct(std::string what, std::string change)override;
-
-            virtual std::string display_product_info()=0;
-            double calculate_discount(int quantity) const;
+            virtual std::string display_product_info()const=0;
+            virtual double calculate_discount(int quantity, int month);
 
             ~HomeAppliance();
-
-      private:
-            std::string brand_;
 };
 
+
+//* --------------------------------HomeAppliance concrete subclasses-------------------------------- *//
 class Fridge : public HomeAppliance
 {
 public:
-    Fridge(int id, double price, int volume, Supplier supplier, std::string brand, std::string model);
-    
-    std::string getModel() const;
+    Fridge(int id, double price, int volume, Supplier supplier);
 
-    void updateProduct(std::string what, std::string change)override;
-
-    std::string display_product_info();
+    std::string display_product_info() const;
+    virtual double calculate_discount(int quantity, int month) override;
 
     ~Fridge();
-
-private:
-    std::string model_;
 };
 
 class WashingMachine : public HomeAppliance
 {
 public:
-    WashingMachine(int id, double price, int volume, Supplier supplier, std::string brand, std::string energyEfficiency);
-    
-    std::string getEnergyEfficiency() const;
-
-    void updateProduct(std::string what, std::string change)override;
-
-    std::string display_product_info();
+    WashingMachine(int id, double price, int volume, Supplier supplier);
+        
+    std::string display_product_info()const;
+    virtual double calculate_discount(int quantity, int month) override;
 
     ~WashingMachine();
-
-private:
-    std::string energyEfficiency_;
 };
 
 #endif // HOMEAPPLIANCE_HPP_

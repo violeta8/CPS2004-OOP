@@ -1,16 +1,11 @@
 #include "computergame.hpp"
 
-ComputerGame::ComputerGame(int id, double price, int volume, Supplier supplier,int age_limit) 
-      : Product(id, price, volume, supplier), ageLimit_(age_limit){}
+ComputerGame::ComputerGame(int id, double price, int volume, Supplier supplier) 
+      : Product(id, price, volume, supplier){}
 
-int ComputerGame::getAgeLimit() const { return ageLimit_; }
-
-void ComputerGame::updateProduct(std::string what, std::string change) 
+double ComputerGame::calculate_discount(int quantity, int month)
 {
-      if (what == "age limit")
-      {
-            ageLimit_ = std::stoi(change);
-      }
+      return Product::calculate_discount(quantity, month);
 }
 
 ComputerGame::~ComputerGame(){}
@@ -18,53 +13,41 @@ ComputerGame::~ComputerGame(){}
 
 
 //* --------------------------------ComputerGame concrete subclasses-------------------------------- *//
-Zelda::Zelda(int id, double price, int volume, Supplier supplier,int age_limit, std::string platform)
-        : ComputerGame(id, price, volume, supplier, age_limit), platform_(platform){}
+Zelda::Zelda(int id, double price, int volume, Supplier supplier)
+        : ComputerGame(id, price, volume, supplier){}
 
-
-std::string Zelda::getPlatform() const { return platform_; }
-
-void Zelda::updateProduct(std::string what, std::string change)
+std::string Zelda::display_product_info() const
 {
-      if (what == "platform")
-      {
-            platform_ = change;
-      }
+      std::string info = "Zelda\n";
+      info += "ID: " + std::to_string(getId()) + "\n";
+      info += "Supplier: " + getSupplier().getName() + "\n";
+      info += "Price: " + std::to_string(getPrice()) + "\n";
+      return info;
 }
 
-std::string Zelda::display_product_info()
+double Zelda::calculate_discount(int quantity, int month)
 {
-    std::string info = "ID: " + std::to_string(getId()) + "\n";
-    info += "Age limit: " + std::to_string(getAgeLimit()) + "\n";
-    info += "Platform: " + getPlatform() + "\n";
-    info += "Price: " + std::to_string(getPrice()) + "\n";
-    info += "Platform: " + getPlatform() + "\n";
-    return info;
+      return ComputerGame::calculate_discount(quantity, month);
 }
 
 Zelda::~Zelda(){}
 
 
-Minecraft::Minecraft(int id, double price, int volume, Supplier supplier,int age_limit, std::string platform)
-        : ComputerGame(id, price, volume, supplier, age_limit), platform_(platform){}
+Minecraft::Minecraft(int id, double price, int volume, Supplier supplier)
+        : ComputerGame(id, price, volume, supplier){}
 
-std::string Minecraft::getPlatform() const { return platform_; }
-
-void Minecraft::updateProduct(std::string what, std::string change)
+std::string Minecraft::display_product_info() const
 {
-      if (what == "platform")
-      {
-            platform_ = change;
-      }
+      std::string info = "Minecraft\n";
+      info += "ID: " + std::to_string(getId()) + "\n";
+      info += "Supplier: " + getSupplier().getName() + "\n";
+      info += "Price: " + std::to_string(getPrice()) + "\n";
+      return info;
 }
 
-std::string Minecraft::display_product_info()
+double Minecraft::calculate_discount(int quantity, int month)
 {
-    std::string info = "ID: " + std::to_string(getId()) + "\n";
-    info += "Age limit: " + std::to_string(getAgeLimit()) + "\n";
-    info += "Platform: " + getPlatform() + "\n";
-    info += "Price: " + std::to_string(getPrice()) + "\n";
-    return info;
+      return ComputerGame::calculate_discount(quantity, month);
 }
 
 Minecraft::~Minecraft(){}

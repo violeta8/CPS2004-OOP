@@ -1,47 +1,53 @@
 #include "food.hpp"
-#include "product.hpp"
 
-Food::Food(int id, double price, int volume, Supplier supplier, std::string expirationDate) 
-      : Product(id, price, volume, supplier), expirationDate_(expirationDate){}
+Food::Food(int id, double price, int volume, Supplier supplier) 
+      : Product(id, price, volume, supplier){}
 
-
-std::string Food::getExpirationDate() const { return expirationDate_; }
+double Food::calculate_discount(int quantity, int month)
+{
+      return Product::calculate_discount(quantity, month);
+}
 
 Food::~Food(){}
 
 
+
 //* --------------------------------Food concrete subclasses-------------------------------- *//
-Milk::Milk(int id, double price, int volume, Supplier supplier, std::string expirationDate, std::string getFatContent)
-        : Food(id, price, volume, supplier, expirationDate), fatContent_(getFatContent){}
+Milk::Milk(int id, double price, int volume, Supplier supplier)
+        : Food(id, price, volume, supplier){}
 
-std::string Milk::getFatContent() const { return fatContent_; }
-
-std::string Milk::display_product_info()
+std::string Milk::display_product_info() const
 {
-    std::string info = "ID: " + std::to_string(getId()) + "\n";
-    info += "Expiration date: " + getExpirationDate() + "\n";//todo mirar si esto ta bien
-    info += "Fat content: " + getFatContent() + "\n";
-    info += "Price: " + std::to_string(getPrice()) + "\n";
-    return info;
+      std::string info = "Milk\n";
+      info += "ID: " + std::to_string(getId()) + "\n";
+      info += "Supplier: " + getSupplier().getName() + "\n";
+      info += "Price: " + std::to_string(getPrice()) + "\n";
+      return info;
+}
+
+double Milk::calculate_discount(int quantity, int month)
+{
+      return Food::calculate_discount(quantity, month);
 }
 
 Milk::~Milk(){}
 
 
-Cheese::Cheese(int id, double price, int volume, Supplier supplier, std::string expirationDate, std::string type)
-        : Food(id, price, volume, supplier, expirationDate), type_(type){}
+Cheese::Cheese(int id, double price, int volume, Supplier supplier)
+        : Food(id, price, volume, supplier){}
 
-std::string Cheese::getType() const { return type_; }
-
-std::string Cheese::display_product_info()
+std::string Cheese::display_product_info() const
 {
-    std::string info = "ID: " + std::to_string(getId()) + "\n";
-    info += "Expiration date: " + getExpirationDate() + "\n";//todo mirar si esto ta bien
-    info += "Type: " + getType() + "\n";
-    info += "Price: " + std::to_string(getPrice()) + "\n";
-    return info;
+      std::string info = "Cheese\n";
+      info += "ID: " + std::to_string(getId()) + "\n";
+      info += "Supplier: " + getSupplier().getName() + "\n";
+      info += "Price: " + std::to_string(getPrice()) + "\n";
+      return info;
+}
+
+double Cheese::calculate_discount(int quantity, int month)
+{
+      return Food::calculate_discount(quantity, month);
 }
 
 Cheese::~Cheese(){}
-
-

@@ -1,70 +1,52 @@
 #include "clothing.hpp"
 
-Clothing::Clothing(int id, double price, int volume, Supplier supplier, std::string colour)
-      : Product(id, price, volume, supplier), colour_(colour){}
+Clothing::Clothing(int id, double price, int volume, Supplier supplier)
+      : Product(id, price, volume, supplier){}
 
-
-std::string Clothing::getColour() const { return colour_; }
-
-void Clothing::updateProduct(std::string what, std::string change)
+double Clothing::calculate_discount(int quantity, int month)
 {
-      if (what == "color")
-      {
-            colour_ = change;
-      }
+      return Product::calculate_discount(quantity, month);
 }
 
 Clothing::~Clothing(){}
 
 
 //* --------------------------------Clothing concrete subclasses-------------------------------- *//
-TShirt::TShirt(int id, double price, int volume, Supplier supplier, std::string color, std::string size)
-        : Clothing(id, price, volume, supplier, color), size_(size){}
+TShirt::TShirt(int id, double price, int volume, Supplier supplier)
+        : Clothing(id, price, volume, supplier){}
 
-
-std::string TShirt::getSize() const { return size_; }
-
-void TShirt::updateProduct(std::string what, std::string change)
+std::string TShirt::display_product_info() const
 {
-      if (what == "size")
-      {
-            size_ = change;
-      }
+      std::string info = "T-Shirt\n";
+      info += "ID: " + std::to_string(getId()) + "\n";
+      info += "Supplier: " + getSupplier().getName() + "\n";
+      info += "Price: " + std::to_string(getPrice()) + "\n";
+      return info;
 }
 
-std::string TShirt::display_product_info()
+double TShirt::calculate_discount(int quantity, int month)
 {
-    std::string info = "ID: " + std::to_string(getId()) + "\n";
-    info += "Color: " + getColour() + "\n";
-    info += "Size: " + getSize() + "\n";
-    info += "Price: " + std::to_string(getPrice()) + "\n";
-    return info;
+      return Clothing::calculate_discount(quantity, month);
 }
 
 TShirt::~TShirt(){}
 
 
-Pants::Pants(int id, double price, int volume, Supplier supplier, std::string color, std::string shop)
-        : Clothing(id, price, volume, supplier, color), shop_(shop){}
+Pants::Pants(int id, double price, int volume, Supplier supplier)
+        : Clothing(id, price, volume, supplier){}
 
-
-std::string Pants::getShop() const { return shop_; }
-
-void Pants::updateProduct(std::string what, std::string change)
+std::string Pants::display_product_info() const
 {
-      if (what == "shop")
-      {
-            shop_ = change;
-      }
+      std::string info = "Pants\n";
+      info += "ID: " + std::to_string(getId()) + "\n";
+      info += "Supplier: " + getSupplier().getName() + "\n";
+      info += "Price: " + std::to_string(getPrice()) + "\n";
+      return info;
 }
 
-std::string Pants::display_product_info()
+double Pants::calculate_discount(int quantity, int month)
 {
-    std::string info = "ID: " + std::to_string(getId()) + "\n";
-    info += "Color: " + getColour() + "\n";
-    info += "Price: " + std::to_string(getPrice()) + "\n";
-    info += "Size: " + getShop() + "\n";
-    return info;
+      return Clothing::calculate_discount(quantity, month);
 }
 
 Pants::~Pants(){}

@@ -6,52 +6,36 @@
 class Food : public Product
 {
       public:
-            Food(int id, double price, int volume, Supplier supplier, std::string expirationDate);
+            Food(int id, double price, int volume, Supplier supplier);
 
-            std::string getExpirationDate() const;
-
-            virtual std::string display_product_info()=0;
-            double calculate_discount(int quantity) const;
+            virtual std::string display_product_info()const=0;
+            virtual double calculate_discount(int quantity, int month);
 
             ~Food();
-
-      private:
-            std::string expirationDate_;
 };
 
 
+//* --------------------------------Food concrete subclasses-------------------------------- *//
 class Milk : public Food
 {
 public:
-    Milk(int id, double price, int volume, Supplier supplier, std::string expirationDate, std::string fatContent);
-    std::string getFatContent() const;
+    Milk(int id, double price, int volume, Supplier supplier);
 
-    std::string display_product_info();
+    std::string display_product_info() const;
+    virtual double calculate_discount(int quantity, int month) override;
 
     ~Milk();
-
-private:
-    std::string fatContent_;
 };
 
 class Cheese : public Food
 {
 public:
-    Cheese(int id, double price, int volume, Supplier supplier, std::string expirationDate, std::string type);
-
-    void setFatContent(std::string fatContent);
-    void setType(std::string type);
-
-    std::string getFatContent() const;
-    std::string getType() const;
-
-    std::string display_product_info();
+    Cheese(int id, double price, int volume, Supplier supplier);
+        
+    std::string display_product_info()const;
+    virtual double calculate_discount(int quantity, int month) override;
 
     ~Cheese();
-
-private:
-    std::string type_;
 };
 
-
-#endif // FOOD_HPP_
+#endif // FOOD_HPP
