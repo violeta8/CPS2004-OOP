@@ -80,14 +80,6 @@ There are repositories for each class implemented in the application:
 # Run and compile
 To run the application you will need to have installed the latest version of Java and Maven, then you will need to open the terminal and go to the directory where the project is located and type the following command:
 ```bash
-mvn clean install
-```
-After this you will need to go to the target folder and type the following command:
-```bash
-java -jar cps2004-oop-1.0-SNAPSHOT.jar
-```
-Or you can just type the following command:
-```bash
 mvn exec:java
 ```
 

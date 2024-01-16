@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.ArrayList;
 import java.time.LocalDate;
 import java.util.Map;
+import java.util.HashMap;
 
 import project.product.*;
 import project.transport.*;
@@ -36,6 +37,7 @@ public class Packaging {
         this.idPackaging = PackagingRepository.nextIdPackaging();
         this.cost = 3;
         this.products = new ArrayList<Product>();
+        this.product_quantity = new HashMap<Product, Integer>();
         if(t instanceof Truck){
             this.capacity = 50;
             this.cost = 3;
@@ -117,6 +119,10 @@ public class Packaging {
         else {//if(capacity<100)
             return 1+cost;
         }
+    }
+
+    public void addToMap(Product product, int quantity){
+        product_quantity.put(product, quantity);
     }
 
     public String toString() {

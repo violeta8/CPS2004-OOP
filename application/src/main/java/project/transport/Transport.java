@@ -49,6 +49,6 @@ public abstract class Transport {
 
     @Override
     public String toString() {
-        return " costPerKM=" + costPerKM + ", idTransport=" + idTransport + ", speed=" + speed + "]";
+        return "idTransport=" + idTransport + " costPerKM=" + costPerKM +  ", speed=" + speed + "]";
     }
 }

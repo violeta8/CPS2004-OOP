@@ -19,6 +19,6 @@ public class Plane extends Transport {
 
     @Override
     public String toString() {
-        return "Plane [name=" + super.toString() + "]";
+        return "Plane [" + super.toString() + "]";
     }
 }

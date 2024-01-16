@@ -476,19 +476,21 @@ public class App
                         ProductRepository.updateProduct(product);
                         if(product.getVolume()*quantity<=packagingList.get(i).getCapacity()){
                             packagingList.get(i).addProduct(product);
+                            packagingList.get(i).addToMap(product, quantity);
                         }
                         else{
                             packagingList.add(new Packaging(transport));
                             i++;
                             packagingList.get(i).addProduct(product);
+                            packagingList.get(i).addToMap(product, quantity);
                         }
                     }
                 System.out.println("Would you like to add more products? Please write yes");
                 }while(scanner.nextLine().equals("yes"));
                 Shipment shipment = new Shipment(customer, packagingList , transport, LocalDate.now());
                 ShipmentRepository.saveShipment(shipment);
-                ShipmentDecorator shipmentCost = new ShipmentDecoratorTotalCost(shipment);
-                ShipmentDecorator shipmentDelivery = new ShipmentDecoratorDeliveryDate(shipment);
+                // ShipmentDecorator shipmentCost = new ShipmentDecoratorTotalCost(shipment);
+                // ShipmentDecorator shipmentDelivery = new ShipmentDecoratorDeliveryDate(shipment);
                 break;
 
             case 2:
