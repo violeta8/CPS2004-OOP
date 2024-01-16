@@ -265,34 +265,6 @@ CMakeFiles/project.dir/customer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/customer.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/viole/Desktop/ERASMUS/cps2004-oop-1/CPProject/customer.cpp -o CMakeFiles/project.dir/customer.cpp.s
 
-CMakeFiles/project.dir/customerRepository.cpp.o: CMakeFiles/project.dir/flags.make
-CMakeFiles/project.dir/customerRepository.cpp.o: customerRepository.cpp
-CMakeFiles/project.dir/customerRepository.cpp.o: CMakeFiles/project.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/viole/Desktop/ERASMUS/cps2004-oop-1/CPProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/project.dir/customerRepository.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/project.dir/customerRepository.cpp.o -MF CMakeFiles/project.dir/customerRepository.cpp.o.d -o CMakeFiles/project.dir/customerRepository.cpp.o -c /mnt/c/Users/viole/Desktop/ERASMUS/cps2004-oop-1/CPProject/customerRepository.cpp
-
-CMakeFiles/project.dir/customerRepository.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/customerRepository.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/viole/Desktop/ERASMUS/cps2004-oop-1/CPProject/customerRepository.cpp > CMakeFiles/project.dir/customerRepository.cpp.i
-
-CMakeFiles/project.dir/customerRepository.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/customerRepository.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/viole/Desktop/ERASMUS/cps2004-oop-1/CPProject/customerRepository.cpp -o CMakeFiles/project.dir/customerRepository.cpp.s
-
-CMakeFiles/project.dir/transportRepository.cpp.o: CMakeFiles/project.dir/flags.make
-CMakeFiles/project.dir/transportRepository.cpp.o: transportRepository.cpp
-CMakeFiles/project.dir/transportRepository.cpp.o: CMakeFiles/project.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/viole/Desktop/ERASMUS/cps2004-oop-1/CPProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/project.dir/transportRepository.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/project.dir/transportRepository.cpp.o -MF CMakeFiles/project.dir/transportRepository.cpp.o.d -o CMakeFiles/project.dir/transportRepository.cpp.o -c /mnt/c/Users/viole/Desktop/ERASMUS/cps2004-oop-1/CPProject/transportRepository.cpp
-
-CMakeFiles/project.dir/transportRepository.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/transportRepository.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/viole/Desktop/ERASMUS/cps2004-oop-1/CPProject/transportRepository.cpp > CMakeFiles/project.dir/transportRepository.cpp.i
-
-CMakeFiles/project.dir/transportRepository.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/transportRepository.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/viole/Desktop/ERASMUS/cps2004-oop-1/CPProject/transportRepository.cpp -o CMakeFiles/project.dir/transportRepository.cpp.s
-
 # Object files for target project
 project_OBJECTS = \
 "CMakeFiles/project.dir/main.cpp.o" \
@@ -308,9 +280,7 @@ project_OBJECTS = \
 "CMakeFiles/project.dir/stock.cpp.o" \
 "CMakeFiles/project.dir/supplier.cpp.o" \
 "CMakeFiles/project.dir/transport.cpp.o" \
-"CMakeFiles/project.dir/customer.cpp.o" \
-"CMakeFiles/project.dir/customerRepository.cpp.o" \
-"CMakeFiles/project.dir/transportRepository.cpp.o"
+"CMakeFiles/project.dir/customer.cpp.o"
 
 # External object files for target project
 project_EXTERNAL_OBJECTS =
@@ -329,11 +299,9 @@ project: CMakeFiles/project.dir/stock.cpp.o
 project: CMakeFiles/project.dir/supplier.cpp.o
 project: CMakeFiles/project.dir/transport.cpp.o
 project: CMakeFiles/project.dir/customer.cpp.o
-project: CMakeFiles/project.dir/customerRepository.cpp.o
-project: CMakeFiles/project.dir/transportRepository.cpp.o
 project: CMakeFiles/project.dir/build.make
 project: CMakeFiles/project.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/viole/Desktop/ERASMUS/cps2004-oop-1/CPProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable project"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/viole/Desktop/ERASMUS/cps2004-oop-1/CPProject/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable project"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/project.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

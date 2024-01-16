@@ -23,6 +23,8 @@ class Product
             virtual std::string display_product_info()const=0;
             virtual double calculate_discount(int quantity, int month);
 
+            friend bool operator==(const Product& product, const Product& product2);
+
             ~Product();
 
       private:

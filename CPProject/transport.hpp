@@ -13,12 +13,15 @@ class Transport
             void setCostPerKm(double costPerKm);
 
             virtual void updateTransport(std::string what, std::string change);
-            virtual std::string display_transport_info()const=0 ;
+            virtual std::string display_transport_info()const;
 
             int getId() const;
             double getSpeed() const;
             double getCostPerKm() const;
             virtual int route() const = 0;
+
+            friend bool operator==(const Transport& transport, const Transport& transport2);
+
             virtual ~Transport();
             
       private:
@@ -27,17 +30,19 @@ class Transport
             double costPerKm_;
 };
 
-class Airplane : public Transport
+class Plane : public Transport
 {
       public:
-            Airplane(int id, double speed, double costPerKm, std::string model);
+            Plane(int id, double speed, double costPerKm, std::string model);
             void setModel(std::string model_);
             std::string getModel() const;
 
             void updateTransport(std::string what, std::string change)override;
             std::string display_transport_info()const override;
 
-            ~Airplane();
+            int route() const;
+
+            ~Plane();
 
       private:
             std::string model_;
@@ -53,6 +58,8 @@ class Truck : public Transport
             void updateTransport(std::string what, std::string change)override;
             std::string display_transport_info()const override;
 
+            int route() const;
+
             ~Truck();
       private:
             std::string plate_;
@@ -67,6 +74,8 @@ class Ship : public Transport
 
             void updateTransport(std::string what, std::string change)override;
             std::string display_transport_info()const override;
+
+            int route() const;
 
             ~Ship();
       private:

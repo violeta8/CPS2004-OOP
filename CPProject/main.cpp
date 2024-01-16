@@ -4,12 +4,13 @@
 #include "supplier.hpp"
 #include "product.hpp"
 #include "transport.hpp"
-// #include "shipment.hpp"
+#include "shipment.hpp"
 #include "stock.hpp"
-#include "stockRepository.cpp"
-#include "supplierRepository.cpp"
-#include "productRepository.cpp"
-#include "transportRepository.cpp"
+#include "stockRepository.hpp"
+#include "supplierRepository.hpp"
+#include "productRepository.hpp"
+#include "transportRepository.hpp"
+#include "customerRepository.hpp"
 #include "book.hpp"
 #include "clothing.hpp"
 #include "electronic.hpp"
@@ -23,8 +24,6 @@ int main(){
     cout<< "Escribe nombre, direccion, telefono y email del proveedor: ";
     string name, address, phone, email;
     cin>> name>> address>> phone>> email;
-    Supplier s(name, address, phone, email);
-    cout<<s.display_supplier_info()<<endl;
-    Novel b(1, 10.0, 1, s);
-
+    Customer s(name, address, phone, email);
+    cout<<s.display_customer_info()<<endl;
 }

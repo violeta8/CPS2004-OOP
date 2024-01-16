@@ -5,7 +5,8 @@ include(CTest)
 enable_testing()
 
 add_executable(project main.cpp fecha.cpp packaging.cpp product.cpp book.cpp computergame.cpp food.cpp homeappliance.cpp 
-            electronic.cpp clothing.cpp stock.cpp supplier.cpp transport.cpp customer.cpp customerRepository.cpp packaging.cpp transportRepository.cpp)
+            electronic.cpp clothing.cpp stock.cpp supplier.cpp transport.cpp customer.cpp packaging.cpp
+            customerRepository.hpp transportRepository.hpp stockRepository.hpp supplierRepository.hpp productRepository.hpp)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})

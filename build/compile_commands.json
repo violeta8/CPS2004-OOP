@@ -68,15 +68,5 @@
   "directory": "/mnt/c/Users/viole/Desktop/ERASMUS/cps2004-oop-1/build",
   "command": "/usr/bin/g++ -g -o CMakeFiles/project.dir/customer.cpp.o -c /mnt/c/Users/viole/Desktop/ERASMUS/cps2004-oop-1/CPProject/customer.cpp",
   "file": "/mnt/c/Users/viole/Desktop/ERASMUS/cps2004-oop-1/CPProject/customer.cpp"
-},
-{
-  "directory": "/mnt/c/Users/viole/Desktop/ERASMUS/cps2004-oop-1/build",
-  "command": "/usr/bin/g++ -g -o CMakeFiles/project.dir/customerRepository.cpp.o -c /mnt/c/Users/viole/Desktop/ERASMUS/cps2004-oop-1/CPProject/customerRepository.cpp",
-  "file": "/mnt/c/Users/viole/Desktop/ERASMUS/cps2004-oop-1/CPProject/customerRepository.cpp"
-},
-{
-  "directory": "/mnt/c/Users/viole/Desktop/ERASMUS/cps2004-oop-1/build",
-  "command": "/usr/bin/g++ -g -o CMakeFiles/project.dir/transportRepository.cpp.o -c /mnt/c/Users/viole/Desktop/ERASMUS/cps2004-oop-1/CPProject/transportRepository.cpp",
-  "file": "/mnt/c/Users/viole/Desktop/ERASMUS/cps2004-oop-1/CPProject/transportRepository.cpp"
 }
 ]

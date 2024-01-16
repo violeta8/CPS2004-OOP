@@ -98,7 +98,7 @@ This will compile the project and create the executable file.
 
 After this you will need to type the following command:
 ```bash
-./cps2004-oop
+./project
 ```
 After this you will be able to use the application.
 To clean the project you will need to type the following command:

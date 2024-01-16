@@ -32,5 +32,10 @@ std::string Supplier::display_supplier_info()const
       return info;
 }
 
+bool operator==(const Supplier& supplier, const Supplier& supplier2)
+{
+      return (supplier.getId() == supplier2.getId());
+}
+
 Supplier::~Supplier(){}
 

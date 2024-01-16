@@ -23,6 +23,8 @@ class Supplier
             
             std::string display_supplier_info()const;
 
+            friend bool operator==(const Supplier& supplier, const Supplier& supplier2);
+
             ~Supplier();
 
       private:

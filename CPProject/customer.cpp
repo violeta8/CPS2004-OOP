@@ -1,12 +1,13 @@
 #include "customer.hpp"
 
-Customer::Customer(std::string name, std::string address, std::string phone, std::string email)
+Customer::Customer(std::string name, std::string address, std::string phone, std::string email, double warehouseDistance)
 {
-      idCustomer_=0;//todo
+      idCustomer_= 0;//!todo this en tos laos
       name_ = name;
       address_ = address;
       phone_ = phone;
       email_ = email;
+      warehouseDistance_ = warehouseDistance;
 }
 
 void Customer::setId(int id)
@@ -76,3 +77,10 @@ std::string Customer::display_customer_info()const
                          getEmail() + " \nWarehouse distance: " + std::to_string(getWarehouseDistance());
       return info;
 }
+
+bool operator==(const Customer& customer, const Customer& customer2)
+{
+      return (customer.getId() == customer2.getId());
+}
+
+Customer::~Customer(){}

@@ -7,8 +7,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/project.dir/computergame.cpp.o.d"
   "CMakeFiles/project.dir/customer.cpp.o"
   "CMakeFiles/project.dir/customer.cpp.o.d"
-  "CMakeFiles/project.dir/customerRepository.cpp.o"
-  "CMakeFiles/project.dir/customerRepository.cpp.o.d"
   "CMakeFiles/project.dir/electronic.cpp.o"
   "CMakeFiles/project.dir/electronic.cpp.o.d"
   "CMakeFiles/project.dir/fecha.cpp.o"
@@ -29,8 +27,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/project.dir/supplier.cpp.o.d"
   "CMakeFiles/project.dir/transport.cpp.o"
   "CMakeFiles/project.dir/transport.cpp.o.d"
-  "CMakeFiles/project.dir/transportRepository.cpp.o"
-  "CMakeFiles/project.dir/transportRepository.cpp.o.d"
   "project"
   "project.pdb"
 )

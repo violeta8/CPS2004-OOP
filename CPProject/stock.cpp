@@ -40,3 +40,8 @@ std::string Stock::display_stock_info()const
     info += "Units: " + std::to_string(units_) + "\n";
     return info;
 }
+
+bool operator==(const Stock& stock, const Stock& stock2) 
+{
+    return (stock.getProduct() == stock2.getProduct());
+}

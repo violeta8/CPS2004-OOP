@@ -66,5 +66,14 @@ double Product::calculate_discount(int quantity, int month)
       }
 }
 
+bool operator==(const Product& product, const Product& product2) 
+{
+      return (product.getId() == product2.getId());
+}
 
-Product::~Product(){}
+Product::~Product()
+{
+      price_ = 0;
+      volume_ = 0;
+      supplier_.~Supplier();
+}

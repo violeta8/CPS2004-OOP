@@ -1,13 +1,12 @@
 #ifndef CUTOMER_HPP_
 #define CUTOMER_HPP_
 
-
 #include <iostream>
 
 
 class Customer{
       public:
-            Customer(std::string name, std::string address, std::string phone, std::string email);
+            Customer(std::string name, std::string address, std::string phone, std::string email, double warehouseDistance = 0);
             
             void setId(int id);
             void setName(std::string name);
@@ -24,11 +23,13 @@ class Customer{
             double getWarehouseDistance() const;
 
             std::string display_customer_info()const;
+
+            friend bool operator==(const Customer& customer, const Customer& customer2);
                   
             ~Customer();
       
       private:
-            static int idCustomer_;//todo static(?)
+            int idCustomer_;
             std::string name_;
             std::string address_;
             std::string phone_;

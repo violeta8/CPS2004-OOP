@@ -1,40 +1,21 @@
-#include "customer.hpp"
-#include <list>
-#include <iostream>     
+#include "customerRepository.hpp"
 
-class customerRepository
-{
-      public:
-            customerRepository();
-            int nextIdCustomer();
-            void addCustomer(const Customer customer);
-            void removeCustomer(const Customer customer);
-            void updateCustomer(int id, std::string what, std::string change);
-            Customer getCustomerbyId(int idCustomer) ;
-            std::string getAllCustomers()const;
-            ~customerRepository();
+int customerRepository::nextId=0;
 
-      private:
-            std::list<Customer> repository;
-            int nextId;
-};
-
-customerRepository::customerRepository(){
-      repository = std::list<Customer>();
-      nextId = 0;
-}
+std::list<Customer> customerRepository::repository = std::list<Customer>();
 
 int customerRepository::nextIdCustomer()
 {
       return nextId++;
 }
 
-void customerRepository::addCustomer(const Customer Customer)
+void customerRepository::addCustomer(Customer Customer)
 {
       repository.push_back(Customer);
+      Customer.setId(nextIdCustomer());
 }
 
-void customerRepository::removeCustomer(const Customer Customer)
+void customerRepository::removeCustomer(Customer Customer)
 {
       repository.remove(Customer);
 }
@@ -77,7 +58,7 @@ Customer customerRepository::getCustomerbyId(int idCustomer)
       return Customer("","","","");
 }
 
-std::string customerRepository::getAllCustomers()const
+std::string customerRepository::getAllCustomers()
 {
       std::string result = "";
       for (std::list<Customer>::const_iterator it = repository.begin(); it != repository.end(); ++it)

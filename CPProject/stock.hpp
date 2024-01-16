@@ -19,6 +19,8 @@ class Stock
 
             std::string display_stock_info()const;
 
+            friend bool operator==(const Stock& stock1, const Stock& stock2);
+
             ~Stock();
 
       private:
