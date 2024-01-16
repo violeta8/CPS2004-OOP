@@ -8,7 +8,7 @@ import project.transport.TransportRepository;
 import java.util.List;
 import java.time.LocalDate;
 
-public class Shipment{
+public class Shipment implements ShipmentComponent{
     private int idShipment;
     private Customer customer;
     private List<Packaging> packagings;//this should already have the whole products inside of it
@@ -46,7 +46,7 @@ public class Shipment{
         return this.idShipment == shipment.idShipment;
     }
 
-    void updateShipment(String change, String newchange)
+    public void updateShipment(String change, String newchange)
     {
         if(change.equals("transport")) {
             this.setTransport(TransportRepository.getTransportById(Integer.parseInt(newchange)));

@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/C++.dir/main.cpp.o CMakeFiles/C++.dir/src/customer.cpp.o CMakeFiles/C++.dir/src/packaging.cpp.o CMakeFiles/C++.dir/src/product.cpp.o CMakeFiles/C++.dir/src/shipment.cpp.o CMakeFiles/C++.dir/src/stock.cpp.o CMakeFiles/C++.dir/src/supplier.cpp.o CMakeFiles/C++.dir/src/transport.cpp.o -o C++ 

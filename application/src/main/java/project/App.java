@@ -85,7 +85,7 @@ public class App
                 System.out.println( "Please enter what would you like to change" );
                 String change = scanner.nextLine();
                 String newchange = scanner.nextLine();
-                CustomerRepository.updateCustomer(id1, change, newchange);//todo hacer esto en to los updates
+                CustomerRepository.updateCustomer(id1, change, newchange);
                 System.out.println("The customer has been changed successfully!");
                 break;
             case 4:
@@ -325,7 +325,7 @@ public class App
                 try{
                     SupplierRepository.updateSupplier(id1, change,newchange);
                 }catch(IllegalAccessError e){
-                    System.out.println(e.getMessage());//todo hace esto en to laos
+                    System.out.println(e.getMessage());
                 }
                 System.out.println("The supplier has been changed successfully!");
                 break;
@@ -460,7 +460,7 @@ public class App
                     System.out.println("Please enter the id and the quantity of the products you want to add to the shipment");
                     int productid = scanner.nextInt();
                     scanner.nextLine();
-                    int quantity = scanner.nextInt();//todo poner esto en el getTotalCost() de packaging
+                    int quantity = scanner.nextInt();
                     scanner.nextLine();
                     Product product = ProductRepository.getProductById(productid);
                     if(quantity>StockRepository.getStockQuantity(product)){
@@ -488,9 +488,19 @@ public class App
                 System.out.println("Would you like to add more products? Please write yes");
                 }while(scanner.nextLine().equals("yes"));
                 Shipment shipment = new Shipment(customer, packagingList , transport, LocalDate.now());
-                ShipmentRepository.saveShipment(shipment);
-                // ShipmentDecorator shipmentCost = new ShipmentDecoratorTotalCost(shipment);
-                // ShipmentDecorator shipmentDelivery = new ShipmentDecoratorDeliveryDate(shipment);
+                if(shipment.getCustomer().getName()=="mark"){
+                    ShipmentDecorator shipmentCost = new ShipmentDecoratorTotalCost(shipment);
+                    ShipmentRepository.saveShipment(shipmentCost);
+                    System.out.println("The total cost of the shipment is: "+shipmentCost.getTotalCost());
+                }
+                else if(shipment.getCustomer().getName()=="john"){
+                    ShipmentDecorator shipmentDelivery = new ShipmentDecoratorDeliveryDate(shipment);
+                    ShipmentRepository.saveShipment(shipmentDelivery);
+                    System.out.println("The delivery date of the shipment is: "+shipmentDelivery.getDeliveryDate());
+                }
+                else{
+                    ShipmentRepository.saveShipment(shipment);
+                }
                 break;
 
             case 2:

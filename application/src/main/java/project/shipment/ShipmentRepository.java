@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ShipmentRepository {
-    private static List<Shipment> repository=new ArrayList<Shipment>();
+    private static List<ShipmentComponent> repository=new ArrayList<ShipmentComponent>();
     private static int nextIdShipment;
 
     public ShipmentRepository() {
@@ -16,7 +16,7 @@ public class ShipmentRepository {
         return nextIdShipment++;
     }
 
-    public static void saveShipment(Shipment shipment) {
+    public static void saveShipment(ShipmentComponent shipment) {
         repository.add(shipment);
     }
 
@@ -24,17 +24,17 @@ public class ShipmentRepository {
         if (!repository.contains(repository.get(id))) {
             throw new IllegalAccessError("Shipment not found");
         }
-        Shipment shipment = repository.get(id);
+        ShipmentComponent shipment = repository.get(id);
         shipment.updateShipment(change, newchange);
     }
 
-    public static Shipment getShipmentById(int id) {
+    public static ShipmentComponent getShipmentById(int id) {
         return repository.get(id);
     }
 
     public static String getAllShipments() {
         String result="";
-        for (Shipment shipment : repository) {
+        for (ShipmentComponent shipment : repository) {
             result += shipment.toString()+"\n";
         }
         return result;
