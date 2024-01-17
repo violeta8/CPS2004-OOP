@@ -1,8 +1,8 @@
 #include "customer.hpp"
 
-Customer::Customer(std::string name, std::string address, std::string phone, std::string email, double warehouseDistance)
+Customer::Customer(int id, std::string name, std::string address, std::string phone, std::string email, double warehouseDistance)
 {
-      idCustomer_= 0;//!todo this en tos laos
+      idCustomer_= id;//!todo this en tos laos
       name_ = name;
       address_ = address;
       phone_ = phone;
@@ -72,9 +72,9 @@ double Customer::getWarehouseDistance() const
 
 std::string Customer::display_customer_info()const
 {
-      std::string info = "Customer: " + std::to_string(getId()) + " \nName: " + getName() + " \nAddress: " +
-                         getAddress() + " \nPhone: " + getPhone() + " \nEmail: " +
-                         getEmail() + " \nWarehouse distance: " + std::to_string(getWarehouseDistance());
+      std::string info = "Customer: " + std::to_string(getId()) + ", Name: " + getName() + ", Address: " +
+                         getAddress() + ", Phone: " + getPhone() + ", Email: " +
+                         getEmail() + ", Warehouse distance: " + std::to_string(getWarehouseDistance());
       return info;
 }
 

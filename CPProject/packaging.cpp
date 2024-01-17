@@ -1,61 +1,79 @@
 #include "packaging.hpp"
 
-Packaging::Packaging(int units, double price, double volume, double weight)
+Packaging::Packaging(Transport* t)
 {
-    units_ = units;
-    pricePerUnit_ = price;
-    volume_ = volume;
-    weight_ = weight;
+    products_ = std::list<Product*>();
+    product_quantity_ = std::map<Product*, int>();
+    if(dynamic_cast<Truck*>(t) != nullptr)
+    {
+        capacity_ = 50;
+        cost_ = 3;
+    }
+    else if(dynamic_cast<Ship*>(t) != nullptr)
+    {
+        capacity_ = 80;
+        cost_ = 1;
+    }
+    else if(dynamic_cast<Plane*>(t) != nullptr)
+    {
+        capacity_ = 100;
+        cost_ = 2;
+    }
 }
 
 //* ----------------Setters and getters---------------- *//
-void Packaging::setUnits(int units)
+void Packaging::setCapacity(int capacity)
 {
-    units_ = units;
+    capacity_ = capacity;
 }
 
-void Packaging::setPrice(double price)
+void Packaging::setCost(double cost)
 {
-    pricePerUnit_ = price;
+    cost_ = cost;
 }
 
-void Packaging::setVolume(double volume)
+int Packaging::getCapacity() const
 {
-    volume_ = volume;
+    return capacity_;
 }
 
-void Packaging::setWeight(double weight)
+double Packaging::getCost() const
 {
-    weight_ = weight;
+    return cost_;
 }
 
-int Packaging::getUnits() const
+double Packaging::getTotalCost() const
 {
-    return units_;
+    double result=0;
+    for(std::list<Product*>::const_iterator it = products_.begin(); it != products_.end(); ++it)
+    {
+        result += (*it)->getPrice()*(*it)->calculate_discount(product_quantity_.at(*it), Fecha().mes());
+    }
+    if(capacity_ < 50)
+    {
+        return result + cost_;
+    }
+    else if(capacity_ < 80)
+    {
+        return result + cost_;
+    }
+    else
+    {
+        return result + cost_;
+    }
 }
 
-double Packaging::getPrice() const
+std::string Packaging::display_packaging_info() const
 {
-    return pricePerUnit_;
-}
-
-double Packaging::getVolume() const
-{
-    return volume_;
-}
-
-double Packaging::getWeight() const
-{
-    return weight_;
+    std::string info = "[Packaging:  Capacity: " + std::to_string(capacity_) + ", Total Cost: " + std::to_string(getTotalCost()) + ", Products: \n{"; 
+    for(std::list<Product*>::const_iterator it = products_.begin(); it != products_.end(); ++it)
+    {
+        info += (*it)->display_product_info();
+    }
+    "}\n";
+    return info;
 }
 
 
-void Packaging::display_packaging_info() const
-{
-    std::cout << "Units: " << getUnits() << std::endl;
-    std::cout << "Price: " << getPrice() << std::endl;
-    std::cout << "Volume: " << getVolume() << std::endl;
-    std::cout << "Weight: " << getWeight() << std::endl;
-}
 
 Packaging::~Packaging(){}

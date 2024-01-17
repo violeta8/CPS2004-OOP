@@ -1,7 +1,11 @@
 package project.shipment;
 import java.time.LocalDate;
+import java.util.List;
 
 import project.customer.Customer;
+import project.packaging.Packaging;
+import project.transport.Transport;
+
 
 public abstract class ShipmentDecorator implements ShipmentComponent{
     private Shipment wrapee;
@@ -53,5 +57,23 @@ public abstract class ShipmentDecorator implements ShipmentComponent{
     public void setPurchaseDate(LocalDate purchaseDate) {
         setPurchaseDate(purchaseDate);
     }
+
+    public Transport getTransport() {
+        return getTransport();
+    }
+
+    public void setTransport(Transport transport) {
+        setTransport(transport);
+    }
+
+    public List<Packaging> getPackagings() {
+        return getPackagings();
+    }
+
+    public void setPackagings(List<Packaging> packagings) {
+        setPackagings(packagings);
+    }
+
+
 
 }

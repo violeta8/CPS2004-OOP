@@ -34,9 +34,9 @@ public class App
     public static void index(){
         System.out.println("Select what do you want to do:");
         System.out.println( "1. Customers" );
-        System.out.println( "2. Product" );
-        System.out.println( "3. Suppliers" );
-        System.out.println( "4. Transport" );
+        System.out.println( "2. Suppliers" );
+        System.out.println( "3. Transports" );
+        System.out.println( "4. Products" );
         System.out.println( "5. Shipments" );
         System.out.println( "6. Stock");
     }
@@ -595,36 +595,38 @@ public class App
                     
                 case 2:
                     do{
-                        ProductMenu();
-                        System.out.println( "Would you like to do anything more with Products? Please write yes" );
-                    }while(scanner.nextLine().equals("yes"));
-                    break;
-
-                case 3: 
-                    do{
                         SupplierMenu();
                         System.out.println( "Would you like to do anything more with Suppliers? Please write yes" );
-                    }while(scanner.nextLine().equals("yes"));  
-                    break;  
-            
-                case 4:
+                    }while(scanner.nextLine().equals("yes")); 
+                    
+
+                case 3: 
                     do{
                         TransportMenu();
                         System.out.println( "Would you like to do anything more with Transports? Please write yes" );
                     }while(scanner.nextLine().equals("yes"));
                     break;
-                case 5:
+            
+                case 4:
                     do{
-                        ShipmentMenu();
-                        System.out.println( "Would you like to do anything more with Shipments? Please write yes" );
+                        ProductMenu();
+                        System.out.println( "Would you like to do anything more with Products? Please write yes" );
                     }while(scanner.nextLine().equals("yes"));
                     break;
-                case 6: 
+        
+                case 5:
                     do{
                         StockMenu();
                         System.out.println( "Would you like to do anything more with Stock? Please write yes" );
                     }while(scanner.nextLine().equals("yes"));
                     break;
+                case 6: 
+                    do{ 
+                        ShipmentMenu();
+                        System.out.println( "Would you like to do anything more with Shipments? Please write yes" );
+                    }while(scanner.nextLine().equals("yes"));
+                    break;
+                    
                 }
             
             System.out.println( "Would you like to do anything more with the application? Please write yes" );

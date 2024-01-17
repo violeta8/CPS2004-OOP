@@ -23,7 +23,7 @@ void Transport::updateTransport(std::string what, std::string change)
 
 std::string Transport::display_transport_info()const
 {
-      std::string info = std::to_string(getId()) + " \nThe speed is: " + std::to_string(getSpeed()) + " \nThe cost per km is: " + std::to_string(getCostPerKm());
+      std::string info = std::to_string(getId()) + " The speed is: " + std::to_string(getSpeed()) + ", Cost per km: " + std::to_string(getCostPerKm());
       return info;
 }
 
@@ -45,12 +45,8 @@ Transport::~Transport(){}
 
 
 
-Plane::Plane(int id, double speed, double costPerKm, std::string model)
-      : Transport(id, speed, costPerKm), model_(model){}
-
-void Plane::setModel(std::string model) { model_ = model; }
-
-std::string Plane::getModel() const { return model_; }
+Plane::Plane(int id, double speed, double costPerKm)
+      : Transport(id, speed, costPerKm){}
 
 void Plane::updateTransport(std::string what, std::string change)
 {
@@ -73,12 +69,8 @@ int Plane::route() const
 Plane::~Plane(){}
 
 
-Truck::Truck(int id, double speed, double costPerKm, std::string plate)
-      : Transport(id, speed, costPerKm), plate_(plate){}
-
-void Truck::setPlate(std::string plate) { plate_ = plate; }
-
-std::string Truck::getPlate() const { return plate_; }
+Truck::Truck(int id, double speed, double costPerKm)
+      : Transport(id, speed, costPerKm){}
 
 void Truck::updateTransport(std::string what, std::string change)
 {
@@ -99,12 +91,8 @@ int Truck::route() const
 Truck::~Truck(){}
 
 
-Ship::Ship(int id, double speed, double costPerKm, std::string name)
-      : Transport(id, speed, costPerKm), name_(name){}
-
-void Ship::setName(std::string name) { name_ = name; }
-
-std::string Ship::getName() const { return name_; }
+Ship::Ship(int id, double speed, double costPerKm)
+      : Transport(id, speed, costPerKm){}
 
 void Ship::updateTransport(std::string what, std::string change)
 {

@@ -1,26 +1,26 @@
 #include "customerRepository.hpp"
 
-int customerRepository::nextId=0;
+int CustomerRepository::nextId=0;
 
-std::list<Customer> customerRepository::repository = std::list<Customer>();
+std::list<Customer> CustomerRepository::repository = std::list<Customer>();
 
-int customerRepository::nextIdCustomer()
+int CustomerRepository::nextIdCustomer()
 {
       return nextId++;
 }
 
-void customerRepository::addCustomer(Customer Customer)
+void CustomerRepository::addCustomer(Customer customer)
 {
-      repository.push_back(Customer);
-      Customer.setId(nextIdCustomer());
+      repository.push_back(customer);
+      customer.setId(nextIdCustomer());
 }
 
-void customerRepository::removeCustomer(Customer Customer)
+void CustomerRepository::removeCustomer(Customer customer)
 {
-      repository.remove(Customer);
+      repository.remove(customer);
 }
 
-void customerRepository::updateCustomer(int id, std::string what, std::string change)
+void CustomerRepository::updateCustomer(int id, std::string what, std::string change)
 {
      for(std::list<Customer>::iterator it = repository.begin(); it != repository.end(); ++it)
      {
@@ -46,7 +46,7 @@ void customerRepository::updateCustomer(int id, std::string what, std::string ch
      }
 }
 
-Customer customerRepository::getCustomerbyId(int idCustomer) 
+Customer CustomerRepository::getCustomerbyId(int idCustomer) 
 {
       for (std::list<Customer>::const_iterator it = repository.begin(); it != repository.end(); ++it)
       {
@@ -55,10 +55,10 @@ Customer customerRepository::getCustomerbyId(int idCustomer)
                   return *it;
             }
       }
-      return Customer("","","","");
+      return Customer(0,"","","","");
 }
 
-std::string customerRepository::getAllCustomers()
+std::string CustomerRepository::getAllCustomers()
 {
       std::string result = "";
       for (std::list<Customer>::const_iterator it = repository.begin(); it != repository.end(); ++it)
@@ -68,4 +68,4 @@ std::string customerRepository::getAllCustomers()
       return result;
 }
 
-customerRepository::~customerRepository(){}
+CustomerRepository::~CustomerRepository(){}

@@ -2,31 +2,37 @@
 #define PACKAGING_HPP_
 
 #include <iostream>
+#include <list>
+#include <map>
 
-// #include "product.hpp" //todo no se si esto esta bien
+#include "product.hpp" 
+#include "transport.hpp"
+#include "fecha.hpp"
 
 //class that will be used to store the packaging information of the product
 class Packaging
 {
       public:
-            Packaging(int units, double price, double volume, double weight);
-            void setUnits(int units);
-            void setPrice(double price);
-            void setVolume(double volume);
-            void setWeight(double weight);
-            int getUnits() const;
-            double getPrice() const;
-            double getVolume() const;
-            double getWeight() const;
+            Packaging(Transport* t);
 
-            void display_packaging_info() const;
+            void setCapacity(int capacity);
+            void setCost(double cost);
+
+            int getCapacity() const;
+            double getCost() const;
+
+            double getTotalCost() const;
+
+            std::string display_packaging_info() const;
             ~Packaging();
 
       private:
-            int units_;
-            double pricePerUnit_;
-            double volume_;
-            double weight_;
+            int capacity_;
+            double cost_;
+            std::list<Product*> products_;
+            std::map<Product*, int> product_quantity_;
+
+
 };
 
 #endif // PACKAGING_HPP_

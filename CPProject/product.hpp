@@ -28,7 +28,7 @@ class Product
             ~Product();
 
       private:
-            int id_;//get this incremented
+            int id_;
             double price_;
             int volume_;
             Supplier supplier_;

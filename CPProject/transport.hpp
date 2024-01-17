@@ -33,7 +33,7 @@ class Transport
 class Plane : public Transport
 {
       public:
-            Plane(int id, double speed, double costPerKm, std::string model);
+            Plane(int id, double speed, double costPerKm);
             void setModel(std::string model_);
             std::string getModel() const;
 
@@ -51,7 +51,7 @@ class Plane : public Transport
 class Truck : public Transport
 {
       public:
-            Truck(int id, double speed, double costPerKm, std::string plate);
+            Truck(int id, double speed, double costPerKm);
             void setPlate(std::string plate_);
             std::string getPlate() const;
 
@@ -68,7 +68,7 @@ class Truck : public Transport
 class Ship : public Transport
 {
       public:
-            Ship(int id, double speed, double costPerKm, std::string name);
+            Ship(int id, double speed, double costPerKm);
             void setName(std::string name_);
             std::string getName() const;
 

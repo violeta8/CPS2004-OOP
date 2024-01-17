@@ -19,23 +19,8 @@ public class Packaging {
     private List<Product> products;
     private Map<Product, Integer> product_quantity;
 
-    public Packaging(int idPackaging, int capacity, int cost, List<Product> products) {
-        this.idPackaging = idPackaging;
-        this.capacity = capacity;
-        this.cost = cost;
-        this.products = products;
-    }
-
-    public Packaging(int capacity){
-        this.idPackaging = PackagingRepository.nextIdPackaging();
-        this.capacity = capacity;
-        this.cost = 1;
-        this.products = new ArrayList<Product>();
-    }
-
     public Packaging(Transport t) {
         this.idPackaging = PackagingRepository.nextIdPackaging();
-        this.cost = 3;
         this.products = new ArrayList<Product>();
         this.product_quantity = new HashMap<Product, Integer>();
         if(t instanceof Truck){

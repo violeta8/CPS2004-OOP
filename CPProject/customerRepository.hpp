@@ -1,18 +1,17 @@
 #include "customer.hpp"
 
 #include <list>
-#include <iostream>     
 
-class customerRepository
+class CustomerRepository
 {
       public:
             static int nextIdCustomer();
             static void addCustomer(Customer customer);
             static void removeCustomer(Customer customer);
             static void updateCustomer(int id, std::string what, std::string change);
-            static Customer getCustomerbyId(int idCustomer) ;
+            static Customer getCustomerbyId(int idCustomer);
             static std::string getAllCustomers();
-            ~customerRepository();
+            ~CustomerRepository();
 
       private:
             static std::list<Customer> repository;

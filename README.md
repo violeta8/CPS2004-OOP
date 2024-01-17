@@ -78,6 +78,7 @@ There are repositories for each class implemented in the application:
 •	Shipment repository will store all the shipments created, this repository will handle the saving, updating, delete, and show all the shipments made.
 
 # Run and compile
+## JAVA
 To run the application you will need to have installed the latest version of Java and Maven, then you will need to open the terminal and go to the directory where the project is located and type the following command:
 ```bash
 mvn exec:java
@@ -85,6 +86,7 @@ mvn exec:java
 
 After this you will be able to use the application.
 
+## C++
 In the C++ version of the application you will need to have installed the latest version of C++ and CMake, then you will need to open the terminal and go to the directory where the project is located and type the following command:
 ```bash
 cmake .

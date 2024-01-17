@@ -3,10 +3,9 @@
 
 #include <iostream>
 
-
 class Customer{
       public:
-            Customer(std::string name, std::string address, std::string phone, std::string email, double warehouseDistance = 0);
+            Customer(int id, std::string name, std::string address, std::string phone, std::string email, double warehouseDistance = 0);
             
             void setId(int id);
             void setName(std::string name);
