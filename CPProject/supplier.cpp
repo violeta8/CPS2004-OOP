@@ -24,11 +24,11 @@ std::string Supplier::getEmail() const { return email_; }
 std::string Supplier::display_supplier_info()const
 {
       std::string info = "";
-      info += "Supplier id: " + std::to_string(id_) + ", ";
-      info += "Supplier name: " + name_ + ", ";
-      info += "Supplier address: " + address_ + ", ";
-      info += "Supplier phone: " + phone_ + ", ";
-      info += "Supplier email: " + email_;
+      info += "Supplier: [ID: " + std::to_string(id_) + ", ";
+      info += "Name: " + name_ + ", ";
+      info += "Address: " + address_ + ", ";
+      info += "Phone: " + phone_ + ", ";
+      info += "Email: " + email_ + "]";
       return info;
 }
 

@@ -74,6 +74,5 @@ public abstract class ShipmentDecorator implements ShipmentComponent{
         setPackagings(packagings);
     }
 
-
-
+    public abstract String toString();
 }

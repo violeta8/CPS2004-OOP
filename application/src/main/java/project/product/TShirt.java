@@ -12,7 +12,7 @@ public class TShirt extends Clothing{
     @Override
     public String display_product_info() {
         return "TShirt{" +        
-                ", productId=" + getProductId() +
+                "productId=" + getProductId() +
                 ", supplierId=" + getSupplier().getIdSupplier() +
                 ", supplier name=" + getSupplier().getName() +
                 ", productId=" + getProductId() +

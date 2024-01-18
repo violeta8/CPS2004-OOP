@@ -21,6 +21,7 @@ class Shipment{
             Fecha getDeliveryDate() const;
             std::list<Packaging> getPackaging() const;
             Fecha setDeliveryDate();
+            double getTotalCost() const;
 
             void setCustomer(Customer customer);
             void setTransport(Transport* transport);

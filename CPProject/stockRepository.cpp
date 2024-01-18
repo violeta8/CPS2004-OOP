@@ -60,7 +60,7 @@ std::string StockRepository::getAllStock()
       std::string info = "";
       for(std::list<Stock>::const_iterator it = repository.begin(); it != repository.end(); ++it)
       {
-            info += it->display_stock_info();
+            info += it->display_stock_info() + "\n";
       }
       return info;
 }

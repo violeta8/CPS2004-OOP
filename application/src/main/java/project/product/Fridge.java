@@ -12,7 +12,7 @@ public class Fridge extends HomeAppliance{
     @Override
     public String display_product_info() {
         return "Fridge{" +
-                ", productId=" + getProductId() +
+                "productId=" + getProductId() +
                 ", supplierId=" + getSupplier().getIdSupplier() +
                 ", supplier name=" + getSupplier().getName() +
                 ", stock=" +  StockRepository.getStockQuantity(this) +

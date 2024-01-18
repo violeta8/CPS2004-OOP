@@ -24,9 +24,9 @@ void Transport::updateTransport(std::string what, std::string change)
 std::string Transport::display_transport_info()const
 {
       std::string info = "";
-      info += "ID: " + std::to_string(getId()) + ", ";
+      info += "Transport: [ID: " + std::to_string(getId()) + ", ";
       info += " Speed: " + std::to_string(getSpeed()) + ", " ;
-      info += "Cost per km: " + std::to_string(getCostPerKm());
+      info += "Cost per km: " + std::to_string(getCostPerKm())+ "]";
       return info;
 }
 

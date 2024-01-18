@@ -10,13 +10,5 @@ public abstract class Food extends Product{
     }
 
     @Override
-    public String display_product_info() {
-        return "Food{" +
-                ", productId=" + getProductId() +
-                ", supplierId=" + getSupplier().getIdSupplier() +
-                ", supplier name=" + getSupplier().getName() +
-                ", stock=" + StockRepository.getStockQuantity(this) +
-                ", price=" + getPrice() + 
-                '}';
-    }
+    public abstract String display_product_info();
 }

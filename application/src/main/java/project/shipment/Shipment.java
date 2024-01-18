@@ -140,8 +140,8 @@ public class Shipment implements ShipmentComponent{
                 ", transport=" + transport.toString() +
                 ", purchaseDate=" + purchaseDate +
                 ", deliveryDate=" + deliveryDate +
-                ", totalCost=" + getTotalCost() + "€" + "\n" +
-                '}';
+                ", totalCost=" + getTotalCost() + "€" +
+                '}' + "\n";
     }
 
 }

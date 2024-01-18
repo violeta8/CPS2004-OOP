@@ -11,7 +11,7 @@ public class Pants extends Clothing{
     @Override
     public String display_product_info() {
         return "Pants{" +
-                ", productId=" + getProductId() +
+                "productId=" + getProductId() +
                 ", supplierId=" + getSupplier().getIdSupplier() +
                 ", supplier name=" + getSupplier().getName() +
                 ", stock=" + StockRepository.getStockQuantity(this) +

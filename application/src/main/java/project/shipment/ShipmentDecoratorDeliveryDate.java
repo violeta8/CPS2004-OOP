@@ -11,4 +11,11 @@ public class ShipmentDecoratorDeliveryDate extends ShipmentDecorator{
     public LocalDate getDeliveryDate() {
         return super.getDeliveryDate().plusDays(2);     
     }
+
+    
+    public String toString() {
+        return "Shipment{ "+ getIdShipment() + " " + getCustomer().toString() +
+        ", " + getPackagings().toString() + ", " + getTransport().toString() + ", " + 
+        getPurchaseDate() + ", " + getDeliveryDate()+ ", " + getTotalCost() +"€}";
+    }
 }

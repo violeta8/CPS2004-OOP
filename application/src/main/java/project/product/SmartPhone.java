@@ -12,7 +12,7 @@ public class SmartPhone extends Electronic{
     @Override
     public String display_product_info() {
         return "SmartPhone{" +        
-                ", productId=" + getProductId() +
+                "productId=" + getProductId() +
                 ", supplierId=" + getSupplier().getIdSupplier() +
                 ", supplier name=" + getSupplier().getName() +
                 ", stock=" + StockRepository.getStockQuantity(this) +

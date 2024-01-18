@@ -13,7 +13,7 @@ public class Tablet extends Electronic{
     @Override
     public String display_product_info() {
         return "Tablet{" +        
-                ", productId=" + getProductId() +
+                "productId=" + getProductId() +
                 ", supplierId=" + getSupplier().getIdSupplier() +
                 ", supplier name=" + getSupplier().getName() +
                 ", stock=" + StockRepository.getStockQuantity(this) +

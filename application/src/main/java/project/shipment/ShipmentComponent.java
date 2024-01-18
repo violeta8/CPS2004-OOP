@@ -22,4 +22,5 @@ public interface ShipmentComponent {
     public void setTransport(Transport transport);
     public LocalDate getPurchaseDate();
     public void setPurchaseDate(LocalDate purchaseDate);
+    public String toString();
 }

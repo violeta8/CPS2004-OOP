@@ -54,7 +54,7 @@ Customer CustomerRepository::getCustomerbyId(int idCustomer)
                   return *it;
             }
       }
-      return Customer(0,"","","","");
+      return Customer(0, "", "", "", "", 0);
 }
 
 std::string CustomerRepository::getAllCustomers()

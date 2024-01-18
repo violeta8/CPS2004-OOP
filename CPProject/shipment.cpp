@@ -82,6 +82,16 @@ Fecha Shipment::setDeliveryDate()
       return deliveryDate_;
 }
 
+double Shipment::getTotalCost() const
+{
+      double total = 0;
+      for(auto it = packaging_.begin(); it != packaging_.end(); ++it)
+      {
+            total += it->getTotalCost()+(((transport_->route()+customer_.getWarehouseDistance())*transport_->getCostPerKm())/transport_->getSpeed());
+      }
+      return total;
+}
+
 void Shipment::setCustomer(Customer customer)
 {
       customer_ = customer;
@@ -101,7 +111,7 @@ std::string Shipment::display_shipment_info() const
 {
       std::string info = "[Shipment: " + std::to_string(idShipment_) + ", " + customer_.display_customer_info() + 
       ", " + transport_->display_transport_info() + ", " + purchaseDate_.cadena() + ", " +
-      deliveryDate_.cadena() + ", " + std::to_string(packaging_.size()) + "]\n";
+      deliveryDate_.cadena() + ", " + std::to_string(packaging_.size()) + "Total cost: " +  std::to_string(getTotalCost()) + "€]\n";
       return info;
 }
 

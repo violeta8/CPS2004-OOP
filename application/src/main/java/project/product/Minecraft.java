@@ -12,7 +12,7 @@ public class Minecraft extends ComputerGame{
         @Override
     public String display_product_info() {
         return "Minecraft{" +
-                ", productId=" + getProductId() +
+                "productId=" + getProductId() +
                 ", supplierId=" + getSupplier().getIdSupplier() +
                 ", supplier name=" + getSupplier().getName() +
                 ", stock=" + StockRepository.getStockQuantity(this)+

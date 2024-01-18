@@ -12,7 +12,6 @@ int ProductRepository::nextIdProduct()
 void ProductRepository::addProduct(Product* product)
 {
       repository.push_back(product);
-      product->setId(nextIdProduct());
 }
 
 void ProductRepository::removeProduct(Product* product)
@@ -72,7 +71,7 @@ std::string ProductRepository::getAllProductsbySupplier(int idSupplier)
       {
             if ((*it)->getSupplier().getId() == idSupplier)
             {
-                  result += (*it)->display_product_info();
+                  result += (*it)->display_product_info() + "\n";
             }
       }
       return result;

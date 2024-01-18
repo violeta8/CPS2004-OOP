@@ -429,7 +429,6 @@ void CreateProduct()//todo maybe change this bc it'll be the same problem as tra
         case 1:
             CreateNovel(s, units, price, volume);
             break;
-            
         case 2:
             CreateTextbook(s, units, price, volume);
             break;

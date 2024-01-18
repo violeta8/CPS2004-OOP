@@ -47,7 +47,7 @@ std::string ShipmentRepository::getAllShipments()
       std::string result = "";
       for(std::list<Shipment>::const_iterator it = repository.begin(); it != repository.end(); ++it)
       {
-            result += it->display_shipment_info();
+            result += it->display_shipment_info() + "\n";
       }
       return result;
 }

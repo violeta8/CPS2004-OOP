@@ -5,8 +5,8 @@
 
 class Customer{
       public:
-            Customer(int id, std::string name, std::string address, std::string phone, std::string email, double warehouseDistance = 0);
-            //todo look incrementation of the id (supplier)
+            Customer(int id, std::string name, std::string address, std::string phone, std::string email, double warehouseDistance);
+
             void setId(int id);
             void setName(std::string name);
             void setAddress(std::string address);
@@ -24,7 +24,7 @@ class Customer{
             std::string display_customer_info()const;
 
             friend bool operator==(const Customer& customer, const Customer& customer2);
-                  
+
             ~Customer();
       
       private:

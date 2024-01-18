@@ -2,7 +2,7 @@
 
 Customer::Customer(int id, std::string name, std::string address, std::string phone, std::string email, double warehouseDistance)
 {
-      idCustomer_= id;//!todo this en tos laos
+      idCustomer_= id;
       name_ = name;
       address_ = address;
       phone_ = phone;
@@ -72,9 +72,9 @@ double Customer::getWarehouseDistance() const
 
 std::string Customer::display_customer_info()const
 {
-      std::string info = "Customer: " + std::to_string(getId()) + ", Name: " + getName() + ", Address: " +
+      std::string info = "Customer [ID:" + std::to_string(getId()) + ", Name: " + getName() + ", Address: " +
                          getAddress() + ", Phone: " + getPhone() + ", Email: " +
-                         getEmail() + ", Warehouse distance: " + std::to_string(getWarehouseDistance());
+                         getEmail() + ", Warehouse distance: " + std::to_string(getWarehouseDistance()) + "]";
       return info;
 }
 

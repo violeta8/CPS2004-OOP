@@ -80,6 +80,13 @@ There are repositories for each class implemented in the application:
 # Run and compile
 ## JAVA
 To run the application you will need to have installed the latest version of Java and Maven, then you will need to open the terminal and go to the directory where the project is located and type the following command:
+
+```bash
+mvn clean
+```
+```bash
+mvn compile
+```
 ```bash
 mvn exec:java
 ```
@@ -107,3 +114,10 @@ To clean the project you will need to type the following command:
 ```bash
 make clean
 ```
+
+Or if you are using VSCode we could do 
+```bash
+cmake: clean
+```
+Then hit configure.
+And then run without debugging
