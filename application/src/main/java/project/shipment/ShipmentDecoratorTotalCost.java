@@ -13,6 +13,6 @@ public class ShipmentDecoratorTotalCost extends ShipmentDecorator {
     public String toString() {
         return "Shipment{ "+ getIdShipment() + " " + getCustomer().toString() +
         ", " + getPackagings().toString() + ", " + getTransport().toString() + ", " + 
-        getPurchaseDate() + ", " + getDeliveryDate()+ ", " +getTotalCost()"€}";
+        getPurchaseDate() + ", " + getDeliveryDate()+ ", " +getTotalCost()+"€}";
     }
 }
