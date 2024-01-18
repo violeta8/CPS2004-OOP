@@ -1,7 +1,7 @@
 #include "supplier.hpp"
 
-Supplier::Supplier(std::string name, std::string address, std::string phone, std::string email)
-      : id_(), name_(name), address_(address), phone_(phone), email_(email){}
+Supplier::Supplier(int id, std::string name, std::string address, std::string phone, std::string email)
+      : id_(id), name_(name), address_(address), phone_(phone), email_(email){}
 
 int Supplier::getId() const{return id_;}
 

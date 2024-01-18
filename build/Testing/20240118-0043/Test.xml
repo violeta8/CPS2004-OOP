@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Site BuildName="Linux-g++"
-	BuildStamp="20240117-0938-Experimental"
+	BuildStamp="20240118-0043-Experimental"
 	Name="ateloiv"
 	Generator="ctest-3.22.1"
 	CompilerName="/usr/bin/g++"
@@ -24,11 +24,11 @@
 	ProcessorClockFrequency="2112.01"
 	>
 	<Testing>
-		<StartDateTime>Jan 17 20:16 CET</StartDateTime>
-		<StartTestTime>1705518977</StartTestTime>
+		<StartDateTime>Jan 18 02:25 CET</StartDateTime>
+		<StartTestTime>1705541119</StartTestTime>
 		<TestList/>
-		<EndDateTime>Jan 17 20:16 CET</EndDateTime>
-		<EndTestTime>1705518977</EndTestTime>
+		<EndDateTime>Jan 18 02:25 CET</EndDateTime>
+		<EndTestTime>1705541119</EndTestTime>
 		<ElapsedMinutes>0</ElapsedMinutes>
 	</Testing>
 </Site>

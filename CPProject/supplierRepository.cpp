@@ -54,7 +54,7 @@ Supplier SupplierRepository::getSupplierbyId(int idSupplier)
                   return *it;
             }
       }
-      return Supplier("","","","");
+      return Supplier(-1,"","","","");
 }
 
 std::string SupplierRepository::getAllSuppliers()

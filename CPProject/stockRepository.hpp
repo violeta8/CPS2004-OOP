@@ -8,10 +8,10 @@ class StockRepository
 {
     public:
             static void addStock(const Stock& stock);
-            static void removeStock( const int id);
-            static void updateStock(Product& product, int units);
+            static void removeStock(Product* product);
+            static void updateStock(Product* product, int units);
             static Stock getStock(int id);
-            static int getStockQuantity(Product& product);
+            static int getStockQuantity(Product* product);
             static std::string getAllStock();
             ~StockRepository();
 

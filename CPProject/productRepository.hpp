@@ -8,6 +8,7 @@ public:
       static void addProduct(Product* product);
       static void removeProduct(Product* product);
       static void updateProduct(int id, std::string what, std::string change);
+      static void updateProduct(Product* product);
       static Product* getProductbyId(int id);
       static std::string getAllProducts();
       static std::string getAllProductsbySupplier(int idSupplier);

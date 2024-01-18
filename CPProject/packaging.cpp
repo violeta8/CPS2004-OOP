@@ -32,6 +32,16 @@ void Packaging::setCost(double cost)
     cost_ = cost;
 }
 
+void Packaging::addProduct(Product* product)
+{
+    products_.push_back(product);
+}
+
+void Packaging::addToMap(Product* product, int quantity)
+{
+    product_quantity_.insert(std::pair<Product*, int>(product, quantity));
+}
+
 int Packaging::getCapacity() const
 {
     return capacity_;

@@ -17,6 +17,8 @@ class Packaging
 
             void setCapacity(int capacity);
             void setCost(double cost);
+            void addProduct(Product* product);
+            void addToMap(Product* product, int quantity);
 
             int getCapacity() const;
             double getCost() const;

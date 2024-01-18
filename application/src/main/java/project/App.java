@@ -128,7 +128,7 @@ public class App
                 System.out.println( "4. Zelda" );
                 System.out.println( "5. Tablet" );
                 System.out.println( "6. Smartphone" );
-                System.out.println( "7. Tshirt" );
+                System.out.println( "7. T-Shirt" );
                 System.out.println( "8. Pants" );
                 System.out.println( "9. Milk" );
                 System.out.println( "10. Cheese" );
@@ -579,7 +579,6 @@ public class App
     {        
         System.out.println( "Welcome to the Logistics Management Application OF THE UNIVERSITY OF MALTA" );
         System.out.println( "This is the main class" );
-        System.out.println( "In here you will be able to see everything" );
         do{
             index();
             int choice = 0;
@@ -615,15 +614,15 @@ public class App
                     break;
         
                 case 5:
-                    do{
-                        StockMenu();
-                        System.out.println( "Would you like to do anything more with Stock? Please write yes" );
-                    }while(scanner.nextLine().equals("yes"));
-                    break;
-                case 6: 
                     do{ 
                         ShipmentMenu();
                         System.out.println( "Would you like to do anything more with Shipments? Please write yes" );
+                    }while(scanner.nextLine().equals("yes"));
+                    break;
+                case 6: 
+                    do{
+                        StockMenu();
+                        System.out.println( "Would you like to do anything more with Stock? Please write yes" );
                     }while(scanner.nextLine().equals("yes"));
                     break;
                     

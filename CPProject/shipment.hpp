@@ -9,7 +9,7 @@
 
 class Shipment{
       public:
-            Shipment(int id, Customer customer, Transport* transport);
+            Shipment(int id, Customer customer, std::list<Packaging> packaging, Transport* transport, Fecha fecha);
             //both dates cannot be wrong as they are created by the system and the current date
 
             void updateShipment(std::string change, std::string value);
@@ -22,13 +22,14 @@ class Shipment{
             std::list<Packaging> getPackaging() const;
             Fecha setDeliveryDate();
 
-
             void setCustomer(Customer customer);
             void setTransport(Transport* transport);
 
             void addPackaging(Packaging packaging);
       
             std::string display_shipment_info() const;
+
+            friend bool operator==(const Shipment& s1, const Shipment& s2);
             ~Shipment();
       
       private:

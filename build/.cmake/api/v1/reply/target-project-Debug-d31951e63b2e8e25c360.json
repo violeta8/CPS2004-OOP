@@ -54,7 +54,14 @@
 				10,
 				11,
 				12,
-				13
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20
 			]
 		}
 	],
@@ -100,18 +107,14 @@
 				10,
 				11,
 				12,
-				13
-			]
-		},
-		{
-			"name" : "Header Files",
-			"sourceIndexes" : 
-			[
+				13,
 				14,
 				15,
 				16,
 				17,
-				18
+				18,
+				19,
+				20
 			]
 		}
 	],
@@ -203,28 +206,45 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "customerRepository.hpp",
-			"sourceGroupIndex" : 1
+			"compileGroupIndex" : 0,
+			"path" : "shipment.cpp",
+			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "transportRepository.hpp",
-			"sourceGroupIndex" : 1
+			"compileGroupIndex" : 0,
+			"path" : "customerRepository.cpp",
+			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "stockRepository.hpp",
-			"sourceGroupIndex" : 1
+			"compileGroupIndex" : 0,
+			"path" : "transportRepository.cpp",
+			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "supplierRepository.hpp",
-			"sourceGroupIndex" : 1
+			"compileGroupIndex" : 0,
+			"path" : "stockRepository.cpp",
+			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "productRepository.hpp",
-			"sourceGroupIndex" : 1
+			"compileGroupIndex" : 0,
+			"path" : "supplierRepository.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "productRepository.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "shipmentRepository.cpp",
+			"sourceGroupIndex" : 0
 		}
 	],
 	"type" : "EXECUTABLE"

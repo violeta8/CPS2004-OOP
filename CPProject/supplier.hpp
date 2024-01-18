@@ -8,7 +8,7 @@
 class Supplier
 {
       public:
-            Supplier(std::string name, std::string address, std::string phone, std::string email);
+            Supplier(int id, std::string name, std::string address, std::string phone, std::string email);
             
             void setName(std::string name);
             void setAddress(std::string address);

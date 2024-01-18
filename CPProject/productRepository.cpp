@@ -31,6 +31,17 @@ void ProductRepository::updateProduct(int id, std::string what, std::string chan
       }
 }
 
+void ProductRepository::updateProduct(Product* product)
+{
+      for(std::list<Product*>::iterator it = repository.begin(); it != repository.end(); ++it)
+      {
+            if ((*it) == product)
+            {
+                  (*it) = product;
+            }
+      }
+}
+
 Product* ProductRepository::getProductbyId(int id)
 {
       for(std::list<Product*>::iterator it = repository.begin(); it != repository.end(); ++it)

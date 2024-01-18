@@ -68,5 +68,40 @@
   "directory": "/mnt/c/Users/viole/Desktop/ERASMUS/cps2004-oop-1/build",
   "command": "/usr/bin/g++ -g -o CMakeFiles/project.dir/customer.cpp.o -c /mnt/c/Users/viole/Desktop/ERASMUS/cps2004-oop-1/CPProject/customer.cpp",
   "file": "/mnt/c/Users/viole/Desktop/ERASMUS/cps2004-oop-1/CPProject/customer.cpp"
+},
+{
+  "directory": "/mnt/c/Users/viole/Desktop/ERASMUS/cps2004-oop-1/build",
+  "command": "/usr/bin/g++ -g -o CMakeFiles/project.dir/shipment.cpp.o -c /mnt/c/Users/viole/Desktop/ERASMUS/cps2004-oop-1/CPProject/shipment.cpp",
+  "file": "/mnt/c/Users/viole/Desktop/ERASMUS/cps2004-oop-1/CPProject/shipment.cpp"
+},
+{
+  "directory": "/mnt/c/Users/viole/Desktop/ERASMUS/cps2004-oop-1/build",
+  "command": "/usr/bin/g++ -g -o CMakeFiles/project.dir/customerRepository.cpp.o -c /mnt/c/Users/viole/Desktop/ERASMUS/cps2004-oop-1/CPProject/customerRepository.cpp",
+  "file": "/mnt/c/Users/viole/Desktop/ERASMUS/cps2004-oop-1/CPProject/customerRepository.cpp"
+},
+{
+  "directory": "/mnt/c/Users/viole/Desktop/ERASMUS/cps2004-oop-1/build",
+  "command": "/usr/bin/g++ -g -o CMakeFiles/project.dir/transportRepository.cpp.o -c /mnt/c/Users/viole/Desktop/ERASMUS/cps2004-oop-1/CPProject/transportRepository.cpp",
+  "file": "/mnt/c/Users/viole/Desktop/ERASMUS/cps2004-oop-1/CPProject/transportRepository.cpp"
+},
+{
+  "directory": "/mnt/c/Users/viole/Desktop/ERASMUS/cps2004-oop-1/build",
+  "command": "/usr/bin/g++ -g -o CMakeFiles/project.dir/stockRepository.cpp.o -c /mnt/c/Users/viole/Desktop/ERASMUS/cps2004-oop-1/CPProject/stockRepository.cpp",
+  "file": "/mnt/c/Users/viole/Desktop/ERASMUS/cps2004-oop-1/CPProject/stockRepository.cpp"
+},
+{
+  "directory": "/mnt/c/Users/viole/Desktop/ERASMUS/cps2004-oop-1/build",
+  "command": "/usr/bin/g++ -g -o CMakeFiles/project.dir/supplierRepository.cpp.o -c /mnt/c/Users/viole/Desktop/ERASMUS/cps2004-oop-1/CPProject/supplierRepository.cpp",
+  "file": "/mnt/c/Users/viole/Desktop/ERASMUS/cps2004-oop-1/CPProject/supplierRepository.cpp"
+},
+{
+  "directory": "/mnt/c/Users/viole/Desktop/ERASMUS/cps2004-oop-1/build",
+  "command": "/usr/bin/g++ -g -o CMakeFiles/project.dir/productRepository.cpp.o -c /mnt/c/Users/viole/Desktop/ERASMUS/cps2004-oop-1/CPProject/productRepository.cpp",
+  "file": "/mnt/c/Users/viole/Desktop/ERASMUS/cps2004-oop-1/CPProject/productRepository.cpp"
+},
+{
+  "directory": "/mnt/c/Users/viole/Desktop/ERASMUS/cps2004-oop-1/build",
+  "command": "/usr/bin/g++ -g -o CMakeFiles/project.dir/shipmentRepository.cpp.o -c /mnt/c/Users/viole/Desktop/ERASMUS/cps2004-oop-1/CPProject/shipmentRepository.cpp",
+  "file": "/mnt/c/Users/viole/Desktop/ERASMUS/cps2004-oop-1/CPProject/shipmentRepository.cpp"
 }
 ]

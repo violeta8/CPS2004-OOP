@@ -1,7 +1,10 @@
 #include "shipment.hpp"
 
-Shipment::Shipment(int id,Customer customer, Transport* transport):
-      idShipment_(id), customer_(customer), transport_(transport), purchaseDate_(Fecha()), deliveryDate_(Fecha()){}
+Shipment::Shipment(int id,Customer customer, std::list<Packaging> packaging, Transport* transport, Fecha fecha):
+      idShipment_(id), customer_(customer), transport_(transport), purchaseDate_(Fecha())
+{
+       deliveryDate_ = getDeliveryDate();
+}
 
 void Shipment::updateShipment(std::string change, std::string value)
 {   
@@ -50,7 +53,21 @@ Fecha Shipment::getPurchaseDate() const
 
 Fecha Shipment::getDeliveryDate() const
 {
-      return deliveryDate_;
+      int distance = (int)(customer_.getWarehouseDistance()/100);
+      Fecha aux;
+      if(dynamic_cast<Truck*>(transport_) != nullptr)
+      {
+            aux = purchaseDate_ + distance;
+      }
+      else if(dynamic_cast<Ship*>(transport_) != nullptr)
+      {
+            aux = purchaseDate_ + distance*2;
+      }
+      else if(dynamic_cast<Plane*>(transport_) != nullptr)
+      {
+            aux = purchaseDate_ + distance*3;
+      }
+      return aux;
 }
 
 std::list<Packaging> Shipment::getPackaging() const
@@ -85,9 +102,18 @@ std::string Shipment::display_shipment_info() const
       std::string info = "[Shipment: " + std::to_string(idShipment_) + ", " + customer_.display_customer_info() + 
       ", " + transport_->display_transport_info() + ", " + purchaseDate_.cadena() + ", " +
       deliveryDate_.cadena() + ", " + std::to_string(packaging_.size()) + "]\n";
+      return info;
+}
+
+bool operator==(const Shipment& s1, const Shipment& s2)
+{
+      return s1.idShipment_ == s2.idShipment_;
 }
 
 Shipment::~Shipment()
 {
-      packaging_.clear();
+      // idShipment_=-1;
+      // customer_ = Customer(-1,"","","","");
+      // transport_ = nullptr;
+      // packaging_.clear();
 }

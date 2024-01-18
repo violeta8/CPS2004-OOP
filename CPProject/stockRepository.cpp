@@ -9,22 +9,22 @@ void StockRepository::addStock(const Stock& stock)
       repository.push_back(stock);
 }
 
-void StockRepository::removeStock(const int id)
+void StockRepository::removeStock(Product* product)
 {
       for(std::list<Stock>::iterator it = repository.begin(); it != repository.end(); ++it)
       {
-            if (it->getProduct().getId() == id)
+            if (it->getProduct().getId() == product->getId())
             {
-                  repository.remove(*it);
+                  repository.erase(it);
             }
       }
 }
 
-void StockRepository::updateStock(Product& product, int units)
+void StockRepository::updateStock(Product* product, int units)
 {
       for(std::list<Stock>::iterator it = repository.begin(); it != repository.end(); ++it)
       {
-            if (it->getProduct().getId() == product.getId())
+            if (it->getProduct().getId() == product->getId())
             {
                   it->updateStock(units);
             }
@@ -43,11 +43,11 @@ Stock StockRepository::getStock(int id)
       return *repository.end();
 }
 
-int StockRepository::getStockQuantity(Product& product)
+int StockRepository::getStockQuantity(Product* product)
 {
       for(std::list<Stock>::iterator it = repository.begin(); it != repository.end(); ++it)
       {
-            if (it->getProduct().getId() == product.getId())
+            if (it->getProduct().getId() == product->getId())
             {
                   return it->getUnits();
             }
