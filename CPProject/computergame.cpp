@@ -18,10 +18,10 @@ Zelda::Zelda(int id, double price, int volume, Supplier supplier)
 
 std::string Zelda::display_product_info() const
 {
-      std::string info = "Zelda\n";
-      info += "ID: " + std::to_string(getId()) + "\n";
-      info += "Supplier: " + getSupplier().getName() + "\n";
-      info += "Price: " + std::to_string(getPrice()) + "\n";
+      std::string info = "[Zelda: ";
+      info += "ID: " + std::to_string(getId()) + ", ";
+      info += "Supplier: " + getSupplier().getName() + ", ";
+      info += "Price: " + std::to_string(getPrice()) + "]";
       return info;
 }
 
@@ -38,10 +38,10 @@ Minecraft::Minecraft(int id, double price, int volume, Supplier supplier)
 
 std::string Minecraft::display_product_info() const
 {
-      std::string info = "Minecraft\n";
-      info += "ID: " + std::to_string(getId()) + "\n";
-      info += "Supplier: " + getSupplier().getName() + "\n";
-      info += "Price: " + std::to_string(getPrice()) + "\n";
+      std::string info = "Minecraft, ";
+      info += "ID: " + std::to_string(getId()) + ", ";
+      info += "Supplier: " + getSupplier().getName() + ", ";
+      info += "Price: " + std::to_string(getPrice()) + "]";
       return info;
 }
 

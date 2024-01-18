@@ -619,6 +619,30 @@ customer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/customer.cpp.s
 .PHONY : customer.cpp.s
 
+customerRepository.o: customerRepository.cpp.o
+.PHONY : customerRepository.o
+
+# target to build an object file
+customerRepository.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/customerRepository.cpp.o
+.PHONY : customerRepository.cpp.o
+
+customerRepository.i: customerRepository.cpp.i
+.PHONY : customerRepository.i
+
+# target to preprocess a source file
+customerRepository.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/customerRepository.cpp.i
+.PHONY : customerRepository.cpp.i
+
+customerRepository.s: customerRepository.cpp.s
+.PHONY : customerRepository.s
+
+# target to generate assembly for a file
+customerRepository.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/customerRepository.cpp.s
+.PHONY : customerRepository.cpp.s
+
 electronic.o: electronic.cpp.o
 .PHONY : electronic.o
 
@@ -787,6 +811,78 @@ product.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/product.cpp.s
 .PHONY : product.cpp.s
 
+productRepository.o: productRepository.cpp.o
+.PHONY : productRepository.o
+
+# target to build an object file
+productRepository.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/productRepository.cpp.o
+.PHONY : productRepository.cpp.o
+
+productRepository.i: productRepository.cpp.i
+.PHONY : productRepository.i
+
+# target to preprocess a source file
+productRepository.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/productRepository.cpp.i
+.PHONY : productRepository.cpp.i
+
+productRepository.s: productRepository.cpp.s
+.PHONY : productRepository.s
+
+# target to generate assembly for a file
+productRepository.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/productRepository.cpp.s
+.PHONY : productRepository.cpp.s
+
+shipment.o: shipment.cpp.o
+.PHONY : shipment.o
+
+# target to build an object file
+shipment.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/shipment.cpp.o
+.PHONY : shipment.cpp.o
+
+shipment.i: shipment.cpp.i
+.PHONY : shipment.i
+
+# target to preprocess a source file
+shipment.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/shipment.cpp.i
+.PHONY : shipment.cpp.i
+
+shipment.s: shipment.cpp.s
+.PHONY : shipment.s
+
+# target to generate assembly for a file
+shipment.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/shipment.cpp.s
+.PHONY : shipment.cpp.s
+
+shipmentRepository.o: shipmentRepository.cpp.o
+.PHONY : shipmentRepository.o
+
+# target to build an object file
+shipmentRepository.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/shipmentRepository.cpp.o
+.PHONY : shipmentRepository.cpp.o
+
+shipmentRepository.i: shipmentRepository.cpp.i
+.PHONY : shipmentRepository.i
+
+# target to preprocess a source file
+shipmentRepository.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/shipmentRepository.cpp.i
+.PHONY : shipmentRepository.cpp.i
+
+shipmentRepository.s: shipmentRepository.cpp.s
+.PHONY : shipmentRepository.s
+
+# target to generate assembly for a file
+shipmentRepository.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/shipmentRepository.cpp.s
+.PHONY : shipmentRepository.cpp.s
+
 stock.o: stock.cpp.o
 .PHONY : stock.o
 
@@ -810,6 +906,30 @@ stock.s: stock.cpp.s
 stock.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/stock.cpp.s
 .PHONY : stock.cpp.s
+
+stockRepository.o: stockRepository.cpp.o
+.PHONY : stockRepository.o
+
+# target to build an object file
+stockRepository.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/stockRepository.cpp.o
+.PHONY : stockRepository.cpp.o
+
+stockRepository.i: stockRepository.cpp.i
+.PHONY : stockRepository.i
+
+# target to preprocess a source file
+stockRepository.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/stockRepository.cpp.i
+.PHONY : stockRepository.cpp.i
+
+stockRepository.s: stockRepository.cpp.s
+.PHONY : stockRepository.s
+
+# target to generate assembly for a file
+stockRepository.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/stockRepository.cpp.s
+.PHONY : stockRepository.cpp.s
 
 supplier.o: supplier.cpp.o
 .PHONY : supplier.o
@@ -835,6 +955,30 @@ supplier.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/supplier.cpp.s
 .PHONY : supplier.cpp.s
 
+supplierRepository.o: supplierRepository.cpp.o
+.PHONY : supplierRepository.o
+
+# target to build an object file
+supplierRepository.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/supplierRepository.cpp.o
+.PHONY : supplierRepository.cpp.o
+
+supplierRepository.i: supplierRepository.cpp.i
+.PHONY : supplierRepository.i
+
+# target to preprocess a source file
+supplierRepository.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/supplierRepository.cpp.i
+.PHONY : supplierRepository.cpp.i
+
+supplierRepository.s: supplierRepository.cpp.s
+.PHONY : supplierRepository.s
+
+# target to generate assembly for a file
+supplierRepository.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/supplierRepository.cpp.s
+.PHONY : supplierRepository.cpp.s
+
 transport.o: transport.cpp.o
 .PHONY : transport.o
 
@@ -858,6 +1002,30 @@ transport.s: transport.cpp.s
 transport.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/transport.cpp.s
 .PHONY : transport.cpp.s
+
+transportRepository.o: transportRepository.cpp.o
+.PHONY : transportRepository.o
+
+# target to build an object file
+transportRepository.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/transportRepository.cpp.o
+.PHONY : transportRepository.cpp.o
+
+transportRepository.i: transportRepository.cpp.i
+.PHONY : transportRepository.i
+
+# target to preprocess a source file
+transportRepository.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/transportRepository.cpp.i
+.PHONY : transportRepository.cpp.i
+
+transportRepository.s: transportRepository.cpp.s
+.PHONY : transportRepository.s
+
+# target to generate assembly for a file
+transportRepository.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/project.dir/build.make CMakeFiles/project.dir/transportRepository.cpp.s
+.PHONY : transportRepository.cpp.s
 
 # Help Target
 help:
@@ -911,6 +1079,9 @@ help:
 	@echo "... customer.o"
 	@echo "... customer.i"
 	@echo "... customer.s"
+	@echo "... customerRepository.o"
+	@echo "... customerRepository.i"
+	@echo "... customerRepository.s"
 	@echo "... electronic.o"
 	@echo "... electronic.i"
 	@echo "... electronic.s"
@@ -932,15 +1103,33 @@ help:
 	@echo "... product.o"
 	@echo "... product.i"
 	@echo "... product.s"
+	@echo "... productRepository.o"
+	@echo "... productRepository.i"
+	@echo "... productRepository.s"
+	@echo "... shipment.o"
+	@echo "... shipment.i"
+	@echo "... shipment.s"
+	@echo "... shipmentRepository.o"
+	@echo "... shipmentRepository.i"
+	@echo "... shipmentRepository.s"
 	@echo "... stock.o"
 	@echo "... stock.i"
 	@echo "... stock.s"
+	@echo "... stockRepository.o"
+	@echo "... stockRepository.i"
+	@echo "... stockRepository.s"
 	@echo "... supplier.o"
 	@echo "... supplier.i"
 	@echo "... supplier.s"
+	@echo "... supplierRepository.o"
+	@echo "... supplierRepository.i"
+	@echo "... supplierRepository.s"
 	@echo "... transport.o"
 	@echo "... transport.i"
 	@echo "... transport.s"
+	@echo "... transportRepository.o"
+	@echo "... transportRepository.i"
+	@echo "... transportRepository.s"
 .PHONY : help
 
 

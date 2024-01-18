@@ -62,7 +62,7 @@ std::string SupplierRepository::getAllSuppliers()
       std::string info = "";
       for (std::list<Supplier>::const_iterator it = repository.begin(); it != repository.end(); ++it)
       {
-            info += it->display_supplier_info();
+            info += it->display_supplier_info() + "\n";
       }
       return info;
 }

@@ -16,10 +16,10 @@ Novel::Novel(int id, double price, int volume, Supplier supplier)
 
 std::string Novel::display_product_info()const
 {
-      std::string info = "Novel\n";
-      info += "ID: " + std::to_string(getId()) + "\n";
-      info += "Supplier: " + getSupplier().getName() + "\n";
-      info += "Price: " + std::to_string(getPrice()) + "\n";
+      std::string info = "[Novel: ";
+      info += "ID: " + std::to_string(getId()) + ", ";
+      info += "Supplier: " + getSupplier().getName() + ", ";
+      info += "Price: " + std::to_string(getPrice()) + "]";
       return info;
 }
 
@@ -37,10 +37,10 @@ Textbook::Textbook(int id, double price, int volume, Supplier supplier)
 
 std::string Textbook::display_product_info() const
 {
-      std::string info = "Textbook\n";
-      info += "ID: " + std::to_string(getId()) + "\n";
-      info += "Supplier: " + getSupplier().getName() + "\n";
-      info += "Price: " + std::to_string(getPrice()) + "\n";
+      std::string info = "[Textbook, ";
+      info += "ID: " + std::to_string(getId()) + ", ";
+      info += "Supplier: " + getSupplier().getName() + ", ";
+      info += "Price: " + std::to_string(getPrice()) + "]";
       return info;
 }
 

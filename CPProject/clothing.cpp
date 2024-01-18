@@ -17,10 +17,10 @@ TShirt::TShirt(int id, double price, int volume, Supplier supplier)
 
 std::string TShirt::display_product_info() const
 {
-      std::string info = "T-Shirt\n";
-      info += "ID: " + std::to_string(getId()) + "\n";
-      info += "Supplier: " + getSupplier().getName() + "\n";
-      info += "Price: " + std::to_string(getPrice()) + "\n";
+      std::string info = "[T-Shirt: ";
+      info += "ID: " + std::to_string(getId()) + ", ";
+      info += "Supplier: " + getSupplier().getName() + ", ";
+      info += "Price: " + std::to_string(getPrice()) + "]";
       return info;
 }
 
@@ -37,10 +37,10 @@ Pants::Pants(int id, double price, int volume, Supplier supplier)
 
 std::string Pants::display_product_info() const
 {
-      std::string info = "Pants\n";
-      info += "ID: " + std::to_string(getId()) + "\n";
-      info += "Supplier: " + getSupplier().getName() + "\n";
-      info += "Price: " + std::to_string(getPrice()) + "\n";
+      std::string info = "[Pants: ";
+      info += "ID: " + std::to_string(getId()) + ", ";
+      info += "Supplier: " + getSupplier().getName() + ", ";
+      info += "Price: " + std::to_string(getPrice()) + "]";
       return info;
 }
 

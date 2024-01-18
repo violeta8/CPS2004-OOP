@@ -10,11 +10,11 @@ class Product;
 class Stock
 {
       public:
-            Stock(Product& product, int units);
-            void addProduct(Product& product, int units);
+            Stock(Product* product, int units);
+            void addProduct(Product* product, int units);
             void removeProduct();
             void updateStock(int units);
-            Product& getProduct() const;
+            Product* getProduct() const;
             int getUnits() const;
 
             std::string display_stock_info()const;
@@ -24,7 +24,7 @@ class Stock
             ~Stock();
 
       private:
-            Product& product_;
+            Product* product_;
             int units_;
 };
 

@@ -9,13 +9,12 @@ int CustomerRepository::nextIdCustomer()
       return nextId++;
 }
 
-void CustomerRepository::addCustomer(Customer customer)
+void CustomerRepository::addCustomer(const Customer customer)
 {
       repository.push_back(customer);
-      customer.setId(nextIdCustomer());
 }
 
-void CustomerRepository::removeCustomer(Customer customer)
+void CustomerRepository::removeCustomer(const Customer customer)
 {
       repository.remove(customer);
 }

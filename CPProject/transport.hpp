@@ -38,7 +38,7 @@ class Plane : public Transport
             std::string getModel() const;
 
             void updateTransport(std::string what, std::string change)override;
-            std::string display_transport_info()const override;
+            std::string display_transport_info()const;
 
             int route() const;
 
@@ -56,7 +56,7 @@ class Truck : public Transport
             std::string getPlate() const;
 
             void updateTransport(std::string what, std::string change)override;
-            std::string display_transport_info()const override;
+            std::string display_transport_info()const;
 
             int route() const;
 
@@ -73,7 +73,7 @@ class Ship : public Transport
             std::string getName() const;
 
             void updateTransport(std::string what, std::string change)override;
-            std::string display_transport_info()const override;
+            std::string display_transport_info()const;
 
             int route() const;
 

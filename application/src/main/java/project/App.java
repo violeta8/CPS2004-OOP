@@ -487,7 +487,7 @@ public class App
                     }
                 System.out.println("Would you like to add more products? Please write yes");
                 }while(scanner.nextLine().equals("yes"));
-                Shipment shipment = new Shipment(customer, packagingList , transport, LocalDate.now());
+                Shipment shipment = new Shipment(ShipmentRepository.nextIdShipment(), customer, packagingList , transport, LocalDate.now());
                 if(shipment.getCustomer().getName()=="mark"){
                     ShipmentDecorator shipmentCost = new ShipmentDecoratorTotalCost(shipment);
                     ShipmentRepository.saveShipment(shipmentCost);
@@ -597,7 +597,7 @@ public class App
                         SupplierMenu();
                         System.out.println( "Would you like to do anything more with Suppliers? Please write yes" );
                     }while(scanner.nextLine().equals("yes")); 
-                    
+                    break;
 
                 case 3: 
                     do{

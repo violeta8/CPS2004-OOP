@@ -18,6 +18,7 @@ void ProductRepository::addProduct(Product* product)
 void ProductRepository::removeProduct(Product* product)
 {
       repository.remove(product);
+      delete product;
 }
 
 void ProductRepository::updateProduct(int id, std::string what, std::string change) //todo check this

@@ -23,7 +23,10 @@ void Transport::updateTransport(std::string what, std::string change)
 
 std::string Transport::display_transport_info()const
 {
-      std::string info = std::to_string(getId()) + " The speed is: " + std::to_string(getSpeed()) + ", Cost per km: " + std::to_string(getCostPerKm());
+      std::string info = "";
+      info += "ID: " + std::to_string(getId()) + ", ";
+      info += " Speed: " + std::to_string(getSpeed()) + ", " ;
+      info += "Cost per km: " + std::to_string(getCostPerKm());
       return info;
 }
 
@@ -55,8 +58,9 @@ void Plane::updateTransport(std::string what, std::string change)
 
 std::string Plane::display_transport_info()const
 {
-      std::string info = "[Plane: " + Transport::display_transport_info() + " ]";
-      return info;
+      std::string res = "";
+      res += "[Plane: " +  Transport::display_transport_info() + " ]";
+      return res;
 }
 
 int Plane::route() const
@@ -64,9 +68,8 @@ int Plane::route() const
       return 256;
 }
 
-
-
 Plane::~Plane(){}
+
 
 
 Truck::Truck(int id, double speed, double costPerKm)
@@ -79,8 +82,9 @@ void Truck::updateTransport(std::string what, std::string change)
 
 std::string Truck::display_transport_info()const
 {
-      std::string info = "[Truck: " + Transport::display_transport_info() + " ]";
-      return info;
+      std::string res = "";
+      res += "[Truck: " +  Transport::display_transport_info() + " ]";
+      return res;
 }
 
 int Truck::route() const
@@ -89,6 +93,7 @@ int Truck::route() const
 }
 
 Truck::~Truck(){}
+
 
 
 Ship::Ship(int id, double speed, double costPerKm)
@@ -101,8 +106,9 @@ void Ship::updateTransport(std::string what, std::string change)
 
 std::string Ship::display_transport_info()const
 {
-      std::string info = "[Ship: " + Transport::display_transport_info() + " ]";
-      return info;
+      std::string res = "";
+      res += "[Ship: " +  Transport::display_transport_info() + " ]";
+      return res;
 }
 
 int Ship::route() const

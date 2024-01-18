@@ -1,8 +1,8 @@
 #include "stock.hpp"
 
-Stock::Stock(Product& product, int units) : product_(product), units_(units){}
+Stock::Stock(Product* product, int units) : product_(product), units_(units){}
 
-void Stock::addProduct(Product& product, int units)
+void Stock::addProduct(Product* product, int units)
 {
     product_ = product;
     units_ = units;
@@ -18,7 +18,7 @@ void Stock::updateStock(int units)
     units_ = units;
 }
 
-Product& Stock::getProduct() const
+Product* Stock::getProduct() const
 {
     return product_;
 }
@@ -36,8 +36,8 @@ Stock::~Stock()
 std::string Stock::display_stock_info()const
 {
     std::string info = "";
-    info += "Product: " + std::to_string(product_.getId())+ "\n";
-    info += "Units: " + std::to_string(units_) + "\n";
+    info += "[Product ID: " + std::to_string(product_->getId())+ ", ";
+    info += "Units: " + std::to_string(units_) + "]";
     return info;
 }
 

@@ -18,10 +18,10 @@ Tablet::Tablet(int id, double price, int volume, Supplier supplier)
 
 std::string Tablet::display_product_info() const
 {
-      std::string info = "Tablet\n";
-      info += "ID: " + std::to_string(getId()) + "\n";
-      info += "Supplier: " + getSupplier().getName() + "\n";
-      info += "Price: " + std::to_string(getPrice()) + "\n";
+      std::string info = "[Tablet, ";
+      info += "ID: " + std::to_string(getId()) + ", ";
+      info += "Supplier: " + getSupplier().getName() + ", ";
+      info += "Price: " + std::to_string(getPrice()) + "]";
       return info;
 }
 
@@ -38,10 +38,10 @@ Smartphone::Smartphone(int id, double price, int volume, Supplier supplier)
 
 std::string Smartphone::display_product_info() const
 {
-      std::string info = "Smartphone\n";
-      info += "ID: " + std::to_string(getId()) + "\n";
-      info += "Supplier: " + getSupplier().getName() + "\n";
-      info += "Price: " + std::to_string(getPrice()) + "\n";
+      std::string info = "Smartphone, ";
+      info += "ID: " + std::to_string(getId()) + ", ";
+      info += "Supplier: " + getSupplier().getName() + ", ";
+      info += "Price: " + std::to_string(getPrice()) + "]";
       return info;
 }
 

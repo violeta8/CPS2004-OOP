@@ -18,10 +18,10 @@ Fridge::Fridge(int id, double price, int volume, Supplier supplier)
 
 std::string Fridge::display_product_info() const
 {
-      std::string info = "Fridge\n";
-      info += "ID: " + std::to_string(getId()) + "\n";
-      info += "Supplier: " + getSupplier().getName() + "\n";
-      info += "Price: " + std::to_string(getPrice()) + "\n";
+      std::string info = "[Fridge: ";
+      info += "ID: " + std::to_string(getId()) + ", ";
+      info += "Supplier: " + getSupplier().getName() + ", ";
+      info += "Price: " + std::to_string(getPrice()) + "]";
       return info;
 }
 
@@ -38,10 +38,10 @@ WashingMachine::WashingMachine(int id, double price, int volume, Supplier suppli
 
 std::string WashingMachine::display_product_info() const
 {
-      std::string info = "WashingMachine\n";
-      info += "ID: " + std::to_string(getId()) + "\n";
-      info += "Supplier: " + getSupplier().getName() + "\n";
-      info += "Price: " + std::to_string(getPrice()) + "\n";
+      std::string info = "[WashingMachine, ";
+      info += "ID: " + std::to_string(getId()) + ", ";
+      info += "Supplier: " + getSupplier().getName() + ", ";
+      info += "Price: " + std::to_string(getPrice()) + "]";
       return info;
 }
 

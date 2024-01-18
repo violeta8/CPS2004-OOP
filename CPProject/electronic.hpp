@@ -18,24 +18,24 @@ class Electronic : public Product
 //* --------------------------------Electronic concrete subclasses-------------------------------- *//
 class Tablet : public Electronic
 {
-public:
-    Tablet(int id, double price, int volume, Supplier supplier);
+    public:
+        Tablet(int id, double price, int volume, Supplier supplier);
 
-    std::string display_product_info() const;
-    virtual double calculate_discount(int quantity, int month) override;
+        std::string display_product_info() const;
+        virtual double calculate_discount(int quantity, int month) override;
 
-    ~Tablet();
+        ~Tablet();
 };
 
 class Smartphone : public Electronic
 {
-public:
-    Smartphone(int id, double price, int volume, Supplier supplier);
-        
-    std::string display_product_info()const;
-    virtual double calculate_discount(int quantity, int month) override;
+    public:
+        Smartphone(int id, double price, int volume, Supplier supplier);
+            
+        std::string display_product_info()const;
+        virtual double calculate_discount(int quantity, int month) override;
 
-    ~Smartphone();
+        ~Smartphone();
 };
 
 

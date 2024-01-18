@@ -25,7 +25,7 @@ class Product
 
             friend bool operator==(const Product& product, const Product& product2);
 
-            ~Product();
+            virtual ~Product();
 
       private:
             int id_;

@@ -193,6 +193,25 @@ void SupplierMenu()
     }while(decision=="yes");
 }
 
+void CreateTruck(double cost, double speed)
+{
+    Transport* truck = new Truck(TransportRepository::nextIdTransport(), speed, cost);
+    TransportRepository::addTransport(truck);
+    cout<<"succesfully added"<<endl;
+}
+
+void CreateShip(double cost, double speed)
+{
+    Transport* ship = new Ship(TransportRepository::nextIdTransport(), speed, cost);
+    TransportRepository::addTransport(ship);
+}
+
+void CreatePlane(double cost, double speed)
+{
+    Transport* plane = new Plane(TransportRepository::nextIdTransport(), speed, cost);
+    TransportRepository::addTransport(plane);
+}
+
 void CreateTransport()
 {
     double cost, speed;
@@ -202,27 +221,25 @@ void CreateTransport()
     cout << "Please enter the transport's speed" << endl;
     cin >> speed;
     int choice;
-    cout << "Please enter the transport's type" << endl;
     cout << "1. Truck" << endl;
     cout << "2. Ship" << endl;
     cout << "3. Plane" << endl;
     cin >> choice;
-    if(choice==1)//todo get this fixed and maybe on another function
+    switch(choice)//todo get this fixed and maybe on another function
     {
-    
-        Truck truck(TransportRepository::nextIdTransport(), speed, cost);
-        TransportRepository::addTransport(&truck);
+        case 1:
+            CreateTruck(speed, cost);
+            cout <<"You have created a truck successfully" << endl;
+            break;    
+        case 2:
+            CreateShip(speed, cost);
+            break;
+        case 3: 
+            CreatePlane(speed, cost);
+            break;
+        default:
+            break;
     }
-    else if(choice==2)
-    {
-        Ship ship(TransportRepository::nextIdTransport(), speed, cost);
-        TransportRepository::addTransport(&ship);
-    }else if(choice==3)
-    {
-        Plane plane(TransportRepository::nextIdTransport(), speed, cost);
-        TransportRepository::addTransport(&plane);
-    }
-    else{}
 }
 
 void DeleteTransport()
@@ -278,10 +295,105 @@ void TransportMenu()
             default:
                 break;
         }
-        string decision;
         cout << "Do you want to anything more with Transports? yes/no" << endl;
         cin >> decision;
     }while(decision=="yes");
+}
+
+void CreateNovel(Supplier s, int units, double price, int volume)
+{
+    Product* novel = new Novel(ProductRepository::nextIdProduct(), price, volume, s);    
+    ProductRepository::addProduct(novel);
+    Stock stock(novel, units);
+    StockRepository::addStock(stock);
+}
+
+void CreateTextbook(Supplier s, int units, double price, int volume)
+{
+    Product* textbook = new Textbook(ProductRepository::nextIdProduct(), price, volume, s);
+    ProductRepository::addProduct(textbook);
+    Stock stock(textbook, units);
+    StockRepository::addStock(stock);
+}
+
+void CreateMinecraft(Supplier s, int units, double price, int volume)
+{
+    Product* minecraft = new Minecraft(ProductRepository::nextIdProduct(), price, volume, s);
+    ProductRepository::addProduct(minecraft);
+    Stock stock(minecraft, units);
+    StockRepository::addStock(stock);
+}
+
+void CreateZelda(Supplier s, int units, double price, int volume)
+{
+    Product* zelda = new Zelda(ProductRepository::nextIdProduct(), price, volume, s);
+    ProductRepository::addProduct(zelda);
+    Stock stock(zelda, units);
+    StockRepository::addStock(stock);
+}
+
+void CreateTablet(Supplier s, int units, double price, int volume)
+{
+    Product* tablet = new Tablet(ProductRepository::nextIdProduct(), price, volume, s);
+    ProductRepository::addProduct(tablet);
+    Stock stock(tablet, units);
+    StockRepository::addStock(stock);
+}
+
+void CreateSmartphone(Supplier s, int units, double price, int volume)
+{
+    Product* smartphone = new Smartphone(ProductRepository::nextIdProduct(), price, volume, s);
+    ProductRepository::addProduct(smartphone);
+    Stock stock(smartphone, units);
+    StockRepository::addStock(stock);
+}
+
+void CreateTShirt(Supplier s, int units, double price, int volume)
+{
+    Product* tshirt = new TShirt(ProductRepository::nextIdProduct(), price, volume, s);
+    ProductRepository::addProduct(tshirt);
+    Stock stock(tshirt, units);
+    StockRepository::addStock(stock);
+}
+
+void CreatePants(Supplier s, int units, double price, int volume)
+{
+    Product* pants = new Pants(ProductRepository::nextIdProduct(), price, volume, s);
+    ProductRepository::addProduct(pants);
+    Stock stock(pants, units);
+    StockRepository::addStock(stock);
+}
+
+void CreateMilk(Supplier s, int units, double price, int volume)
+{
+    Product* milk = new Milk(ProductRepository::nextIdProduct(), price, volume, s);
+    ProductRepository::addProduct(milk);
+    Stock stock(milk, units);
+    StockRepository::addStock(stock);
+}
+
+void CreateCheese(Supplier s, int units, double price, int volume)
+{
+    Product* cheese = new Cheese(ProductRepository::nextIdProduct(), price, volume, s);
+    ProductRepository::addProduct(cheese);
+    Stock stock(cheese, units);
+    StockRepository::addStock(stock);
+}
+
+void CreateWashingMachine(Supplier s, int units, double price, int volume)
+{
+    Product* washingmachine = new WashingMachine(ProductRepository::nextIdProduct(), price, volume, s);
+    ProductRepository::addProduct(washingmachine);
+    Stock stock(washingmachine, units);
+    StockRepository::addStock(stock);
+}
+
+void CreateFridge(Supplier s, int units, double price, int volume)
+{
+    Product* fridge = new Fridge(ProductRepository::nextIdProduct(), price, volume, s);
+    ProductRepository::addProduct(fridge);
+    Stock stock(fridge, units);
+    StockRepository::addStock(stock);
 }
 
 void CreateProduct()//todo maybe change this bc it'll be the same problem as transport
@@ -315,101 +427,42 @@ void CreateProduct()//todo maybe change this bc it'll be the same problem as tra
     switch(choice)
     {
         case 1:
-            {
-                Novel novel(ProductRepository::nextIdProduct(), price, volume, s);
-                ProductRepository::addProduct(&novel);
-                Stock stock(novel, units);
-                StockRepository::addStock(stock);
-                break;
-            }
+            CreateNovel(s, units, price, volume);
+            break;
+            
         case 2:
-            {
-                Textbook textbook(ProductRepository::nextIdProduct(), price, volume, s);
-                ProductRepository::addProduct(&textbook);
-                Stock stock(textbook, units);
-                StockRepository::addStock(stock);
-                break;
-            }
+            CreateTextbook(s, units, price, volume);
+            break;
         case 3:
-            {
-                Minecraft minecraft(ProductRepository::nextIdProduct(), price, volume, s);
-                ProductRepository::addProduct(&minecraft);
-                Stock stock(minecraft, units);
-                StockRepository::addStock(stock);
-                break;
-            }
+            CreateMinecraft(s, units, price, volume);
+            break;
         case 4:
-            {
-                Zelda zelda(ProductRepository::nextIdProduct(), price, volume, s);
-                ProductRepository::addProduct(&zelda);
-                Stock stock(zelda, units);
-                StockRepository::addStock(stock);
-                break;
-            }
+            CreateZelda(s, units, price, volume);
+            break;
         case 5:
-            {
-                Tablet tablet(ProductRepository::nextIdProduct(), price, volume, s);
-                ProductRepository::addProduct(&tablet);
-                Stock stock(tablet, units);
-                StockRepository::addStock(stock);
-                break;
-            }
+            CreateTablet(s, units, price, volume);
+            break;
         case 6:
-            {
-                Smartphone smartphone(ProductRepository::nextIdProduct(), price, volume, s);
-                ProductRepository::addProduct(&smartphone);
-                Stock stock(smartphone, units);
-                StockRepository::addStock(stock);
-                break;
-            }
+            CreateSmartphone(s, units, price, volume);
+            break;
         case 7:
-            {
-                TShirt tshirt(ProductRepository::nextIdProduct(), price, volume, s);
-                ProductRepository::addProduct(&tshirt);
-                Stock stock(tshirt, units);
-                StockRepository::addStock(stock);
-                break;
-            }
+            CreateTShirt(s, units, price, volume);
+            break;
         case 8:
-            {
-                Pants pants(ProductRepository::nextIdProduct(), price, volume, s);
-                ProductRepository::addProduct(&pants);
-                Stock stock(pants, units);
-                StockRepository::addStock(stock);
-                break;
-            }
+            CreatePants(s, units, price, volume);
+            break;
         case 9:
-            {
-                Milk milk(ProductRepository::nextIdProduct(), price, volume, s);
-                ProductRepository::addProduct(&milk);
-                Stock stock(milk, units);
-                StockRepository::addStock(stock);
-                break;
-            }
+            CreateMilk(s, units, price, volume);
+            break;
         case 10:
-            {
-                Cheese cheese(ProductRepository::nextIdProduct(), price, volume, s);
-                ProductRepository::addProduct(&cheese);
-                Stock stock(cheese, units);
-                StockRepository::addStock(stock);
-                break;
-            }   
+            CreateCheese(s, units, price, volume);
+            break; 
         case 11:
-            {
-                WashingMachine washingmachine(ProductRepository::nextIdProduct(), price, volume, s);
-                ProductRepository::addProduct(&washingmachine);
-                Stock stock(washingmachine, units);
-                StockRepository::addStock(stock);
-                break;
-            }
+            CreateWashingMachine(s, units, price, volume);
+            break;
         case 12:
-            {
-                Fridge fridge(ProductRepository::nextIdProduct(), price, volume, s);
-                ProductRepository::addProduct(&fridge);
-                Stock stock(fridge, units);
-                StockRepository::addStock(stock);
-                break;
-            }
+            CreateFridge(s, units, price, volume);
+            break;
         default:
             break;
                     
@@ -496,7 +549,6 @@ void CreateShipment()
     {
         cout << "Please enter the id and the quantity of the product you want to add" << endl;
         cin >> idProduct >> quantity;
-        cin >> quantity;
         Product* p = ProductRepository::getProductbyId(idProduct);
         if(quantity>StockRepository::getStockQuantity(p))
         {
@@ -563,29 +615,37 @@ void UpdateShipment()
 void ShipmentMenu()
 {
     cout << "You are in the Shipment's menu" << endl;
-    cout << "1. Add shipment" << endl;
-    cout << "2. Delete shipment" << endl;
-    cout << "3. Modify shipment" << endl;
-    cout << "4. Show all shipments" << endl;
-    int option;
-    cin >> option;
-    switch(option)
+    string decision;
+    do
     {
-        case 1:
+        cout << "1. Add shipment" << endl;
+        cout << "2. Delete shipment" << endl;
+        cout << "3. Modify shipment" << endl;
+        cout << "4. Show all shipments" << endl;
+        int option;
+        cin >> option;
+        switch(option)
+        {
+            case 1:
                 CreateShipment();
                 break;
-        case 2:
+            case 2:
                 DeleteShipment();
                 break;
-        case 3:
+            case 3:
                 UpdateShipment();
                 break;
-        case 4:
-            cout << ShipmentRepository::getAllShipments() << endl;
-            break;
-        default:
-            break;
-    }
+            case 4:
+                cout << ShipmentRepository::getAllShipments() << endl;
+                break;
+            default:
+                break;
+        }
+        cout << "Do you want to do anything more with Shipments? yes/no" << endl;
+        cin >> decision;
+    } while (decision=="yes");
+    
+    
 }
 
 int main(){
@@ -616,12 +676,11 @@ int main(){
                 break;
             case 6:
                 cout << StockRepository::getAllStock() << endl;
+                break;
             default:
                 break;
         }
-        cout << "Do you want to do anything more? yes/no" << endl;
+        cout << "Do you want to do anything more in the application? yes/no" << endl;
         cin >> decision;
     } while (decision == "yes");
-    
-    
 }

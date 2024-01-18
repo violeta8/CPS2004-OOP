@@ -34,7 +34,7 @@ public class TransportRepository {
     public static String getAllTransports() {
         String result="";
         for (Transport transport : repository) {
-            result += transport.toString();
+            result += transport.toString() + "\n";
         }
         return result;
     }
